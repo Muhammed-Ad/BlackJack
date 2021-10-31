@@ -17,6 +17,15 @@ namespace Project2
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+
+            //aShoe dealingShoe = new aShoe();
+            //dealingShoe.Draw
+
+           /* 
+            var main_form = new Form1();
+            main_form.Show();
+            Application.Run();
+           */
         }
     }
 }
