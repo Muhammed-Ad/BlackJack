@@ -29,168 +29,171 @@ namespace Project2
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.resetBttn = new System.Windows.Forms.Button();
-            this.standBttn = new System.Windows.Forms.Button();
-            this.hitBttn = new System.Windows.Forms.Button();
-            this.totalTxtbox = new System.Windows.Forms.TextBox();
-            this.betTxtbox = new System.Windows.Forms.TextBox();
+            this.dealerCardsLabel = new System.Windows.Forms.Label();
+            this.playerCardsLabel = new System.Windows.Forms.Label();
+            this.totalLabel = new System.Windows.Forms.Label();
+            this.betLabel = new System.Windows.Forms.Label();
+            this.resetButton = new System.Windows.Forms.Button();
+            this.standButton = new System.Windows.Forms.Button();
+            this.hitButton = new System.Windows.Forms.Button();
+            this.totalTextBox = new System.Windows.Forms.TextBox();
+            this.betTextBox = new System.Windows.Forms.TextBox();
             this.seedLabel = new System.Windows.Forms.Label();
-            this.seedTxtbox = new System.Windows.Forms.TextBox();
-            this.dealer_status_label = new System.Windows.Forms.Label();
-            this.player_status_label = new System.Windows.Forms.Label();
-            this.win_loseLabel = new System.Windows.Forms.Label();
+            this.seedTextbox = new System.Windows.Forms.TextBox();
+            this.dealerValueLabel = new System.Windows.Forms.Label();
+            this.playerValueLabel = new System.Windows.Forms.Label();
+            this.winOrLoseLabel = new System.Windows.Forms.Label();
             this.deckLabel = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.gameModeLabel = new System.Windows.Forms.Label();
             this.gameModeComboBox = new System.Windows.Forms.ComboBox();
-            this.playBttn = new System.Windows.Forms.Button();
+            this.playButton = new System.Windows.Forms.Button();
             this.computerPicturebox = new System.Windows.Forms.PictureBox();
             this.playerPicturebox = new System.Windows.Forms.PictureBox();
-            this.nDeckCombobox = new System.Windows.Forms.ComboBox();
+            this.numberOfDeckComboBox = new System.Windows.Forms.ComboBox();
+            this.dealerValueRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.playerValueRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.winOrLoseRichTextBox = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.computerPicturebox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerPicturebox)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // dealerCardsLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(376, 10);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Dealer Cards";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.dealerCardsLabel.AutoSize = true;
+            this.dealerCardsLabel.Location = new System.Drawing.Point(376, 10);
+            this.dealerCardsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.dealerCardsLabel.Name = "dealerCardsLabel";
+            this.dealerCardsLabel.Size = new System.Drawing.Size(68, 13);
+            this.dealerCardsLabel.TabIndex = 0;
+            this.dealerCardsLabel.Text = "Dealer Cards";
+            this.dealerCardsLabel.Click += new System.EventHandler(this.dealerCards_Click);
             // 
-            // label2
+            // playerCardsLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(376, 248);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Player Cards";
+            this.playerCardsLabel.AutoSize = true;
+            this.playerCardsLabel.Location = new System.Drawing.Point(376, 248);
+            this.playerCardsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.playerCardsLabel.Name = "playerCardsLabel";
+            this.playerCardsLabel.Size = new System.Drawing.Size(66, 13);
+            this.playerCardsLabel.TabIndex = 1;
+            this.playerCardsLabel.Text = "Player Cards";
             // 
-            // label3
+            // totalLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 133);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Total ($):";
+            this.totalLabel.AutoSize = true;
+            this.totalLabel.Location = new System.Drawing.Point(24, 133);
+            this.totalLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.totalLabel.Name = "totalLabel";
+            this.totalLabel.Size = new System.Drawing.Size(49, 13);
+            this.totalLabel.TabIndex = 2;
+            this.totalLabel.Text = "Total ($):";
             // 
-            // label4
+            // betLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(24, 193);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Bet ($):";
+            this.betLabel.AutoSize = true;
+            this.betLabel.Location = new System.Drawing.Point(24, 193);
+            this.betLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.betLabel.Name = "betLabel";
+            this.betLabel.Size = new System.Drawing.Size(41, 13);
+            this.betLabel.TabIndex = 3;
+            this.betLabel.Text = "Bet ($):";
             // 
-            // resetBttn
+            // resetButton
             // 
-            this.resetBttn.Location = new System.Drawing.Point(16, 590);
-            this.resetBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.resetBttn.Name = "resetBttn";
-            this.resetBttn.Size = new System.Drawing.Size(58, 39);
-            this.resetBttn.TabIndex = 4;
-            this.resetBttn.Text = "Reset";
-            this.resetBttn.UseVisualStyleBackColor = true;
-            this.resetBttn.Click += new System.EventHandler(this.resetBttn_Click);
+            this.resetButton.Location = new System.Drawing.Point(939, 107);
+            this.resetButton.Margin = new System.Windows.Forms.Padding(2);
+            this.resetButton.Name = "resetButton";
+            this.resetButton.Size = new System.Drawing.Size(58, 39);
+            this.resetButton.TabIndex = 4;
+            this.resetButton.Text = "Reset";
+            this.resetButton.UseVisualStyleBackColor = true;
+            this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
             // 
-            // standBttn
+            // standButton
             // 
-            this.standBttn.Location = new System.Drawing.Point(465, 499);
-            this.standBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.standBttn.Name = "standBttn";
-            this.standBttn.Size = new System.Drawing.Size(60, 35);
-            this.standBttn.TabIndex = 5;
-            this.standBttn.Text = "Stand";
-            this.standBttn.UseVisualStyleBackColor = true;
-            this.standBttn.Click += new System.EventHandler(this.standBttn_Click);
+            this.standButton.Location = new System.Drawing.Point(465, 499);
+            this.standButton.Margin = new System.Windows.Forms.Padding(2);
+            this.standButton.Name = "standButton";
+            this.standButton.Size = new System.Drawing.Size(60, 35);
+            this.standButton.TabIndex = 5;
+            this.standButton.Text = "Stand";
+            this.standButton.UseVisualStyleBackColor = true;
+            this.standButton.Click += new System.EventHandler(this.standButton_Click);
             // 
-            // hitBttn
+            // hitButton
             // 
-            this.hitBttn.Location = new System.Drawing.Point(279, 499);
-            this.hitBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.hitBttn.Name = "hitBttn";
-            this.hitBttn.Size = new System.Drawing.Size(70, 34);
-            this.hitBttn.TabIndex = 6;
-            this.hitBttn.Text = "HIT";
-            this.hitBttn.UseVisualStyleBackColor = true;
-            this.hitBttn.Click += new System.EventHandler(this.hitBttn_Click);
+            this.hitButton.Location = new System.Drawing.Point(279, 499);
+            this.hitButton.Margin = new System.Windows.Forms.Padding(2);
+            this.hitButton.Name = "hitButton";
+            this.hitButton.Size = new System.Drawing.Size(70, 34);
+            this.hitButton.TabIndex = 6;
+            this.hitButton.Text = "HIT";
+            this.hitButton.UseVisualStyleBackColor = true;
+            this.hitButton.Click += new System.EventHandler(this.hitButton_Click);
             // 
-            // totalTxtbox
+            // totalTextBox
             // 
-            this.totalTxtbox.Location = new System.Drawing.Point(26, 159);
-            this.totalTxtbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.totalTxtbox.Name = "totalTxtbox";
-            this.totalTxtbox.Size = new System.Drawing.Size(52, 20);
-            this.totalTxtbox.TabIndex = 7;
+            this.totalTextBox.Location = new System.Drawing.Point(26, 159);
+            this.totalTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.totalTextBox.Name = "totalTextBox";
+            this.totalTextBox.Size = new System.Drawing.Size(52, 20);
+            this.totalTextBox.TabIndex = 7;
             // 
-            // betTxtbox
+            // betTextBox
             // 
-            this.betTxtbox.Location = new System.Drawing.Point(26, 219);
-            this.betTxtbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.betTxtbox.Name = "betTxtbox";
-            this.betTxtbox.Size = new System.Drawing.Size(52, 20);
-            this.betTxtbox.TabIndex = 8;
+            this.betTextBox.Location = new System.Drawing.Point(26, 219);
+            this.betTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.betTextBox.Name = "betTextBox";
+            this.betTextBox.Size = new System.Drawing.Size(52, 20);
+            this.betTextBox.TabIndex = 8;
             // 
             // seedLabel
             // 
             this.seedLabel.AutoSize = true;
-            this.seedLabel.Location = new System.Drawing.Point(170, 590);
+            this.seedLabel.Location = new System.Drawing.Point(954, 162);
             this.seedLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.seedLabel.Name = "seedLabel";
             this.seedLabel.Size = new System.Drawing.Size(32, 13);
             this.seedLabel.TabIndex = 9;
             this.seedLabel.Text = "Seed";
             // 
-            // seedTxtbox
+            // seedTextbox
             // 
-            this.seedTxtbox.Location = new System.Drawing.Point(168, 613);
-            this.seedTxtbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.seedTxtbox.Name = "seedTxtbox";
-            this.seedTxtbox.Size = new System.Drawing.Size(52, 20);
-            this.seedTxtbox.TabIndex = 10;
+            this.seedTextbox.Location = new System.Drawing.Point(945, 186);
+            this.seedTextbox.Margin = new System.Windows.Forms.Padding(2);
+            this.seedTextbox.Name = "seedTextbox";
+            this.seedTextbox.Size = new System.Drawing.Size(52, 20);
+            this.seedTextbox.TabIndex = 10;
             // 
-            // dealer_status_label
+            // dealerValueLabel
             // 
-            this.dealer_status_label.AutoSize = true;
-            this.dealer_status_label.Location = new System.Drawing.Point(728, 47);
-            this.dealer_status_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.dealer_status_label.Name = "dealer_status_label";
-            this.dealer_status_label.Size = new System.Drawing.Size(35, 13);
-            this.dealer_status_label.TabIndex = 12;
-            this.dealer_status_label.Text = "label5";
+            this.dealerValueLabel.AutoSize = true;
+            this.dealerValueLabel.Location = new System.Drawing.Point(761, 10);
+            this.dealerValueLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.dealerValueLabel.Name = "dealerValueLabel";
+            this.dealerValueLabel.Size = new System.Drawing.Size(34, 13);
+            this.dealerValueLabel.TabIndex = 12;
+            this.dealerValueLabel.Text = "Value";
             // 
-            // player_status_label
+            // playerValueLabel
             // 
-            this.player_status_label.AutoSize = true;
-            this.player_status_label.Location = new System.Drawing.Point(728, 167);
-            this.player_status_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.player_status_label.Name = "player_status_label";
-            this.player_status_label.Size = new System.Drawing.Size(35, 13);
-            this.player_status_label.TabIndex = 13;
-            this.player_status_label.Text = "label6";
+            this.playerValueLabel.AutoSize = true;
+            this.playerValueLabel.Location = new System.Drawing.Point(771, 248);
+            this.playerValueLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.playerValueLabel.Name = "playerValueLabel";
+            this.playerValueLabel.Size = new System.Drawing.Size(34, 13);
+            this.playerValueLabel.TabIndex = 13;
+            this.playerValueLabel.Text = "Value";
             // 
-            // win_loseLabel
+            // winOrLoseLabel
             // 
-            this.win_loseLabel.AutoSize = true;
-            this.win_loseLabel.Location = new System.Drawing.Point(728, 414);
-            this.win_loseLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.win_loseLabel.Name = "win_loseLabel";
-            this.win_loseLabel.Size = new System.Drawing.Size(78, 13);
-            this.win_loseLabel.TabIndex = 14;
-            this.win_loseLabel.Text = "win/lose status";
+            this.winOrLoseLabel.AutoSize = true;
+            this.winOrLoseLabel.Location = new System.Drawing.Point(748, 417);
+            this.winOrLoseLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.winOrLoseLabel.Name = "winOrLoseLabel";
+            this.winOrLoseLabel.Size = new System.Drawing.Size(78, 13);
+            this.winOrLoseLabel.TabIndex = 14;
+            this.winOrLoseLabel.Text = "win/lose status";
             // 
             // deckLabel
             // 
@@ -198,48 +201,49 @@ namespace Project2
             this.deckLabel.Location = new System.Drawing.Point(20, 53);
             this.deckLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.deckLabel.Name = "deckLabel";
-            this.deckLabel.Size = new System.Drawing.Size(94, 13);
+            this.deckLabel.Size = new System.Drawing.Size(88, 13);
             this.deckLabel.TabIndex = 15;
-            this.deckLabel.Text = "Number of deck(s)";
+            this.deckLabel.Text = "Number of decks";
             // 
-            // label5
+            // gameModeLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(25, 10);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 13);
-            this.label5.TabIndex = 17;
-            this.label5.Text = "Game mode";
+            this.gameModeLabel.AutoSize = true;
+            this.gameModeLabel.Location = new System.Drawing.Point(25, 10);
+            this.gameModeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.gameModeLabel.Name = "gameModeLabel";
+            this.gameModeLabel.Size = new System.Drawing.Size(64, 13);
+            this.gameModeLabel.TabIndex = 17;
+            this.gameModeLabel.Text = "Game mode";
             // 
             // gameModeComboBox
             // 
             this.gameModeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.gameModeComboBox.FormattingEnabled = true;
             this.gameModeComboBox.Items.AddRange(new object[] {
-            "S17",
-            "H17"});
+            "H17",
+            "S17"});
             this.gameModeComboBox.Location = new System.Drawing.Point(26, 25);
-            this.gameModeComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gameModeComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.gameModeComboBox.Name = "gameModeComboBox";
             this.gameModeComboBox.Size = new System.Drawing.Size(62, 21);
             this.gameModeComboBox.TabIndex = 18;
+            this.gameModeComboBox.SelectedIndexChanged += new System.EventHandler(this.gameModeComboBox_SelectedIndexChanged);
             // 
-            // playBttn
+            // playButton
             // 
-            this.playBttn.Location = new System.Drawing.Point(86, 590);
-            this.playBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.playBttn.Name = "playBttn";
-            this.playBttn.Size = new System.Drawing.Size(58, 39);
-            this.playBttn.TabIndex = 19;
-            this.playBttn.Text = "Play";
-            this.playBttn.UseVisualStyleBackColor = true;
-            this.playBttn.Click += new System.EventHandler(this.playBttn_Click);
+            this.playButton.Location = new System.Drawing.Point(939, 40);
+            this.playButton.Margin = new System.Windows.Forms.Padding(2);
+            this.playButton.Name = "playButton";
+            this.playButton.Size = new System.Drawing.Size(58, 39);
+            this.playButton.TabIndex = 19;
+            this.playButton.Text = "Play";
+            this.playButton.UseVisualStyleBackColor = true;
+            this.playButton.Click += new System.EventHandler(this.playButton_Click);
             // 
             // computerPicturebox
             // 
             this.computerPicturebox.Location = new System.Drawing.Point(162, 33);
-            this.computerPicturebox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.computerPicturebox.Margin = new System.Windows.Forms.Padding(2);
             this.computerPicturebox.Name = "computerPicturebox";
             this.computerPicturebox.Size = new System.Drawing.Size(500, 208);
             this.computerPicturebox.TabIndex = 20;
@@ -249,18 +253,18 @@ namespace Project2
             // playerPicturebox
             // 
             this.playerPicturebox.Location = new System.Drawing.Point(162, 271);
-            this.playerPicturebox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.playerPicturebox.Margin = new System.Windows.Forms.Padding(2);
             this.playerPicturebox.Name = "playerPicturebox";
             this.playerPicturebox.Size = new System.Drawing.Size(500, 208);
             this.playerPicturebox.TabIndex = 21;
             this.playerPicturebox.TabStop = false;
             this.playerPicturebox.Click += new System.EventHandler(this.playerPicturebox_Click);
             // 
-            // nDeckCombobox
+            // numberOfDeckComboBox
             // 
-            this.nDeckCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.nDeckCombobox.FormattingEnabled = true;
-            this.nDeckCombobox.Items.AddRange(new object[] {
+            this.numberOfDeckComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.numberOfDeckComboBox.FormattingEnabled = true;
+            this.numberOfDeckComboBox.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
@@ -269,42 +273,69 @@ namespace Project2
             "6",
             "7",
             "8"});
-            this.nDeckCombobox.Location = new System.Drawing.Point(26, 87);
-            this.nDeckCombobox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.nDeckCombobox.Name = "nDeckCombobox";
-            this.nDeckCombobox.Size = new System.Drawing.Size(62, 21);
-            this.nDeckCombobox.TabIndex = 22;
+            this.numberOfDeckComboBox.Location = new System.Drawing.Point(26, 87);
+            this.numberOfDeckComboBox.Margin = new System.Windows.Forms.Padding(2);
+            this.numberOfDeckComboBox.Name = "numberOfDeckComboBox";
+            this.numberOfDeckComboBox.Size = new System.Drawing.Size(62, 21);
+            this.numberOfDeckComboBox.TabIndex = 22;
+            // 
+            // dealerValueRichTextBox
+            // 
+            this.dealerValueRichTextBox.Location = new System.Drawing.Point(716, 33);
+            this.dealerValueRichTextBox.Name = "dealerValueRichTextBox";
+            this.dealerValueRichTextBox.Size = new System.Drawing.Size(145, 96);
+            this.dealerValueRichTextBox.TabIndex = 24;
+            this.dealerValueRichTextBox.Text = "Some Value or Bust";
+            // 
+            // playerValueRichTextBox
+            // 
+            this.playerValueRichTextBox.Location = new System.Drawing.Point(716, 271);
+            this.playerValueRichTextBox.Name = "playerValueRichTextBox";
+            this.playerValueRichTextBox.Size = new System.Drawing.Size(145, 91);
+            this.playerValueRichTextBox.TabIndex = 25;
+            this.playerValueRichTextBox.Text = "Some Value or Bust";
+            // 
+            // winOrLoseRichTextBox
+            // 
+            this.winOrLoseRichTextBox.Location = new System.Drawing.Point(716, 450);
+            this.winOrLoseRichTextBox.Name = "winOrLoseRichTextBox";
+            this.winOrLoseRichTextBox.Size = new System.Drawing.Size(145, 55);
+            this.winOrLoseRichTextBox.TabIndex = 26;
+            this.winOrLoseRichTextBox.Text = "Win or Lose or Tie status";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(180)))), ((int)(((byte)(76)))));
-            this.ClientSize = new System.Drawing.Size(766, 552);
-            this.Controls.Add(this.nDeckCombobox);
+            this.BackColor = System.Drawing.Color.Gray;
+            this.ClientSize = new System.Drawing.Size(1074, 673);
+            this.Controls.Add(this.winOrLoseRichTextBox);
+            this.Controls.Add(this.playerValueRichTextBox);
+            this.Controls.Add(this.dealerValueRichTextBox);
+            this.Controls.Add(this.numberOfDeckComboBox);
             this.Controls.Add(this.playerPicturebox);
             this.Controls.Add(this.computerPicturebox);
-            this.Controls.Add(this.playBttn);
+            this.Controls.Add(this.playButton);
             this.Controls.Add(this.gameModeComboBox);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.gameModeLabel);
             this.Controls.Add(this.deckLabel);
-            this.Controls.Add(this.win_loseLabel);
-            this.Controls.Add(this.player_status_label);
-            this.Controls.Add(this.dealer_status_label);
-            this.Controls.Add(this.seedTxtbox);
+            this.Controls.Add(this.winOrLoseLabel);
+            this.Controls.Add(this.playerValueLabel);
+            this.Controls.Add(this.dealerValueLabel);
+            this.Controls.Add(this.seedTextbox);
             this.Controls.Add(this.seedLabel);
-            this.Controls.Add(this.betTxtbox);
-            this.Controls.Add(this.totalTxtbox);
-            this.Controls.Add(this.hitBttn);
-            this.Controls.Add(this.standBttn);
-            this.Controls.Add(this.resetBttn);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Controls.Add(this.betTextBox);
+            this.Controls.Add(this.totalTextBox);
+            this.Controls.Add(this.hitButton);
+            this.Controls.Add(this.standButton);
+            this.Controls.Add(this.resetButton);
+            this.Controls.Add(this.betLabel);
+            this.Controls.Add(this.totalLabel);
+            this.Controls.Add(this.playerCardsLabel);
+            this.Controls.Add(this.dealerCardsLabel);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "JasonTruong_and_MuhammedAdemola";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.computerPicturebox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerPicturebox)).EndInit();
@@ -315,27 +346,30 @@ namespace Project2
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button resetBttn;
-        private System.Windows.Forms.Button standBttn;
-        private System.Windows.Forms.Button hitBttn;
-        private System.Windows.Forms.TextBox totalTxtbox;
-        private System.Windows.Forms.TextBox betTxtbox;
+        private System.Windows.Forms.Label dealerCardsLabel;
+        private System.Windows.Forms.Label playerCardsLabel;
+        private System.Windows.Forms.Label totalLabel;
+        private System.Windows.Forms.Label betLabel;
+        private System.Windows.Forms.Button resetButton;
+        private System.Windows.Forms.Button standButton;
+        private System.Windows.Forms.Button hitButton;
+        private System.Windows.Forms.TextBox totalTextBox;
+        private System.Windows.Forms.TextBox betTextBox;
         private System.Windows.Forms.Label seedLabel;
-        private System.Windows.Forms.TextBox seedTxtbox;
-        private System.Windows.Forms.Label dealer_status_label;
-        private System.Windows.Forms.Label player_status_label;
-        private System.Windows.Forms.Label win_loseLabel;
+        private System.Windows.Forms.TextBox seedTextbox;
+        private System.Windows.Forms.Label dealerValueLabel;
+        private System.Windows.Forms.Label playerValueLabel;
+        private System.Windows.Forms.Label winOrLoseLabel;
         private System.Windows.Forms.Label deckLabel;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label gameModeLabel;
         private System.Windows.Forms.ComboBox gameModeComboBox;
-        private System.Windows.Forms.Button playBttn;
+        private System.Windows.Forms.Button playButton;
         private System.Windows.Forms.PictureBox computerPicturebox;
         private System.Windows.Forms.PictureBox playerPicturebox;
-        private System.Windows.Forms.ComboBox nDeckCombobox;
+        private System.Windows.Forms.ComboBox numberOfDeckComboBox;
+        private System.Windows.Forms.RichTextBox dealerValueRichTextBox;
+        private System.Windows.Forms.RichTextBox playerValueRichTextBox;
+        private System.Windows.Forms.RichTextBox winOrLoseRichTextBox;
     }
 }
 
