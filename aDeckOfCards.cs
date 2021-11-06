@@ -20,6 +20,11 @@ namespace Project2
         /// </summary>
         private readonly List<aCard> deck = new List<aCard>();
 
+        int cardCount = 52;
+        public int Count
+        {
+            get { return this.cardCount; }
+        }
         /// <summary>
         /// default constructor
         /// </summary>
@@ -34,6 +39,20 @@ namespace Project2
             }
         }
 
+        public aCard drawCard(int index)
+        {
+            return deck[index];
+        }
+
+        public void removeCard(int index)
+        {
+            deck.RemoveAt(index);
+        }
+
+        public bool isEmpty()
+        {
+            return this.cardCount == 0;
+        }
         /// <summary>
         /// 
         /// </summary>

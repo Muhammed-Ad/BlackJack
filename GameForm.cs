@@ -21,7 +21,7 @@ namespace Project2
 
         //imageList 
         ImageList playerPictureboxList;
-        ImageList computerPictureboxList;
+        ImageList dealerPictureboxList;
         
 
         //PictureBox computerPicturebox;
@@ -33,11 +33,12 @@ namespace Project2
 
         //number of decks
         int nDecks;
-        bool s17Mode = false;  //playing mode
+        bool s17Mode = true;  //playing mode
         //also got a deck of card one though lol.
         aDeckOfCards deck;
-        int computerSum;
+        int dealerSum;
         int playerSum;
+        int playerImageNum = 1, dealerImageNum = 1;
         aShoe dealingShoe;
         string win = "You Won";
         string lose = "You Lost";
@@ -53,9 +54,10 @@ namespace Project2
 
             //create the new iamge list
             playerPictureboxList = new ImageList();
-            //dealingShoe = new aShoe();
+            rand = new Random(999);
+            dealingShoe = new aShoe();
 
-            
+
         }
 
         public GameForm(int seed, int NumDecks, bool mode)
@@ -63,12 +65,12 @@ namespace Project2
             InitializeComponent();
 
             seedTextbox.Text = seed.ToString();
-            
-            //create the new iamge list
+            rand = new Random(seed);
+            s17Mode = mode;
+            dealingShoe = new aShoe(NumDecks);
             playerPictureboxList = new ImageList();
-            //dealingShoe = new aShoe();
-
-
+            dealerPictureboxList = new ImageList();
+            aCard deal = dealingShoe.Draw();
         }
 
         private void label1_Click(object sender, EventArgs e)

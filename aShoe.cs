@@ -37,10 +37,16 @@ namespace Project2
         public aCard Draw()
         {
             Random rand = new Random();
-            int value = rand.Next(0, deck.Count);
-            aCard drawCard = deck[value];
+            int DeckIndex = rand.Next(numberOfDecks);
+            if (shoe[DeckIndex].isEmpty())
+            {
+                shoe.RemoveAt(DeckIndex);
+            }
 
-            deck.RemoveAt(value);
+            int value = rand.Next(shoe[DeckIndex].Count);
+            aCard drawCard = shoe[DeckIndex].drawCard(value);
+
+            shoe[DeckIndex].removeCard(value);
 
             return drawCard;
 
