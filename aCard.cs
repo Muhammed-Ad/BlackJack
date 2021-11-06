@@ -10,8 +10,9 @@ using System.Drawing;
 namespace Project2
 {
    
-    public enum CardValue
+    public enum CardValue: int
     {
+        None = 0,
         Ace = 1,
         Two = 2,
         Three = 3,
@@ -22,191 +23,136 @@ namespace Project2
         Eight = 8,
         Nine = 9,
         Ten = 10,
-        Jack = 11,
-        Queen = 12,
-        King = 13
+        Jack = 10,
+        Queen = 10,
+        King = 10,
     }
 
     public enum CardSuit
     {
-        Hearts = 1,
-        Spades = 2,
-        Clubs = 3,
-        Diamonds = 4
+        None = 0,
+        Spades = 1,
+        Clubs = 2,
+        Diamonds = 3,
+        Hearts = 4    
+        
     }
 
 
     /// <summary>
     /// a card contains value, face and picture? 
     /// </summary>
-    class aCard
+    public class aCard
     {
         /// <summary>
         /// card value
         /// </summary>
         /// this is an enum
-        CardValue cardValue;
+        private CardValue cardValue;
 
         /// <summary>
         /// face 
         /// </summary>
-        CardSuit suit;
+        private CardSuit suit;
 
 
         /// <summary>
         /// the image
         /// </summary>
-        Image image;
+        private Image image;
 
-        public Image Image
+        public aCard(CardValue value, CardSuit suit, System.Drawing.Image image)
         {
-            get
-            {
-                return this.image;
-            }
+            this.cardValue = value;
+            this.suit = suit;
+            this.image = image;
         }
 
-        public CardValue Value
+        public Image getImage()
         {
-            get
-            {
-                return this.cardValue;
-            }
-            set
-            {
-                this.cardValue = value;
-                GetImage();
-            }
+            return this.image;
         }
 
-        public CardSuit Suit
+        public int getValue()
         {
-            get
-            {
-                return this.suit;
-            }
-            set
-            {
-                this.suit = value;
-                GetImage();
-            }
+            if (this.cardValue == CardValue.Ace)
+                return 1;
+            else if (this.cardValue == CardValue.Two)
+                return 2;
+            else if (this.cardValue == CardValue.Three)
+                return 3;
+            else if (this.cardValue == CardValue.Four)
+                return 4;
+            else if (this.cardValue == CardValue.Five)
+                return 5;
+            else if (this.cardValue == CardValue.Six)
+                return 6;
+            else if (this.cardValue == CardValue.Seven)
+                return 7;
+            else if (this.cardValue == CardValue.Eight)
+                return 8;
+            else if (this.cardValue == CardValue.Nine)
+                return 9;
+            else if (this.cardValue == CardValue.Ten || this.cardValue == CardValue.Jack ||
+                this.cardValue == CardValue.Queen || this.cardValue == CardValue.King)
+                return 10;
+            else
+                return 0;
         }
 
-        public aCard()
+        public static CardValue calculateValue(int value)
         {
-            cardValue = 0;
-            suit = 0;
-            image = null;
-        }
-        
-
-
-        public void GetImage()
-        {
-
-            if (this.Suit != 0 && this.Value != 0)//so it must be a valid card (see the Enums)
+            switch (value)
             {
-                int x = 0;//starting point from the left
-                int y = 0;//starting point from the top. Can be 0, 98, 196 and 294
-                int height = 97;
-                int width = 73;
-
-                switch (this.Suit)
-                {
-                    case CardSuit.Hearts:
-                        y = 196;
-                        break;
-                    case CardSuit.Spades:
-                        y = 98;
-                        break;
-                    case CardSuit.Clubs:
-                        y = 0;
-                        break;
-                    case CardSuit.Diamonds:
-                        y = 294;
-                        break; 
-                }
-                
-                x = width * ((int)this.Value - 1);//the Ace has the value of 1 (see the Enum), so the X coordinate will be the starting (first one), that's why we have to subtract 1. The card 6 has the total width of the first 6 cards (6*73=438) minus the total width of the first 5 cards (5*73=365). Of course it is 73. The starting X coordinate is at the end of the 5th card (or the start of the left side of the 6th card). Hope you understand. :)
-
-                Bitmap  source = Properties.Resources.cards;//the original cards.png image
-                Bitmap img = new Bitmap(width, height);//this will be the created one for each card
-                Graphics g = Graphics.FromImage(img);
-                g.DrawImage(source, new Rectangle(0, 0, width, height), new Rectangle(x, y, width, height), GraphicsUnit.Pixel);//here we slice the original into pieces
-                g.Dispose();
-                this.image = img;
-
-                
-                
+                case 1:
+                    return CardValue.Ace;
+                case 2:
+                    return CardValue.Two;
+                case 3:
+                    return CardValue.Three;
+                case 4:
+                    return CardValue.Four;
+                case 5:
+                    return CardValue.Five;
+                case 6:
+                    return CardValue.Six;
+                case 7:
+                    return CardValue.Seven;
+                case 8:
+                    return CardValue.Eight;
+                case 9:
+                    return CardValue.Nine;
+                case 10:
+                    return CardValue.Ten;
+                case 11:
+                    return CardValue.Jack;
+                case 12:
+                    return CardValue.Queen;
+                case 13:
+                    return CardValue.King;
+                default:
+                    return CardValue.None;
                
             }
         }
 
-        public Bitmap GetBitmapImage()
+        public static CardSuit calculateSuit(int value)
         {
-            Bitmap bitmapImg = new Bitmap(97,73);
-            
-
-            if (this.Suit != 0 && this.Value != 0)//so it must be a valid card (see the Enums)
+            switch (value)
             {
-                int x = 0;//starting point from the left
-                int y = 0;//starting point from the top. Can be 0, 98, 196 and 294
-                int height = 97;
-                int width = 73;
-
-                switch (this.Suit)
-                {
-                    case CardSuit.Hearts:
-                        y = 196;
-                        break;
-                    case CardSuit.Spades:
-                        y = 98;
-                        break;
-                    case CardSuit.Clubs:
-                        y = 0;
-                        break;
-                    case CardSuit.Diamonds:
-                        y = 294;
-                        break;
-                }
-
-                x = width * ((int)this.Value - 1);//the Ace has the value of 1 (see the Enum), so the X coordinate will be the starting (first one), that's why we have to subtract 1. The card 6 has the total width of the first 6 cards (6*73=438) minus the total width of the first 5 cards (5*73=365). Of course it is 73. The starting X coordinate is at the end of the 5th card (or the start of the left side of the 6th card). Hope you understand. :)
-
-                Bitmap source = Properties.Resources.cards;//the original cards.png image
-                Bitmap img = new Bitmap(width, height);//this will be the created one for each card
-                Graphics g = Graphics.FromImage(img);
-                g.DrawImage(source, new Rectangle(0, 0, width, height), new Rectangle(x, y, width, height), GraphicsUnit.Pixel);//here we slice the original into pieces
-                g.Dispose();
-                this.image = img;
-
-
-
-                return img;
+                case 1:
+                    return CardSuit.Spades;
+                case 2:
+                    return CardSuit.Clubs;
+                case 3:
+                    return CardSuit.Diamonds;
+                case 4:
+                    return CardSuit.Hearts;
+                default:
+                    return CardSuit.None;
             }
-
-            return bitmapImg;
-
-
         }
-
-        /*
-
-        public aCard drawCard(Hand hand)
-        {
-            aCard drawn = cards[cards.Count - 1];
-            cards.Remove(drawn);
-            hands.Cards.Add(drawn);
-            return dranw;
-        }
-        */
-
-
-
-
-
-
 
     }
-
     
 }

@@ -56,6 +56,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Hand.cs" />
+    <Compile Include="IDrawCard.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -69,6 +70,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -82,6 +84,91 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="cards\10C.png" />
+    <Content Include="cards\10D.png" />
+    <Content Include="cards\10H.png" />
+    <Content Include="cards\10S.png" />
+    <Content Include="cards\2C.png" />
+    <Content Include="cards\2D.png" />
+    <Content Include="cards\2H.png" />
+    <Content Include="cards\2S.png" />
+    <Content Include="cards\3C.png" />
+    <Content Include="cards\3D.png" />
+    <Content Include="cards\3H.png" />
+    <Content Include="cards\3S.png" />
+    <Content Include="cards\4C.png" />
+    <Content Include="cards\4D.png" />
+    <Content Include="cards\4H.png" />
+    <Content Include="cards\4S.png" />
+    <Content Include="cards\4_pips.png" />
+    <Content Include="cards\5C.png" />
+    <Content Include="cards\5D.png" />
+    <Content Include="cards\5H.png" />
+    <Content Include="cards\5S.png" />
+    <Content Include="cards\6C.png" />
+    <Content Include="cards\6D.png" />
+    <Content Include="cards\6H.png" />
+    <Content Include="cards\6S.png" />
+    <Content Include="cards\7C.png" />
+    <Content Include="cards\7D.png" />
+    <Content Include="cards\7H.png" />
+    <Content Include="cards\7S.png" />
+    <Content Include="cards\8C.png" />
+    <Content Include="cards\8D.png" />
+    <Content Include="cards\8H.png" />
+    <Content Include="cards\8S.png" />
+    <Content Include="cards\9C.png" />
+    <Content Include="cards\9D.png" />
+    <Content Include="cards\9H.png" />
+    <Content Include="cards\9S.png" />
+    <Content Include="cards\AC.png" />
+    <Content Include="cards\aces.png" />
+    <Content Include="cards\AD.png" />
+    <Content Include="cards\AH.png" />
+    <Content Include="cards\AS.png" />
+    <Content Include="cards\back_cards-07.png" />
+    <Content Include="cards\BI_winner__01413.1440111674.1280.1280.png" />
+    <Content Include="cards\blue_back.png" />
+    <Content Include="cards\gray_back.png" />
+    <Content Include="cards\green_back.png" />
+    <Content Include="cards\honors_spade-14.png" />
+    <Content Include="cards\honor_clubs.png" />
+    <Content Include="cards\honor_diamond.png" />
+    <Content Include="cards\honor_heart-14.png" />
+    <Content Include="cards\icon.ico" />
+    <Content Include="cards\JC.png" />
+    <Content Include="cards\JD.png" />
+    <Content Include="cards\JH.png" />
+    <Content Include="cards\JS.png" />
+    <Content Include="cards\J_CLub.png" />
+    <Content Include="cards\J_Dia.png" />
+    <Content Include="cards\J_Hrt.png" />
+    <Content Include="cards\J_Sp.png" />
+    <Content Include="cards\KC.png" />
+    <Content Include="cards\KD.png" />
+    <Content Include="cards\KH.png" />
+    <Content Include="cards\KS.png" />
+    <Content Include="cards\K_Club.png" />
+    <Content Include="cards\K_Dia.png" />
+    <Content Include="cards\K_Hrt.png" />
+    <Content Include="cards\K_Sp.png" />
+    <Content Include="cards\purple_back.png" />
+    <Content Include="cards\QC.png" />
+    <Content Include="cards\QD.png" />
+    <Content Include="cards\QH.png" />
+    <Content Include="cards\QS.png" />
+    <Content Include="cards\Q_Club.png" />
+    <Content Include="cards\Q_Dia.png" />
+    <Content Include="cards\Q_Hrt.png" />
+    <Content Include="cards\Q_Sp.png" />
+    <Content Include="cards\red_back.png" />
+    <Content Include="cards\table_play.png" />
+    <Content Include="cards\yellow_back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
