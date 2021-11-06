@@ -11,7 +11,7 @@ namespace Project2
     /// <summary>
     /// contain up to 8 decks of card 
     /// </summary>
-    public class aDeckOfCards : IDrawCard
+    public class aDeckOfCards// : IDrawCard
     {
 
         /// <summary>
@@ -153,7 +153,7 @@ namespace Project2
             }
         }
 
-        public aCard Draw()
+        /*public aCard Draw()
         {
             Random rand = new Random();
             int value = rand.Next(0, deck.Count);
@@ -163,7 +163,7 @@ namespace Project2
 
             return drawCard;
 
-        }
+        }*/
     }
 }
 

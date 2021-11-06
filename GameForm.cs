@@ -14,7 +14,7 @@ namespace Project2
     /// <summary>
     /// Main form
     /// </summary>
-    public partial class Form1 : Form
+    public partial class GameForm : Form
     {
         
 
@@ -27,13 +27,13 @@ namespace Project2
         //PictureBox computerPicturebox;
         //PictureBox playerPicturebox;
         int startingHand = 2;
-
+        Random rand; //random number gen. to start from once given seed
         //did not specify though
         int max_cards_on_table = 11;
 
         //number of decks
         int nDecks;
-
+        bool s17Mode = false;  //playing mode
         //also got a deck of card one though lol.
         aDeckOfCards deck;
         int computerSum;
@@ -47,7 +47,7 @@ namespace Project2
         /// <summary>
         /// form1 constructor
         /// </summary>
-        public Form1()
+        public GameForm()
         {
             InitializeComponent();
 
@@ -56,6 +56,19 @@ namespace Project2
             //dealingShoe = new aShoe();
 
             
+        }
+
+        public GameForm(int seed, int NumDecks, bool mode)
+        {
+            InitializeComponent();
+
+            seedTextbox.Text = seed.ToString();
+            
+            //create the new iamge list
+            playerPictureboxList = new ImageList();
+            //dealingShoe = new aShoe();
+
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -150,7 +163,10 @@ namespace Project2
 
         private void hitButton_Click(object sender, EventArgs e)
         {
-            
+            if(playerSum >= 17)//check the s17 mode
+            {
+
+            }
         }
 
         private void standButton_Click(object sender, EventArgs e)

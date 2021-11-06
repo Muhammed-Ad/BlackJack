@@ -7,7 +7,7 @@ namespace Project2
     /// <summary>
     /// creating a shuffling machine or a shoe containing potentially up to 8 decks of cards
     /// </summary>
-    public class aShoe //: IDrawCard
+    public class aShoe : IDrawCard
     {
         /// <summary>
         /// object shoe as read only at the runtime
@@ -33,7 +33,7 @@ namespace Project2
 
         }
 
-        /*
+        
         public aCard Draw()
         {
             Random rand = new Random();
@@ -44,7 +44,7 @@ namespace Project2
 
             return drawCard;
 
-        }*/
+        }
     }
  
 

@@ -34,14 +34,14 @@ namespace Project2
             this.ModeLabel = new System.Windows.Forms.Label();
             this.SeedTextBox = new System.Windows.Forms.TextBox();
             this.SeedLabel = new System.Windows.Forms.Label();
-            this.NumDecksComboBox = new System.Windows.Forms.ComboBox();
             this.NumDecksLabel = new System.Windows.Forms.Label();
+            this.NumDecksTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // S17CheckBox
             // 
             this.S17CheckBox.AutoSize = true;
-            this.S17CheckBox.Location = new System.Drawing.Point(179, 182);
+            this.S17CheckBox.Location = new System.Drawing.Point(168, 182);
             this.S17CheckBox.Name = "S17CheckBox";
             this.S17CheckBox.Size = new System.Drawing.Size(51, 19);
             this.S17CheckBox.TabIndex = 14;
@@ -84,16 +84,6 @@ namespace Project2
             this.SeedLabel.TabIndex = 10;
             this.SeedLabel.Text = "Seed:";
             // 
-            // NumDecksComboBox
-            // 
-            this.NumDecksComboBox.FormattingEnabled = true;
-            this.NumDecksComboBox.Location = new System.Drawing.Point(168, 62);
-            this.NumDecksComboBox.Name = "NumDecksComboBox";
-            this.NumDecksComboBox.Size = new System.Drawing.Size(121, 21);
-            this.NumDecksComboBox.Sorted = true;
-            this.NumDecksComboBox.TabIndex = 9;
-            this.NumDecksComboBox.Text = "1";
-            // 
             // NumDecksLabel
             // 
             this.NumDecksLabel.AutoSize = true;
@@ -103,17 +93,25 @@ namespace Project2
             this.NumDecksLabel.TabIndex = 8;
             this.NumDecksLabel.Text = "Number of Decks:";
             // 
+            // NumDecksTextBox
+            // 
+            this.NumDecksTextBox.Location = new System.Drawing.Point(168, 62);
+            this.NumDecksTextBox.Name = "NumDecksTextBox";
+            this.NumDecksTextBox.Size = new System.Drawing.Size(100, 20);
+            this.NumDecksTextBox.TabIndex = 15;
+            this.NumDecksTextBox.Text = "1";
+            // 
             // StartingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(399, 421);
+            this.Controls.Add(this.NumDecksTextBox);
             this.Controls.Add(this.S17CheckBox);
             this.Controls.Add(this.StartButton);
             this.Controls.Add(this.ModeLabel);
             this.Controls.Add(this.SeedTextBox);
             this.Controls.Add(this.SeedLabel);
-            this.Controls.Add(this.NumDecksComboBox);
             this.Controls.Add(this.NumDecksLabel);
             this.Name = "StartingForm";
             this.Text = "StartingForm";
@@ -129,7 +127,7 @@ namespace Project2
         private System.Windows.Forms.Label ModeLabel;
         private System.Windows.Forms.TextBox SeedTextBox;
         private System.Windows.Forms.Label SeedLabel;
-        private System.Windows.Forms.ComboBox NumDecksComboBox;
         private System.Windows.Forms.Label NumDecksLabel;
+        private System.Windows.Forms.TextBox NumDecksTextBox;
     }
 }

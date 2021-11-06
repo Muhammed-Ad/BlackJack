@@ -1,7 +1,7 @@
 ﻿
 namespace Project2
 {
-    partial class Form1
+    partial class GameForm
     {
         /// <summary>
         /// Required designer variable.
@@ -110,7 +110,7 @@ namespace Project2
             this.dealerCardsLabel.Location = new System.Drawing.Point(334, 10);
             this.dealerCardsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.dealerCardsLabel.Name = "dealerCardsLabel";
-            this.dealerCardsLabel.Size = new System.Drawing.Size(186, 31);
+            this.dealerCardsLabel.Size = new System.Drawing.Size(230, 39);
             this.dealerCardsLabel.TabIndex = 0;
             this.dealerCardsLabel.Text = "Dealer Cards";
             this.dealerCardsLabel.Click += new System.EventHandler(this.dealerCards_Click);
@@ -122,7 +122,7 @@ namespace Project2
             this.playerCardsLabel.Location = new System.Drawing.Point(334, 271);
             this.playerCardsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.playerCardsLabel.Name = "playerCardsLabel";
-            this.playerCardsLabel.Size = new System.Drawing.Size(183, 31);
+            this.playerCardsLabel.Size = new System.Drawing.Size(226, 39);
             this.playerCardsLabel.TabIndex = 1;
             this.playerCardsLabel.Text = "Player Cards";
             // 
@@ -133,9 +133,10 @@ namespace Project2
             this.totalLabel.Location = new System.Drawing.Point(8, 16);
             this.totalLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.totalLabel.Name = "totalLabel";
-            this.totalLabel.Size = new System.Drawing.Size(71, 20);
+            this.totalLabel.Size = new System.Drawing.Size(92, 25);
             this.totalLabel.TabIndex = 2;
             this.totalLabel.Text = "Total ($):";
+            this.totalLabel.UseWaitCursor = true;
             // 
             // betLabel
             // 
@@ -144,9 +145,10 @@ namespace Project2
             this.betLabel.Location = new System.Drawing.Point(10, 64);
             this.betLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.betLabel.Name = "betLabel";
-            this.betLabel.Size = new System.Drawing.Size(61, 20);
+            this.betLabel.Size = new System.Drawing.Size(77, 25);
             this.betLabel.TabIndex = 3;
             this.betLabel.Text = "Bet ($):";
+            this.betLabel.UseWaitCursor = true;
             // 
             // resetButton
             // 
@@ -190,6 +192,7 @@ namespace Project2
             this.totalTextBox.Name = "totalTextBox";
             this.totalTextBox.Size = new System.Drawing.Size(113, 20);
             this.totalTextBox.TabIndex = 7;
+            this.totalTextBox.UseWaitCursor = true;
             // 
             // betTextBox
             // 
@@ -198,21 +201,22 @@ namespace Project2
             this.betTextBox.Name = "betTextBox";
             this.betTextBox.Size = new System.Drawing.Size(118, 20);
             this.betTextBox.TabIndex = 8;
+            this.betTextBox.UseWaitCursor = true;
             // 
             // seedLabel
             // 
             this.seedLabel.AutoSize = true;
             this.seedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.seedLabel.Location = new System.Drawing.Point(1015, 162);
+            this.seedLabel.Location = new System.Drawing.Point(995, 162);
             this.seedLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.seedLabel.Name = "seedLabel";
-            this.seedLabel.Size = new System.Drawing.Size(55, 24);
+            this.seedLabel.Size = new System.Drawing.Size(71, 29);
             this.seedLabel.TabIndex = 9;
             this.seedLabel.Text = "Seed";
             // 
             // seedTextbox
             // 
-            this.seedTextbox.Location = new System.Drawing.Point(1006, 186);
+            this.seedTextbox.Location = new System.Drawing.Point(1006, 193);
             this.seedTextbox.Margin = new System.Windows.Forms.Padding(2);
             this.seedTextbox.Name = "seedTextbox";
             this.seedTextbox.Size = new System.Drawing.Size(52, 20);
@@ -225,7 +229,7 @@ namespace Project2
             this.dealerValueLabel.Location = new System.Drawing.Point(747, 17);
             this.dealerValueLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.dealerValueLabel.Name = "dealerValueLabel";
-            this.dealerValueLabel.Size = new System.Drawing.Size(59, 24);
+            this.dealerValueLabel.Size = new System.Drawing.Size(74, 29);
             this.dealerValueLabel.TabIndex = 12;
             this.dealerValueLabel.Text = "Value";
             // 
@@ -236,7 +240,7 @@ namespace Project2
             this.playerValueLabel.Location = new System.Drawing.Point(747, 271);
             this.playerValueLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.playerValueLabel.Name = "playerValueLabel";
-            this.playerValueLabel.Size = new System.Drawing.Size(59, 24);
+            this.playerValueLabel.Size = new System.Drawing.Size(74, 29);
             this.playerValueLabel.TabIndex = 13;
             this.playerValueLabel.Text = "Value";
             // 
@@ -247,7 +251,7 @@ namespace Project2
             this.winOrLoseLabel.Location = new System.Drawing.Point(728, 432);
             this.winOrLoseLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.winOrLoseLabel.Name = "winOrLoseLabel";
-            this.winOrLoseLabel.Size = new System.Drawing.Size(131, 24);
+            this.winOrLoseLabel.Size = new System.Drawing.Size(171, 29);
             this.winOrLoseLabel.TabIndex = 14;
             this.winOrLoseLabel.Text = "win/lose status";
             // 
@@ -258,7 +262,7 @@ namespace Project2
             this.deckLabel.Location = new System.Drawing.Point(22, 72);
             this.deckLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.deckLabel.Name = "deckLabel";
-            this.deckLabel.Size = new System.Drawing.Size(129, 20);
+            this.deckLabel.Size = new System.Drawing.Size(159, 25);
             this.deckLabel.TabIndex = 15;
             this.deckLabel.Text = "Number of decks";
             // 
@@ -269,7 +273,7 @@ namespace Project2
             this.gameModeLabel.Location = new System.Drawing.Point(22, 10);
             this.gameModeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.gameModeLabel.Name = "gameModeLabel";
-            this.gameModeLabel.Size = new System.Drawing.Size(97, 20);
+            this.gameModeLabel.Size = new System.Drawing.Size(119, 25);
             this.gameModeLabel.TabIndex = 17;
             this.gameModeLabel.Text = "Game mode";
             // 
@@ -575,7 +579,7 @@ namespace Project2
             this.moneyGroupBox.TabStop = false;
             this.moneyGroupBox.UseWaitCursor = true;
             // 
-            // Form1
+            // GameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -625,7 +629,7 @@ namespace Project2
             this.Controls.Add(this.playerCardsLabel);
             this.Controls.Add(this.dealerCardsLabel);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "Form1";
+            this.Name = "GameForm";
             this.Text = "JasonTruong_and_MuhammedAdemola";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dealerPicturebox1)).EndInit();

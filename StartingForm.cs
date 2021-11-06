@@ -26,14 +26,14 @@ namespace Project2
                 MessageBox.Show("Seed must be an integer"); //build the constructor to put args
                 return;
             }
-            if (!int.TryParse(NumDecksComboBox.Text, out NumDecks))
+            if (!int.TryParse(NumDecksTextBox.Text, out NumDecks))
             {
                 MessageBox.Show("Number of decks must be an integer");
                 return;
 
             }
                 
-            GameForm GameForm = new GameForm();
+            GameForm GameForm = new GameForm(seed, NumDecks, s17);
             GameForm.Show();
         }
     }
