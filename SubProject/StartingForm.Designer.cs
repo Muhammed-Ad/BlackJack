@@ -46,6 +46,7 @@ namespace SubProject
             this.NumDecksLabel.Size = new System.Drawing.Size(105, 15);
             this.NumDecksLabel.TabIndex = 0;
             this.NumDecksLabel.Text = "Number of Decks:";
+            this.NumDecksLabel.Click += new System.EventHandler(this.NumDecksLabel_Click);
             // 
             // NumDecksComboBox
             // 
@@ -56,6 +57,7 @@ namespace SubProject
             this.NumDecksComboBox.Sorted = true;
             this.NumDecksComboBox.TabIndex = 1;
             this.NumDecksComboBox.Text = "1";
+            this.NumDecksComboBox.SelectedIndexChanged += new System.EventHandler(this.NumDecksComboBox_SelectedIndexChanged);
             // 
             // SeedLabel
             // 
@@ -65,6 +67,7 @@ namespace SubProject
             this.SeedLabel.Size = new System.Drawing.Size(39, 15);
             this.SeedLabel.TabIndex = 2;
             this.SeedLabel.Text = "Seed:";
+            this.SeedLabel.Click += new System.EventHandler(this.SeedLabel_Click);
             // 
             // SeedTextBox
             // 
@@ -73,6 +76,7 @@ namespace SubProject
             this.SeedTextBox.Size = new System.Drawing.Size(100, 20);
             this.SeedTextBox.TabIndex = 3;
             this.SeedTextBox.Text = "999";
+            this.SeedTextBox.TextChanged += new System.EventHandler(this.SeedTextBox_TextChanged);
             // 
             // ModeLabel
             // 
@@ -82,6 +86,7 @@ namespace SubProject
             this.ModeLabel.Size = new System.Drawing.Size(42, 15);
             this.ModeLabel.TabIndex = 5;
             this.ModeLabel.Text = "Mode:";
+            this.ModeLabel.Click += new System.EventHandler(this.ModeLabel_Click);
             // 
             // StartButton
             // 
@@ -102,6 +107,7 @@ namespace SubProject
             this.S17CheckBox.TabIndex = 7;
             this.S17CheckBox.Text = "S17";
             this.S17CheckBox.UseVisualStyleBackColor = true;
+            this.S17CheckBox.CheckedChanged += new System.EventHandler(this.S17CheckBox_CheckedChanged);
             // 
             // StartingForm
             // 

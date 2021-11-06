@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Project2
 {
     static class Program
@@ -16,7 +17,7 @@ namespace Project2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new StartingForm()); 
 
             //aShoe dealingShoe = new aShoe();
             //dealingShoe.Draw

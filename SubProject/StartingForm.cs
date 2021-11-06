@@ -30,5 +30,35 @@ namespace SubProject
             Form1 GameForm = new Form1();
             GameForm.Show();
         }
+
+        private void S17CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ModeLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SeedTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SeedLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NumDecksComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NumDecksLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
