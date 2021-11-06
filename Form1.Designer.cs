@@ -29,6 +29,7 @@ namespace Project2
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dealerCardsLabel = new System.Windows.Forms.Label();
             this.playerCardsLabel = new System.Windows.Forms.Label();
             this.totalLabel = new System.Windows.Forms.Label();
@@ -53,6 +54,7 @@ namespace Project2
             this.dealerValueRichTextBox = new System.Windows.Forms.RichTextBox();
             this.playerValueRichTextBox = new System.Windows.Forms.RichTextBox();
             this.winOrLoseRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.computerPicturebox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerPicturebox)).BeginInit();
             this.SuspendLayout();
@@ -63,7 +65,7 @@ namespace Project2
             this.dealerCardsLabel.Location = new System.Drawing.Point(376, 10);
             this.dealerCardsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.dealerCardsLabel.Name = "dealerCardsLabel";
-            this.dealerCardsLabel.Size = new System.Drawing.Size(68, 13);
+            this.dealerCardsLabel.Size = new System.Drawing.Size(79, 15);
             this.dealerCardsLabel.TabIndex = 0;
             this.dealerCardsLabel.Text = "Dealer Cards";
             this.dealerCardsLabel.Click += new System.EventHandler(this.dealerCards_Click);
@@ -74,7 +76,7 @@ namespace Project2
             this.playerCardsLabel.Location = new System.Drawing.Point(376, 248);
             this.playerCardsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.playerCardsLabel.Name = "playerCardsLabel";
-            this.playerCardsLabel.Size = new System.Drawing.Size(66, 13);
+            this.playerCardsLabel.Size = new System.Drawing.Size(76, 15);
             this.playerCardsLabel.TabIndex = 1;
             this.playerCardsLabel.Text = "Player Cards";
             // 
@@ -84,7 +86,7 @@ namespace Project2
             this.totalLabel.Location = new System.Drawing.Point(24, 133);
             this.totalLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.totalLabel.Name = "totalLabel";
-            this.totalLabel.Size = new System.Drawing.Size(49, 13);
+            this.totalLabel.Size = new System.Drawing.Size(55, 15);
             this.totalLabel.TabIndex = 2;
             this.totalLabel.Text = "Total ($):";
             // 
@@ -94,7 +96,7 @@ namespace Project2
             this.betLabel.Location = new System.Drawing.Point(24, 193);
             this.betLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.betLabel.Name = "betLabel";
-            this.betLabel.Size = new System.Drawing.Size(41, 13);
+            this.betLabel.Size = new System.Drawing.Size(46, 15);
             this.betLabel.TabIndex = 3;
             this.betLabel.Text = "Bet ($):";
             // 
@@ -153,7 +155,7 @@ namespace Project2
             this.seedLabel.Location = new System.Drawing.Point(954, 162);
             this.seedLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.seedLabel.Name = "seedLabel";
-            this.seedLabel.Size = new System.Drawing.Size(32, 13);
+            this.seedLabel.Size = new System.Drawing.Size(36, 15);
             this.seedLabel.TabIndex = 9;
             this.seedLabel.Text = "Seed";
             // 
@@ -171,7 +173,7 @@ namespace Project2
             this.dealerValueLabel.Location = new System.Drawing.Point(761, 10);
             this.dealerValueLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.dealerValueLabel.Name = "dealerValueLabel";
-            this.dealerValueLabel.Size = new System.Drawing.Size(34, 13);
+            this.dealerValueLabel.Size = new System.Drawing.Size(38, 15);
             this.dealerValueLabel.TabIndex = 12;
             this.dealerValueLabel.Text = "Value";
             // 
@@ -181,7 +183,7 @@ namespace Project2
             this.playerValueLabel.Location = new System.Drawing.Point(771, 248);
             this.playerValueLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.playerValueLabel.Name = "playerValueLabel";
-            this.playerValueLabel.Size = new System.Drawing.Size(34, 13);
+            this.playerValueLabel.Size = new System.Drawing.Size(38, 15);
             this.playerValueLabel.TabIndex = 13;
             this.playerValueLabel.Text = "Value";
             // 
@@ -191,7 +193,7 @@ namespace Project2
             this.winOrLoseLabel.Location = new System.Drawing.Point(748, 417);
             this.winOrLoseLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.winOrLoseLabel.Name = "winOrLoseLabel";
-            this.winOrLoseLabel.Size = new System.Drawing.Size(78, 13);
+            this.winOrLoseLabel.Size = new System.Drawing.Size(87, 15);
             this.winOrLoseLabel.TabIndex = 14;
             this.winOrLoseLabel.Text = "win/lose status";
             // 
@@ -201,7 +203,7 @@ namespace Project2
             this.deckLabel.Location = new System.Drawing.Point(20, 53);
             this.deckLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.deckLabel.Name = "deckLabel";
-            this.deckLabel.Size = new System.Drawing.Size(88, 13);
+            this.deckLabel.Size = new System.Drawing.Size(100, 15);
             this.deckLabel.TabIndex = 15;
             this.deckLabel.Text = "Number of decks";
             // 
@@ -211,7 +213,7 @@ namespace Project2
             this.gameModeLabel.Location = new System.Drawing.Point(25, 10);
             this.gameModeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.gameModeLabel.Name = "gameModeLabel";
-            this.gameModeLabel.Size = new System.Drawing.Size(64, 13);
+            this.gameModeLabel.Size = new System.Drawing.Size(76, 15);
             this.gameModeLabel.TabIndex = 17;
             this.gameModeLabel.Text = "Game mode";
             // 
@@ -303,6 +305,12 @@ namespace Project2
             this.winOrLoseRichTextBox.TabIndex = 26;
             this.winOrLoseRichTextBox.Text = "Win or Lose or Tie status";
             // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -370,6 +378,7 @@ namespace Project2
         private System.Windows.Forms.RichTextBox dealerValueRichTextBox;
         private System.Windows.Forms.RichTextBox playerValueRichTextBox;
         private System.Windows.Forms.RichTextBox winOrLoseRichTextBox;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }
 

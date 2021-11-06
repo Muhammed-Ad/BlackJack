@@ -21,11 +21,20 @@ namespace Project2
         {
             int seed; int NumDecks;
             bool s17 = S17CheckBox.Checked;
-            while (!int.TryParse(SeedTextBox.Text, out seed))
+            if(!int.TryParse(SeedTextBox.Text, out seed))
+            {
                 MessageBox.Show("Seed must be an integer"); //build the constructor to put args
+                return;
+            }
+                
 
-            while (!int.TryParse(NumDecksComboBox.Text, out NumDecks))
+            if (!int.TryParse(NumDecksComboBox.Text, out NumDecks))
+            {
                 MessageBox.Show("Number of decks must be an integer");
+                return;
+
+            }
+                
             Form1 GameForm = new Form1();
             GameForm.Show();
         }
