@@ -88,11 +88,6 @@ namespace Project2
             this.Close();
         }
 
-        private void playerPicturebox_Click(object sender, EventArgs e)
-        {
-
-        }
-
         /*
         //need picture box though
         private void updatePicturebox(ref PictureBox pBox, ref Hand hand)
@@ -132,11 +127,6 @@ namespace Project2
             pBox.Image = combinedBitmap;
         }*/
 
-        private void computerPicturebox_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void gameModeComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -169,6 +159,16 @@ namespace Project2
         }
 
         private void dealerCards_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void playerPicturebox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dealerPicturebox1_Click(object sender, EventArgs e)
         {
 
         }

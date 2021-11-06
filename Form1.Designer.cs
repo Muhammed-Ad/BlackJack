@@ -47,23 +47,70 @@ namespace Project2
             this.gameModeLabel = new System.Windows.Forms.Label();
             this.gameModeComboBox = new System.Windows.Forms.ComboBox();
             this.playButton = new System.Windows.Forms.Button();
-            this.computerPicturebox = new System.Windows.Forms.PictureBox();
-            this.playerPicturebox = new System.Windows.Forms.PictureBox();
+            this.dealerPicturebox1 = new System.Windows.Forms.PictureBox();
+            this.playerPicturebox1 = new System.Windows.Forms.PictureBox();
             this.numberOfDeckComboBox = new System.Windows.Forms.ComboBox();
             this.dealerValueRichTextBox = new System.Windows.Forms.RichTextBox();
             this.playerValueRichTextBox = new System.Windows.Forms.RichTextBox();
             this.winOrLoseRichTextBox = new System.Windows.Forms.RichTextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.computerPicturebox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.playerPicturebox)).BeginInit();
+            this.dealerPictureBox2 = new System.Windows.Forms.PictureBox();
+            this.dealerPictureBox3 = new System.Windows.Forms.PictureBox();
+            this.dealerPictureBox4 = new System.Windows.Forms.PictureBox();
+            this.dealerPictureBox5 = new System.Windows.Forms.PictureBox();
+            this.dealerPictureBox6 = new System.Windows.Forms.PictureBox();
+            this.dealerPictureBox8 = new System.Windows.Forms.PictureBox();
+            this.dealerPictureBox9 = new System.Windows.Forms.PictureBox();
+            this.dealerPictureBox10 = new System.Windows.Forms.PictureBox();
+            this.dealerPictureBox11 = new System.Windows.Forms.PictureBox();
+            this.dealerPictureBox12 = new System.Windows.Forms.PictureBox();
+            this.dealerPictureBox7 = new System.Windows.Forms.PictureBox();
+            this.playerPicturebox2 = new System.Windows.Forms.PictureBox();
+            this.playerPicturebox3 = new System.Windows.Forms.PictureBox();
+            this.playerPicturebox4 = new System.Windows.Forms.PictureBox();
+            this.playerPicturebox5 = new System.Windows.Forms.PictureBox();
+            this.playerPicturebox6 = new System.Windows.Forms.PictureBox();
+            this.playerPicturebox7 = new System.Windows.Forms.PictureBox();
+            this.playerPicturebox11 = new System.Windows.Forms.PictureBox();
+            this.playerPicturebox8 = new System.Windows.Forms.PictureBox();
+            this.playerPicturebox9 = new System.Windows.Forms.PictureBox();
+            this.playerPicturebox10 = new System.Windows.Forms.PictureBox();
+            this.playerPicturebox12 = new System.Windows.Forms.PictureBox();
+            this.moneyGroupBox = new System.Windows.Forms.GroupBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dealerPicturebox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerPicturebox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dealerPictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dealerPictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dealerPictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dealerPictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dealerPictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dealerPictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dealerPictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dealerPictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dealerPictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dealerPictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dealerPictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerPicturebox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerPicturebox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerPicturebox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerPicturebox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerPicturebox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerPicturebox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerPicturebox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerPicturebox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerPicturebox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerPicturebox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerPicturebox12)).BeginInit();
+            this.moneyGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // dealerCardsLabel
             // 
             this.dealerCardsLabel.AutoSize = true;
-            this.dealerCardsLabel.Location = new System.Drawing.Point(376, 10);
+            this.dealerCardsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dealerCardsLabel.Location = new System.Drawing.Point(334, 10);
             this.dealerCardsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.dealerCardsLabel.Name = "dealerCardsLabel";
-            this.dealerCardsLabel.Size = new System.Drawing.Size(68, 13);
+            this.dealerCardsLabel.Size = new System.Drawing.Size(186, 31);
             this.dealerCardsLabel.TabIndex = 0;
             this.dealerCardsLabel.Text = "Dealer Cards";
             this.dealerCardsLabel.Click += new System.EventHandler(this.dealerCards_Click);
@@ -71,36 +118,39 @@ namespace Project2
             // playerCardsLabel
             // 
             this.playerCardsLabel.AutoSize = true;
-            this.playerCardsLabel.Location = new System.Drawing.Point(376, 248);
+            this.playerCardsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.playerCardsLabel.Location = new System.Drawing.Point(334, 271);
             this.playerCardsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.playerCardsLabel.Name = "playerCardsLabel";
-            this.playerCardsLabel.Size = new System.Drawing.Size(66, 13);
+            this.playerCardsLabel.Size = new System.Drawing.Size(183, 31);
             this.playerCardsLabel.TabIndex = 1;
             this.playerCardsLabel.Text = "Player Cards";
             // 
             // totalLabel
             // 
             this.totalLabel.AutoSize = true;
-            this.totalLabel.Location = new System.Drawing.Point(24, 133);
+            this.totalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalLabel.Location = new System.Drawing.Point(8, 16);
             this.totalLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.totalLabel.Name = "totalLabel";
-            this.totalLabel.Size = new System.Drawing.Size(49, 13);
+            this.totalLabel.Size = new System.Drawing.Size(71, 20);
             this.totalLabel.TabIndex = 2;
             this.totalLabel.Text = "Total ($):";
             // 
             // betLabel
             // 
             this.betLabel.AutoSize = true;
-            this.betLabel.Location = new System.Drawing.Point(24, 193);
+            this.betLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.betLabel.Location = new System.Drawing.Point(10, 64);
             this.betLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.betLabel.Name = "betLabel";
-            this.betLabel.Size = new System.Drawing.Size(41, 13);
+            this.betLabel.Size = new System.Drawing.Size(61, 20);
             this.betLabel.TabIndex = 3;
             this.betLabel.Text = "Bet ($):";
             // 
             // resetButton
             // 
-            this.resetButton.Location = new System.Drawing.Point(939, 107);
+            this.resetButton.Location = new System.Drawing.Point(1000, 107);
             this.resetButton.Margin = new System.Windows.Forms.Padding(2);
             this.resetButton.Name = "resetButton";
             this.resetButton.Size = new System.Drawing.Size(58, 39);
@@ -111,10 +161,11 @@ namespace Project2
             // 
             // standButton
             // 
-            this.standButton.Location = new System.Drawing.Point(465, 499);
+            this.standButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.standButton.Location = new System.Drawing.Point(457, 512);
             this.standButton.Margin = new System.Windows.Forms.Padding(2);
             this.standButton.Name = "standButton";
-            this.standButton.Size = new System.Drawing.Size(60, 35);
+            this.standButton.Size = new System.Drawing.Size(90, 44);
             this.standButton.TabIndex = 5;
             this.standButton.Text = "Stand";
             this.standButton.UseVisualStyleBackColor = true;
@@ -122,44 +173,46 @@ namespace Project2
             // 
             // hitButton
             // 
-            this.hitButton.Location = new System.Drawing.Point(279, 499);
+            this.hitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hitButton.Location = new System.Drawing.Point(327, 513);
             this.hitButton.Margin = new System.Windows.Forms.Padding(2);
             this.hitButton.Name = "hitButton";
-            this.hitButton.Size = new System.Drawing.Size(70, 34);
+            this.hitButton.Size = new System.Drawing.Size(86, 43);
             this.hitButton.TabIndex = 6;
-            this.hitButton.Text = "HIT";
+            this.hitButton.Text = "Hit";
             this.hitButton.UseVisualStyleBackColor = true;
             this.hitButton.Click += new System.EventHandler(this.hitButton_Click);
             // 
             // totalTextBox
             // 
-            this.totalTextBox.Location = new System.Drawing.Point(26, 159);
+            this.totalTextBox.Location = new System.Drawing.Point(14, 38);
             this.totalTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.totalTextBox.Name = "totalTextBox";
-            this.totalTextBox.Size = new System.Drawing.Size(52, 20);
+            this.totalTextBox.Size = new System.Drawing.Size(113, 20);
             this.totalTextBox.TabIndex = 7;
             // 
             // betTextBox
             // 
-            this.betTextBox.Location = new System.Drawing.Point(26, 219);
+            this.betTextBox.Location = new System.Drawing.Point(12, 86);
             this.betTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.betTextBox.Name = "betTextBox";
-            this.betTextBox.Size = new System.Drawing.Size(52, 20);
+            this.betTextBox.Size = new System.Drawing.Size(118, 20);
             this.betTextBox.TabIndex = 8;
             // 
             // seedLabel
             // 
             this.seedLabel.AutoSize = true;
-            this.seedLabel.Location = new System.Drawing.Point(954, 162);
+            this.seedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.seedLabel.Location = new System.Drawing.Point(1015, 162);
             this.seedLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.seedLabel.Name = "seedLabel";
-            this.seedLabel.Size = new System.Drawing.Size(32, 13);
+            this.seedLabel.Size = new System.Drawing.Size(55, 24);
             this.seedLabel.TabIndex = 9;
             this.seedLabel.Text = "Seed";
             // 
             // seedTextbox
             // 
-            this.seedTextbox.Location = new System.Drawing.Point(945, 186);
+            this.seedTextbox.Location = new System.Drawing.Point(1006, 186);
             this.seedTextbox.Margin = new System.Windows.Forms.Padding(2);
             this.seedTextbox.Name = "seedTextbox";
             this.seedTextbox.Size = new System.Drawing.Size(52, 20);
@@ -168,50 +221,55 @@ namespace Project2
             // dealerValueLabel
             // 
             this.dealerValueLabel.AutoSize = true;
-            this.dealerValueLabel.Location = new System.Drawing.Point(761, 10);
+            this.dealerValueLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dealerValueLabel.Location = new System.Drawing.Point(747, 17);
             this.dealerValueLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.dealerValueLabel.Name = "dealerValueLabel";
-            this.dealerValueLabel.Size = new System.Drawing.Size(34, 13);
+            this.dealerValueLabel.Size = new System.Drawing.Size(59, 24);
             this.dealerValueLabel.TabIndex = 12;
             this.dealerValueLabel.Text = "Value";
             // 
             // playerValueLabel
             // 
             this.playerValueLabel.AutoSize = true;
-            this.playerValueLabel.Location = new System.Drawing.Point(771, 248);
+            this.playerValueLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.playerValueLabel.Location = new System.Drawing.Point(747, 271);
             this.playerValueLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.playerValueLabel.Name = "playerValueLabel";
-            this.playerValueLabel.Size = new System.Drawing.Size(34, 13);
+            this.playerValueLabel.Size = new System.Drawing.Size(59, 24);
             this.playerValueLabel.TabIndex = 13;
             this.playerValueLabel.Text = "Value";
             // 
             // winOrLoseLabel
             // 
             this.winOrLoseLabel.AutoSize = true;
-            this.winOrLoseLabel.Location = new System.Drawing.Point(748, 417);
+            this.winOrLoseLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.winOrLoseLabel.Location = new System.Drawing.Point(728, 432);
             this.winOrLoseLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.winOrLoseLabel.Name = "winOrLoseLabel";
-            this.winOrLoseLabel.Size = new System.Drawing.Size(78, 13);
+            this.winOrLoseLabel.Size = new System.Drawing.Size(131, 24);
             this.winOrLoseLabel.TabIndex = 14;
             this.winOrLoseLabel.Text = "win/lose status";
             // 
             // deckLabel
             // 
             this.deckLabel.AutoSize = true;
-            this.deckLabel.Location = new System.Drawing.Point(20, 53);
+            this.deckLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deckLabel.Location = new System.Drawing.Point(22, 72);
             this.deckLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.deckLabel.Name = "deckLabel";
-            this.deckLabel.Size = new System.Drawing.Size(88, 13);
+            this.deckLabel.Size = new System.Drawing.Size(129, 20);
             this.deckLabel.TabIndex = 15;
             this.deckLabel.Text = "Number of decks";
             // 
             // gameModeLabel
             // 
             this.gameModeLabel.AutoSize = true;
-            this.gameModeLabel.Location = new System.Drawing.Point(25, 10);
+            this.gameModeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gameModeLabel.Location = new System.Drawing.Point(22, 10);
             this.gameModeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.gameModeLabel.Name = "gameModeLabel";
-            this.gameModeLabel.Size = new System.Drawing.Size(64, 13);
+            this.gameModeLabel.Size = new System.Drawing.Size(97, 20);
             this.gameModeLabel.TabIndex = 17;
             this.gameModeLabel.Text = "Game mode";
             // 
@@ -222,7 +280,7 @@ namespace Project2
             this.gameModeComboBox.Items.AddRange(new object[] {
             "H17",
             "S17"});
-            this.gameModeComboBox.Location = new System.Drawing.Point(26, 25);
+            this.gameModeComboBox.Location = new System.Drawing.Point(26, 40);
             this.gameModeComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.gameModeComboBox.Name = "gameModeComboBox";
             this.gameModeComboBox.Size = new System.Drawing.Size(62, 21);
@@ -231,7 +289,7 @@ namespace Project2
             // 
             // playButton
             // 
-            this.playButton.Location = new System.Drawing.Point(939, 40);
+            this.playButton.Location = new System.Drawing.Point(1000, 40);
             this.playButton.Margin = new System.Windows.Forms.Padding(2);
             this.playButton.Name = "playButton";
             this.playButton.Size = new System.Drawing.Size(58, 39);
@@ -240,25 +298,25 @@ namespace Project2
             this.playButton.UseVisualStyleBackColor = true;
             this.playButton.Click += new System.EventHandler(this.playButton_Click);
             // 
-            // computerPicturebox
+            // dealerPicturebox1
             // 
-            this.computerPicturebox.Location = new System.Drawing.Point(162, 33);
-            this.computerPicturebox.Margin = new System.Windows.Forms.Padding(2);
-            this.computerPicturebox.Name = "computerPicturebox";
-            this.computerPicturebox.Size = new System.Drawing.Size(500, 208);
-            this.computerPicturebox.TabIndex = 20;
-            this.computerPicturebox.TabStop = false;
-            this.computerPicturebox.Click += new System.EventHandler(this.computerPicturebox_Click);
+            this.dealerPicturebox1.Location = new System.Drawing.Point(223, 62);
+            this.dealerPicturebox1.Margin = new System.Windows.Forms.Padding(2);
+            this.dealerPicturebox1.Name = "dealerPicturebox1";
+            this.dealerPicturebox1.Size = new System.Drawing.Size(57, 84);
+            this.dealerPicturebox1.TabIndex = 20;
+            this.dealerPicturebox1.TabStop = false;
+            this.dealerPicturebox1.Click += new System.EventHandler(this.dealerPicturebox1_Click);
             // 
-            // playerPicturebox
+            // playerPicturebox1
             // 
-            this.playerPicturebox.Location = new System.Drawing.Point(162, 271);
-            this.playerPicturebox.Margin = new System.Windows.Forms.Padding(2);
-            this.playerPicturebox.Name = "playerPicturebox";
-            this.playerPicturebox.Size = new System.Drawing.Size(500, 208);
-            this.playerPicturebox.TabIndex = 21;
-            this.playerPicturebox.TabStop = false;
-            this.playerPicturebox.Click += new System.EventHandler(this.playerPicturebox_Click);
+            this.playerPicturebox1.Location = new System.Drawing.Point(223, 312);
+            this.playerPicturebox1.Margin = new System.Windows.Forms.Padding(2);
+            this.playerPicturebox1.Name = "playerPicturebox1";
+            this.playerPicturebox1.Size = new System.Drawing.Size(57, 84);
+            this.playerPicturebox1.TabIndex = 21;
+            this.playerPicturebox1.TabStop = false;
+            this.playerPicturebox1.Click += new System.EventHandler(this.playerPicturebox1_Click);
             // 
             // numberOfDeckComboBox
             // 
@@ -273,7 +331,7 @@ namespace Project2
             "6",
             "7",
             "8"});
-            this.numberOfDeckComboBox.Location = new System.Drawing.Point(26, 87);
+            this.numberOfDeckComboBox.Location = new System.Drawing.Point(26, 107);
             this.numberOfDeckComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.numberOfDeckComboBox.Name = "numberOfDeckComboBox";
             this.numberOfDeckComboBox.Size = new System.Drawing.Size(62, 21);
@@ -281,7 +339,8 @@ namespace Project2
             // 
             // dealerValueRichTextBox
             // 
-            this.dealerValueRichTextBox.Location = new System.Drawing.Point(716, 33);
+            this.dealerValueRichTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dealerValueRichTextBox.Location = new System.Drawing.Point(714, 62);
             this.dealerValueRichTextBox.Name = "dealerValueRichTextBox";
             this.dealerValueRichTextBox.Size = new System.Drawing.Size(145, 96);
             this.dealerValueRichTextBox.TabIndex = 24;
@@ -289,7 +348,8 @@ namespace Project2
             // 
             // playerValueRichTextBox
             // 
-            this.playerValueRichTextBox.Location = new System.Drawing.Point(716, 271);
+            this.playerValueRichTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.playerValueRichTextBox.Location = new System.Drawing.Point(714, 305);
             this.playerValueRichTextBox.Name = "playerValueRichTextBox";
             this.playerValueRichTextBox.Size = new System.Drawing.Size(145, 91);
             this.playerValueRichTextBox.TabIndex = 25;
@@ -297,11 +357,223 @@ namespace Project2
             // 
             // winOrLoseRichTextBox
             // 
-            this.winOrLoseRichTextBox.Location = new System.Drawing.Point(716, 450);
+            this.winOrLoseRichTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.winOrLoseRichTextBox.Location = new System.Drawing.Point(714, 459);
             this.winOrLoseRichTextBox.Name = "winOrLoseRichTextBox";
-            this.winOrLoseRichTextBox.Size = new System.Drawing.Size(145, 55);
+            this.winOrLoseRichTextBox.Size = new System.Drawing.Size(145, 73);
             this.winOrLoseRichTextBox.TabIndex = 26;
             this.winOrLoseRichTextBox.Text = "Win or Lose or Tie status";
+            // 
+            // dealerPictureBox2
+            // 
+            this.dealerPictureBox2.Location = new System.Drawing.Point(296, 62);
+            this.dealerPictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.dealerPictureBox2.Name = "dealerPictureBox2";
+            this.dealerPictureBox2.Size = new System.Drawing.Size(57, 84);
+            this.dealerPictureBox2.TabIndex = 27;
+            this.dealerPictureBox2.TabStop = false;
+            // 
+            // dealerPictureBox3
+            // 
+            this.dealerPictureBox3.Location = new System.Drawing.Point(370, 62);
+            this.dealerPictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.dealerPictureBox3.Name = "dealerPictureBox3";
+            this.dealerPictureBox3.Size = new System.Drawing.Size(57, 84);
+            this.dealerPictureBox3.TabIndex = 28;
+            this.dealerPictureBox3.TabStop = false;
+            // 
+            // dealerPictureBox4
+            // 
+            this.dealerPictureBox4.Location = new System.Drawing.Point(440, 62);
+            this.dealerPictureBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.dealerPictureBox4.Name = "dealerPictureBox4";
+            this.dealerPictureBox4.Size = new System.Drawing.Size(57, 84);
+            this.dealerPictureBox4.TabIndex = 29;
+            this.dealerPictureBox4.TabStop = false;
+            // 
+            // dealerPictureBox5
+            // 
+            this.dealerPictureBox5.Location = new System.Drawing.Point(516, 62);
+            this.dealerPictureBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.dealerPictureBox5.Name = "dealerPictureBox5";
+            this.dealerPictureBox5.Size = new System.Drawing.Size(57, 84);
+            this.dealerPictureBox5.TabIndex = 30;
+            this.dealerPictureBox5.TabStop = false;
+            // 
+            // dealerPictureBox6
+            // 
+            this.dealerPictureBox6.Location = new System.Drawing.Point(595, 62);
+            this.dealerPictureBox6.Margin = new System.Windows.Forms.Padding(2);
+            this.dealerPictureBox6.Name = "dealerPictureBox6";
+            this.dealerPictureBox6.Size = new System.Drawing.Size(57, 84);
+            this.dealerPictureBox6.TabIndex = 31;
+            this.dealerPictureBox6.TabStop = false;
+            // 
+            // dealerPictureBox8
+            // 
+            this.dealerPictureBox8.Location = new System.Drawing.Point(296, 162);
+            this.dealerPictureBox8.Margin = new System.Windows.Forms.Padding(2);
+            this.dealerPictureBox8.Name = "dealerPictureBox8";
+            this.dealerPictureBox8.Size = new System.Drawing.Size(57, 84);
+            this.dealerPictureBox8.TabIndex = 32;
+            this.dealerPictureBox8.TabStop = false;
+            // 
+            // dealerPictureBox9
+            // 
+            this.dealerPictureBox9.Location = new System.Drawing.Point(370, 162);
+            this.dealerPictureBox9.Margin = new System.Windows.Forms.Padding(2);
+            this.dealerPictureBox9.Name = "dealerPictureBox9";
+            this.dealerPictureBox9.Size = new System.Drawing.Size(57, 84);
+            this.dealerPictureBox9.TabIndex = 33;
+            this.dealerPictureBox9.TabStop = false;
+            // 
+            // dealerPictureBox10
+            // 
+            this.dealerPictureBox10.Location = new System.Drawing.Point(440, 162);
+            this.dealerPictureBox10.Margin = new System.Windows.Forms.Padding(2);
+            this.dealerPictureBox10.Name = "dealerPictureBox10";
+            this.dealerPictureBox10.Size = new System.Drawing.Size(57, 84);
+            this.dealerPictureBox10.TabIndex = 34;
+            this.dealerPictureBox10.TabStop = false;
+            // 
+            // dealerPictureBox11
+            // 
+            this.dealerPictureBox11.Location = new System.Drawing.Point(516, 162);
+            this.dealerPictureBox11.Margin = new System.Windows.Forms.Padding(2);
+            this.dealerPictureBox11.Name = "dealerPictureBox11";
+            this.dealerPictureBox11.Size = new System.Drawing.Size(57, 84);
+            this.dealerPictureBox11.TabIndex = 35;
+            this.dealerPictureBox11.TabStop = false;
+            // 
+            // dealerPictureBox12
+            // 
+            this.dealerPictureBox12.Location = new System.Drawing.Point(595, 162);
+            this.dealerPictureBox12.Margin = new System.Windows.Forms.Padding(2);
+            this.dealerPictureBox12.Name = "dealerPictureBox12";
+            this.dealerPictureBox12.Size = new System.Drawing.Size(57, 84);
+            this.dealerPictureBox12.TabIndex = 36;
+            this.dealerPictureBox12.TabStop = false;
+            // 
+            // dealerPictureBox7
+            // 
+            this.dealerPictureBox7.Location = new System.Drawing.Point(223, 162);
+            this.dealerPictureBox7.Margin = new System.Windows.Forms.Padding(2);
+            this.dealerPictureBox7.Name = "dealerPictureBox7";
+            this.dealerPictureBox7.Size = new System.Drawing.Size(57, 84);
+            this.dealerPictureBox7.TabIndex = 37;
+            this.dealerPictureBox7.TabStop = false;
+            // 
+            // playerPicturebox2
+            // 
+            this.playerPicturebox2.Location = new System.Drawing.Point(296, 312);
+            this.playerPicturebox2.Margin = new System.Windows.Forms.Padding(2);
+            this.playerPicturebox2.Name = "playerPicturebox2";
+            this.playerPicturebox2.Size = new System.Drawing.Size(57, 84);
+            this.playerPicturebox2.TabIndex = 38;
+            this.playerPicturebox2.TabStop = false;
+            // 
+            // playerPicturebox3
+            // 
+            this.playerPicturebox3.Location = new System.Drawing.Point(370, 312);
+            this.playerPicturebox3.Margin = new System.Windows.Forms.Padding(2);
+            this.playerPicturebox3.Name = "playerPicturebox3";
+            this.playerPicturebox3.Size = new System.Drawing.Size(57, 84);
+            this.playerPicturebox3.TabIndex = 39;
+            this.playerPicturebox3.TabStop = false;
+            // 
+            // playerPicturebox4
+            // 
+            this.playerPicturebox4.Location = new System.Drawing.Point(440, 312);
+            this.playerPicturebox4.Margin = new System.Windows.Forms.Padding(2);
+            this.playerPicturebox4.Name = "playerPicturebox4";
+            this.playerPicturebox4.Size = new System.Drawing.Size(57, 84);
+            this.playerPicturebox4.TabIndex = 40;
+            this.playerPicturebox4.TabStop = false;
+            // 
+            // playerPicturebox5
+            // 
+            this.playerPicturebox5.Location = new System.Drawing.Point(516, 312);
+            this.playerPicturebox5.Margin = new System.Windows.Forms.Padding(2);
+            this.playerPicturebox5.Name = "playerPicturebox5";
+            this.playerPicturebox5.Size = new System.Drawing.Size(57, 84);
+            this.playerPicturebox5.TabIndex = 41;
+            this.playerPicturebox5.TabStop = false;
+            // 
+            // playerPicturebox6
+            // 
+            this.playerPicturebox6.Location = new System.Drawing.Point(595, 312);
+            this.playerPicturebox6.Margin = new System.Windows.Forms.Padding(2);
+            this.playerPicturebox6.Name = "playerPicturebox6";
+            this.playerPicturebox6.Size = new System.Drawing.Size(57, 84);
+            this.playerPicturebox6.TabIndex = 42;
+            this.playerPicturebox6.TabStop = false;
+            // 
+            // playerPicturebox7
+            // 
+            this.playerPicturebox7.Location = new System.Drawing.Point(223, 407);
+            this.playerPicturebox7.Margin = new System.Windows.Forms.Padding(2);
+            this.playerPicturebox7.Name = "playerPicturebox7";
+            this.playerPicturebox7.Size = new System.Drawing.Size(57, 84);
+            this.playerPicturebox7.TabIndex = 43;
+            this.playerPicturebox7.TabStop = false;
+            // 
+            // playerPicturebox11
+            // 
+            this.playerPicturebox11.Location = new System.Drawing.Point(516, 407);
+            this.playerPicturebox11.Margin = new System.Windows.Forms.Padding(2);
+            this.playerPicturebox11.Name = "playerPicturebox11";
+            this.playerPicturebox11.Size = new System.Drawing.Size(57, 84);
+            this.playerPicturebox11.TabIndex = 44;
+            this.playerPicturebox11.TabStop = false;
+            // 
+            // playerPicturebox8
+            // 
+            this.playerPicturebox8.Location = new System.Drawing.Point(296, 407);
+            this.playerPicturebox8.Margin = new System.Windows.Forms.Padding(2);
+            this.playerPicturebox8.Name = "playerPicturebox8";
+            this.playerPicturebox8.Size = new System.Drawing.Size(57, 84);
+            this.playerPicturebox8.TabIndex = 45;
+            this.playerPicturebox8.TabStop = false;
+            // 
+            // playerPicturebox9
+            // 
+            this.playerPicturebox9.Location = new System.Drawing.Point(370, 407);
+            this.playerPicturebox9.Margin = new System.Windows.Forms.Padding(2);
+            this.playerPicturebox9.Name = "playerPicturebox9";
+            this.playerPicturebox9.Size = new System.Drawing.Size(57, 84);
+            this.playerPicturebox9.TabIndex = 46;
+            this.playerPicturebox9.TabStop = false;
+            // 
+            // playerPicturebox10
+            // 
+            this.playerPicturebox10.Location = new System.Drawing.Point(440, 407);
+            this.playerPicturebox10.Margin = new System.Windows.Forms.Padding(2);
+            this.playerPicturebox10.Name = "playerPicturebox10";
+            this.playerPicturebox10.Size = new System.Drawing.Size(57, 84);
+            this.playerPicturebox10.TabIndex = 47;
+            this.playerPicturebox10.TabStop = false;
+            // 
+            // playerPicturebox12
+            // 
+            this.playerPicturebox12.Location = new System.Drawing.Point(595, 407);
+            this.playerPicturebox12.Margin = new System.Windows.Forms.Padding(2);
+            this.playerPicturebox12.Name = "playerPicturebox12";
+            this.playerPicturebox12.Size = new System.Drawing.Size(57, 84);
+            this.playerPicturebox12.TabIndex = 48;
+            this.playerPicturebox12.TabStop = false;
+            // 
+            // moneyGroupBox
+            // 
+            this.moneyGroupBox.Controls.Add(this.betLabel);
+            this.moneyGroupBox.Controls.Add(this.betTextBox);
+            this.moneyGroupBox.Controls.Add(this.totalLabel);
+            this.moneyGroupBox.Controls.Add(this.totalTextBox);
+            this.moneyGroupBox.Location = new System.Drawing.Point(12, 312);
+            this.moneyGroupBox.Name = "moneyGroupBox";
+            this.moneyGroupBox.Size = new System.Drawing.Size(150, 130);
+            this.moneyGroupBox.TabIndex = 49;
+            this.moneyGroupBox.TabStop = false;
+            this.moneyGroupBox.UseWaitCursor = true;
             // 
             // Form1
             // 
@@ -309,12 +581,35 @@ namespace Project2
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(1074, 673);
+            this.Controls.Add(this.moneyGroupBox);
+            this.Controls.Add(this.playerPicturebox12);
+            this.Controls.Add(this.playerPicturebox10);
+            this.Controls.Add(this.playerPicturebox9);
+            this.Controls.Add(this.playerPicturebox8);
+            this.Controls.Add(this.playerPicturebox11);
+            this.Controls.Add(this.playerPicturebox7);
+            this.Controls.Add(this.playerPicturebox6);
+            this.Controls.Add(this.playerPicturebox5);
+            this.Controls.Add(this.playerPicturebox4);
+            this.Controls.Add(this.playerPicturebox3);
+            this.Controls.Add(this.playerPicturebox2);
+            this.Controls.Add(this.dealerPictureBox7);
+            this.Controls.Add(this.dealerPictureBox12);
+            this.Controls.Add(this.dealerPictureBox11);
+            this.Controls.Add(this.dealerPictureBox10);
+            this.Controls.Add(this.dealerPictureBox9);
+            this.Controls.Add(this.dealerPictureBox8);
+            this.Controls.Add(this.dealerPictureBox6);
+            this.Controls.Add(this.dealerPictureBox5);
+            this.Controls.Add(this.dealerPictureBox4);
+            this.Controls.Add(this.dealerPictureBox3);
+            this.Controls.Add(this.dealerPictureBox2);
             this.Controls.Add(this.winOrLoseRichTextBox);
             this.Controls.Add(this.playerValueRichTextBox);
             this.Controls.Add(this.dealerValueRichTextBox);
             this.Controls.Add(this.numberOfDeckComboBox);
-            this.Controls.Add(this.playerPicturebox);
-            this.Controls.Add(this.computerPicturebox);
+            this.Controls.Add(this.playerPicturebox1);
+            this.Controls.Add(this.dealerPicturebox1);
             this.Controls.Add(this.playButton);
             this.Controls.Add(this.gameModeComboBox);
             this.Controls.Add(this.gameModeLabel);
@@ -324,21 +619,41 @@ namespace Project2
             this.Controls.Add(this.dealerValueLabel);
             this.Controls.Add(this.seedTextbox);
             this.Controls.Add(this.seedLabel);
-            this.Controls.Add(this.betTextBox);
-            this.Controls.Add(this.totalTextBox);
             this.Controls.Add(this.hitButton);
             this.Controls.Add(this.standButton);
             this.Controls.Add(this.resetButton);
-            this.Controls.Add(this.betLabel);
-            this.Controls.Add(this.totalLabel);
             this.Controls.Add(this.playerCardsLabel);
             this.Controls.Add(this.dealerCardsLabel);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "JasonTruong_and_MuhammedAdemola";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.computerPicturebox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.playerPicturebox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dealerPicturebox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerPicturebox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dealerPictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dealerPictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dealerPictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dealerPictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dealerPictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dealerPictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dealerPictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dealerPictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dealerPictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dealerPictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dealerPictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerPicturebox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerPicturebox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerPicturebox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerPicturebox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerPicturebox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerPicturebox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerPicturebox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerPicturebox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerPicturebox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerPicturebox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerPicturebox12)).EndInit();
+            this.moneyGroupBox.ResumeLayout(false);
+            this.moneyGroupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -364,12 +679,35 @@ namespace Project2
         private System.Windows.Forms.Label gameModeLabel;
         private System.Windows.Forms.ComboBox gameModeComboBox;
         private System.Windows.Forms.Button playButton;
-        private System.Windows.Forms.PictureBox computerPicturebox;
-        private System.Windows.Forms.PictureBox playerPicturebox;
+        private System.Windows.Forms.PictureBox dealerPicturebox1;
+        private System.Windows.Forms.PictureBox playerPicturebox1;
         private System.Windows.Forms.ComboBox numberOfDeckComboBox;
         private System.Windows.Forms.RichTextBox dealerValueRichTextBox;
         private System.Windows.Forms.RichTextBox playerValueRichTextBox;
         private System.Windows.Forms.RichTextBox winOrLoseRichTextBox;
+        private System.Windows.Forms.PictureBox dealerPictureBox2;
+        private System.Windows.Forms.PictureBox dealerPictureBox3;
+        private System.Windows.Forms.PictureBox dealerPictureBox4;
+        private System.Windows.Forms.PictureBox dealerPictureBox5;
+        private System.Windows.Forms.PictureBox dealerPictureBox6;
+        private System.Windows.Forms.PictureBox dealerPictureBox8;
+        private System.Windows.Forms.PictureBox dealerPictureBox9;
+        private System.Windows.Forms.PictureBox dealerPictureBox10;
+        private System.Windows.Forms.PictureBox dealerPictureBox11;
+        private System.Windows.Forms.PictureBox dealerPictureBox12;
+        private System.Windows.Forms.PictureBox dealerPictureBox7;
+        private System.Windows.Forms.PictureBox playerPicturebox2;
+        private System.Windows.Forms.PictureBox playerPicturebox3;
+        private System.Windows.Forms.PictureBox playerPicturebox4;
+        private System.Windows.Forms.PictureBox playerPicturebox5;
+        private System.Windows.Forms.PictureBox playerPicturebox6;
+        private System.Windows.Forms.PictureBox playerPicturebox7;
+        private System.Windows.Forms.PictureBox playerPicturebox11;
+        private System.Windows.Forms.PictureBox playerPicturebox8;
+        private System.Windows.Forms.PictureBox playerPicturebox9;
+        private System.Windows.Forms.PictureBox playerPicturebox10;
+        private System.Windows.Forms.PictureBox playerPicturebox12;
+        private System.Windows.Forms.GroupBox moneyGroupBox;
     }
 }
 
