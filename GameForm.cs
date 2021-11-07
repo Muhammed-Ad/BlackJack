@@ -96,7 +96,14 @@ namespace Project2
                 if (dealer)
                 {
                     temp = dealingShoe.Draw();
-                    dealerSum += temp.getValue();
+                    if(dealerSum > 10 && temp.getValue() == 1)
+                    {
+                        dealerSum += 10;
+                    }
+                    else
+                    {
+                        dealerSum += temp.getValue();
+                    }
                     dealerPictureboxList[dealerImageNum++] = dealingShoe.Draw().getImage();
                 }
                 else
@@ -126,7 +133,7 @@ namespace Project2
             dealerPictureBox11.Image = dealerPictureboxList[10];
             dealerPictureBox12.Image = dealerPictureboxList[11];
 
-            dealerPictureBox7.Visible = true;
+            //dealerPictureBox7.Visible = true;
         }
 
         private void updatePlayer()
