@@ -41,6 +41,11 @@ namespace Project2
             if (shoe[DeckIndex].isEmpty())
             {
                 shoe.RemoveAt(DeckIndex);
+                if (shoe.Count() == 0)
+                {
+                    System.Windows.Forms.MessageBox.Show("Empty Deck of cards. Please exit.");
+                    return null;
+                }
             }
 
             int value = rand.Next(shoe[DeckIndex].Count);

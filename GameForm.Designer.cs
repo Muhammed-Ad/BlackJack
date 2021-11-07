@@ -47,7 +47,7 @@ namespace Project2
             this.gameModeLabel = new System.Windows.Forms.Label();
             this.gameModeComboBox = new System.Windows.Forms.ComboBox();
             this.playButton = new System.Windows.Forms.Button();
-            this.dealerPicturebox1 = new System.Windows.Forms.PictureBox();
+            this.dealerPictureBox1 = new System.Windows.Forms.PictureBox();
             this.playerPicturebox1 = new System.Windows.Forms.PictureBox();
             this.numberOfDeckComboBox = new System.Windows.Forms.ComboBox();
             this.dealerValueRichTextBox = new System.Windows.Forms.RichTextBox();
@@ -76,7 +76,7 @@ namespace Project2
             this.playerPicturebox10 = new System.Windows.Forms.PictureBox();
             this.playerPicturebox12 = new System.Windows.Forms.PictureBox();
             this.moneyGroupBox = new System.Windows.Forms.GroupBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dealerPicturebox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dealerPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerPicturebox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dealerPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dealerPictureBox3)).BeginInit();
@@ -302,15 +302,15 @@ namespace Project2
             this.playButton.UseVisualStyleBackColor = true;
             this.playButton.Click += new System.EventHandler(this.playButton_Click);
             // 
-            // dealerPicturebox1
+            // dealerPictureBox1
             // 
-            this.dealerPicturebox1.Location = new System.Drawing.Point(223, 62);
-            this.dealerPicturebox1.Margin = new System.Windows.Forms.Padding(2);
-            this.dealerPicturebox1.Name = "dealerPicturebox1";
-            this.dealerPicturebox1.Size = new System.Drawing.Size(57, 84);
-            this.dealerPicturebox1.TabIndex = 20;
-            this.dealerPicturebox1.TabStop = false;
-            this.dealerPicturebox1.Click += new System.EventHandler(this.dealerPicturebox1_Click);
+            this.dealerPictureBox1.Location = new System.Drawing.Point(223, 62);
+            this.dealerPictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.dealerPictureBox1.Name = "dealerPictureBox1";
+            this.dealerPictureBox1.Size = new System.Drawing.Size(57, 84);
+            this.dealerPictureBox1.TabIndex = 20;
+            this.dealerPictureBox1.TabStop = false;
+            this.dealerPictureBox1.Click += new System.EventHandler(this.dealerPicturebox1_Click);
             // 
             // playerPicturebox1
             // 
@@ -613,7 +613,7 @@ namespace Project2
             this.Controls.Add(this.dealerValueRichTextBox);
             this.Controls.Add(this.numberOfDeckComboBox);
             this.Controls.Add(this.playerPicturebox1);
-            this.Controls.Add(this.dealerPicturebox1);
+            this.Controls.Add(this.dealerPictureBox1);
             this.Controls.Add(this.playButton);
             this.Controls.Add(this.gameModeComboBox);
             this.Controls.Add(this.gameModeLabel);
@@ -632,7 +632,7 @@ namespace Project2
             this.Name = "GameForm";
             this.Text = "JasonTruong_and_MuhammedAdemola";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dealerPicturebox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dealerPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerPicturebox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dealerPictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dealerPictureBox3)).EndInit();
@@ -683,7 +683,7 @@ namespace Project2
         private System.Windows.Forms.Label gameModeLabel;
         private System.Windows.Forms.ComboBox gameModeComboBox;
         private System.Windows.Forms.Button playButton;
-        private System.Windows.Forms.PictureBox dealerPicturebox1;
+        private System.Windows.Forms.PictureBox dealerPictureBox1;
         private System.Windows.Forms.PictureBox playerPicturebox1;
         private System.Windows.Forms.ComboBox numberOfDeckComboBox;
         private System.Windows.Forms.RichTextBox dealerValueRichTextBox;

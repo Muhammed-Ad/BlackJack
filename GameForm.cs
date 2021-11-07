@@ -20,10 +20,10 @@ namespace Project2
 
 
         //imageList 
-        ImageList playerPictureboxList;
-        ImageList dealerPictureboxList;
-        
+        List<Image> playerPictureboxList;
+        List<Image> dealerPictureboxList;
 
+        Image defaultImage = Properties.Resources.gray_back;
         //PictureBox computerPicturebox;
         //PictureBox playerPicturebox;
         int startingHand = 2;
@@ -36,9 +36,9 @@ namespace Project2
         bool s17Mode = true;  //playing mode
         //also got a deck of card one though lol.
         aDeckOfCards deck;
-        int dealerSum;
-        int playerSum;
-        int playerImageNum = 1, dealerImageNum = 1;
+        int dealerSum = 0;
+        int playerSum = 0;
+        int playerImageNum = 0, dealerImageNum = 0;
         aShoe dealingShoe;
         string win = "You Won";
         string lose = "You Lost";
@@ -53,7 +53,9 @@ namespace Project2
             InitializeComponent();
 
             //create the new iamge list
-            playerPictureboxList = new ImageList();
+            playerPictureboxList = new List<Image>();
+            dealerPictureboxList = new List<Image>();
+            initList();
             rand = new Random(999);
             dealingShoe = new aShoe();
 
@@ -68,11 +70,81 @@ namespace Project2
             rand = new Random(seed);
             s17Mode = mode;
             dealingShoe = new aShoe(NumDecks);
-            playerPictureboxList = new ImageList();
-            dealerPictureboxList = new ImageList();
-            aCard deal = dealingShoe.Draw();
+            playerPictureboxList = new List<Image>();
+            dealerPictureboxList = new List<Image>();
+            initList();
+            drawCard(false, 2); //draw two cards for player
+            drawCard(true, 1);  //draw 1 card for dealer
+            updateDealer();
+            updatePlayer();
+            
+            
+        }
+        private void initList()
+        {
+            for(int i = 0; i < 12; i++)
+            {
+                playerPictureboxList.Add(default);
+                dealerPictureboxList.Add(default);
+            }
+        }
+        private void drawCard(bool dealer, int numCardsDrawn)
+        {
+            aCard temp;
+            for (int i = 0; i < numCardsDrawn; i++)
+            {
+                if (dealer)
+                {
+                    temp = dealingShoe.Draw();
+                    dealerSum += temp.getValue();
+                    dealerPictureboxList[dealerImageNum++] = dealingShoe.Draw().getImage();
+                }
+                else
+                {
+            
+                    temp = dealingShoe.Draw();
+                    playerSum += temp.getValue();
+                    playerPictureboxList[dealerImageNum++] = dealingShoe.Draw().getImage();
+                }
+            }
+            
         }
 
+        private void updateDealer()
+        {
+            dealerPictureBox1.Image = dealerPictureboxList[0];
+            dealerPictureBox2.Image = dealerPictureboxList[1];
+            dealerPictureBox3.Image = dealerPictureboxList[2];
+            dealerPictureBox4.Image = dealerPictureboxList[3];
+            dealerPictureBox5.Image = dealerPictureboxList[4];
+            dealerPictureBox6.Image = dealerPictureboxList[5];
+
+            dealerPictureBox7.Image = dealerPictureboxList[6];
+            dealerPictureBox8.Image = dealerPictureboxList[7];
+            dealerPictureBox9.Image = dealerPictureboxList[8];
+            dealerPictureBox10.Image = dealerPictureboxList[9];
+            dealerPictureBox11.Image = dealerPictureboxList[10];
+            dealerPictureBox12.Image = dealerPictureboxList[11];
+
+            dealerPictureBox7.Visible = true;
+        }
+
+        private void updatePlayer()
+        {
+            playerPicturebox1.Image = dealerPictureboxList[0];
+            playerPicturebox2.Image = dealerPictureboxList[1];
+            playerPicturebox3.Image = dealerPictureboxList[2];
+            playerPicturebox4.Image = dealerPictureboxList[3];
+            playerPicturebox5.Image = dealerPictureboxList[4];
+            playerPicturebox6.Image = dealerPictureboxList[5];
+
+            playerPicturebox7.Image = dealerPictureboxList[6];
+            playerPicturebox8.Image = dealerPictureboxList[7];
+            playerPicturebox9.Image = dealerPictureboxList[8];
+            playerPicturebox10.Image = dealerPictureboxList[9];
+            playerPicturebox11.Image = dealerPictureboxList[10];
+            playerPicturebox12.Image = dealerPictureboxList[11];
+        }
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -167,13 +239,17 @@ namespace Project2
         {
             if(playerSum >= 17)//check the s17 mode
             {
-
+                MessageBox.Show("Cannot hit, must stand");
+                standButton_Click(null, EventArgs.Empty);
             }
+
+            drawCard(false, 1);
+            updatePlayer();
         }
 
         private void standButton_Click(object sender, EventArgs e)
         {
-           
+           while()
         }
 
         private void dealerCards_Click(object sender, EventArgs e)
