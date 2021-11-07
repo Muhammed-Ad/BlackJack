@@ -37,7 +37,7 @@ namespace Project2
         public aCard Draw()
         {
             Random rand = new Random();
-            int DeckIndex = rand.Next(numberOfDecks);
+            int DeckIndex = rand.Next(0, numberOfDecks);
             if (shoe[DeckIndex].isEmpty())
             {
                 shoe.RemoveAt(DeckIndex);
@@ -48,7 +48,7 @@ namespace Project2
                 }
             }
 
-            int value = rand.Next(shoe[DeckIndex].Count);
+            int value = rand.Next(0, shoe[DeckIndex].Count);
             aCard drawCard = shoe[DeckIndex].drawCard(value);
 
             shoe[DeckIndex].removeCard(value);

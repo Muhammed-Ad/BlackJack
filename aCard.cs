@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Reflection;
 using System.Drawing;
+using System.Windows.Forms;
 
 namespace Project2
 {
    
     public enum CardValue: int
     {
-        None = 0,
+        
         Ace = 1,
         Two = 2,
         Three = 3,
@@ -26,16 +27,18 @@ namespace Project2
         Jack = 10,
         Queen = 10,
         King = 10,
+        None = -1,
     }
 
     public enum CardSuit
     {
-        None = 0,
+        
         Spades = 1,
         Clubs = 2,
         Diamonds = 3,
-        Hearts = 4    
-        
+        Hearts = 4,
+        None = -1,
+
     }
 
 
@@ -60,6 +63,11 @@ namespace Project2
         /// the image
         /// </summary>
         private Image image;
+
+        /// <summary>
+        /// display card
+        /// </summary>
+        public PictureBox cardDisplay;
 
         public aCard(CardValue value, CardSuit suit, System.Drawing.Image image)
         {

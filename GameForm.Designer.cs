@@ -38,18 +38,12 @@ namespace Project2
             this.hitButton = new System.Windows.Forms.Button();
             this.totalTextBox = new System.Windows.Forms.TextBox();
             this.betTextBox = new System.Windows.Forms.TextBox();
-            this.seedLabel = new System.Windows.Forms.Label();
-            this.seedTextbox = new System.Windows.Forms.TextBox();
             this.dealerValueLabel = new System.Windows.Forms.Label();
             this.playerValueLabel = new System.Windows.Forms.Label();
             this.winOrLoseLabel = new System.Windows.Forms.Label();
-            this.deckLabel = new System.Windows.Forms.Label();
-            this.gameModeLabel = new System.Windows.Forms.Label();
-            this.gameModeComboBox = new System.Windows.Forms.ComboBox();
             this.playButton = new System.Windows.Forms.Button();
             this.dealerPictureBox1 = new System.Windows.Forms.PictureBox();
             this.playerPicturebox1 = new System.Windows.Forms.PictureBox();
-            this.numberOfDeckComboBox = new System.Windows.Forms.ComboBox();
             this.dealerValueRichTextBox = new System.Windows.Forms.RichTextBox();
             this.playerValueRichTextBox = new System.Windows.Forms.RichTextBox();
             this.winOrLoseRichTextBox = new System.Windows.Forms.RichTextBox();
@@ -110,7 +104,7 @@ namespace Project2
             this.dealerCardsLabel.Location = new System.Drawing.Point(334, 10);
             this.dealerCardsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.dealerCardsLabel.Name = "dealerCardsLabel";
-            this.dealerCardsLabel.Size = new System.Drawing.Size(230, 39);
+            this.dealerCardsLabel.Size = new System.Drawing.Size(186, 31);
             this.dealerCardsLabel.TabIndex = 0;
             this.dealerCardsLabel.Text = "Dealer Cards";
             this.dealerCardsLabel.Click += new System.EventHandler(this.dealerCards_Click);
@@ -122,7 +116,7 @@ namespace Project2
             this.playerCardsLabel.Location = new System.Drawing.Point(334, 271);
             this.playerCardsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.playerCardsLabel.Name = "playerCardsLabel";
-            this.playerCardsLabel.Size = new System.Drawing.Size(226, 39);
+            this.playerCardsLabel.Size = new System.Drawing.Size(183, 31);
             this.playerCardsLabel.TabIndex = 1;
             this.playerCardsLabel.Text = "Player Cards";
             // 
@@ -133,7 +127,7 @@ namespace Project2
             this.totalLabel.Location = new System.Drawing.Point(8, 16);
             this.totalLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.totalLabel.Name = "totalLabel";
-            this.totalLabel.Size = new System.Drawing.Size(92, 25);
+            this.totalLabel.Size = new System.Drawing.Size(71, 20);
             this.totalLabel.TabIndex = 2;
             this.totalLabel.Text = "Total ($):";
             this.totalLabel.UseWaitCursor = true;
@@ -145,17 +139,18 @@ namespace Project2
             this.betLabel.Location = new System.Drawing.Point(10, 64);
             this.betLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.betLabel.Name = "betLabel";
-            this.betLabel.Size = new System.Drawing.Size(77, 25);
+            this.betLabel.Size = new System.Drawing.Size(61, 20);
             this.betLabel.TabIndex = 3;
             this.betLabel.Text = "Bet ($):";
             this.betLabel.UseWaitCursor = true;
             // 
             // resetButton
             // 
-            this.resetButton.Location = new System.Drawing.Point(1000, 107);
+            this.resetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resetButton.Location = new System.Drawing.Point(33, 173);
             this.resetButton.Margin = new System.Windows.Forms.Padding(2);
             this.resetButton.Name = "resetButton";
-            this.resetButton.Size = new System.Drawing.Size(58, 39);
+            this.resetButton.Size = new System.Drawing.Size(109, 73);
             this.resetButton.TabIndex = 4;
             this.resetButton.Text = "Reset";
             this.resetButton.UseVisualStyleBackColor = true;
@@ -203,25 +198,6 @@ namespace Project2
             this.betTextBox.TabIndex = 8;
             this.betTextBox.UseWaitCursor = true;
             // 
-            // seedLabel
-            // 
-            this.seedLabel.AutoSize = true;
-            this.seedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.seedLabel.Location = new System.Drawing.Point(995, 162);
-            this.seedLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.seedLabel.Name = "seedLabel";
-            this.seedLabel.Size = new System.Drawing.Size(71, 29);
-            this.seedLabel.TabIndex = 9;
-            this.seedLabel.Text = "Seed";
-            // 
-            // seedTextbox
-            // 
-            this.seedTextbox.Location = new System.Drawing.Point(1006, 193);
-            this.seedTextbox.Margin = new System.Windows.Forms.Padding(2);
-            this.seedTextbox.Name = "seedTextbox";
-            this.seedTextbox.Size = new System.Drawing.Size(52, 20);
-            this.seedTextbox.TabIndex = 10;
-            // 
             // dealerValueLabel
             // 
             this.dealerValueLabel.AutoSize = true;
@@ -229,7 +205,7 @@ namespace Project2
             this.dealerValueLabel.Location = new System.Drawing.Point(747, 17);
             this.dealerValueLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.dealerValueLabel.Name = "dealerValueLabel";
-            this.dealerValueLabel.Size = new System.Drawing.Size(74, 29);
+            this.dealerValueLabel.Size = new System.Drawing.Size(59, 24);
             this.dealerValueLabel.TabIndex = 12;
             this.dealerValueLabel.Text = "Value";
             // 
@@ -240,7 +216,7 @@ namespace Project2
             this.playerValueLabel.Location = new System.Drawing.Point(747, 271);
             this.playerValueLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.playerValueLabel.Name = "playerValueLabel";
-            this.playerValueLabel.Size = new System.Drawing.Size(74, 29);
+            this.playerValueLabel.Size = new System.Drawing.Size(59, 24);
             this.playerValueLabel.TabIndex = 13;
             this.playerValueLabel.Text = "Value";
             // 
@@ -251,52 +227,17 @@ namespace Project2
             this.winOrLoseLabel.Location = new System.Drawing.Point(728, 432);
             this.winOrLoseLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.winOrLoseLabel.Name = "winOrLoseLabel";
-            this.winOrLoseLabel.Size = new System.Drawing.Size(171, 29);
+            this.winOrLoseLabel.Size = new System.Drawing.Size(131, 24);
             this.winOrLoseLabel.TabIndex = 14;
             this.winOrLoseLabel.Text = "win/lose status";
             // 
-            // deckLabel
-            // 
-            this.deckLabel.AutoSize = true;
-            this.deckLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deckLabel.Location = new System.Drawing.Point(22, 72);
-            this.deckLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.deckLabel.Name = "deckLabel";
-            this.deckLabel.Size = new System.Drawing.Size(159, 25);
-            this.deckLabel.TabIndex = 15;
-            this.deckLabel.Text = "Number of decks";
-            // 
-            // gameModeLabel
-            // 
-            this.gameModeLabel.AutoSize = true;
-            this.gameModeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gameModeLabel.Location = new System.Drawing.Point(22, 10);
-            this.gameModeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.gameModeLabel.Name = "gameModeLabel";
-            this.gameModeLabel.Size = new System.Drawing.Size(119, 25);
-            this.gameModeLabel.TabIndex = 17;
-            this.gameModeLabel.Text = "Game mode";
-            // 
-            // gameModeComboBox
-            // 
-            this.gameModeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.gameModeComboBox.FormattingEnabled = true;
-            this.gameModeComboBox.Items.AddRange(new object[] {
-            "H17",
-            "S17"});
-            this.gameModeComboBox.Location = new System.Drawing.Point(26, 40);
-            this.gameModeComboBox.Margin = new System.Windows.Forms.Padding(2);
-            this.gameModeComboBox.Name = "gameModeComboBox";
-            this.gameModeComboBox.Size = new System.Drawing.Size(62, 21);
-            this.gameModeComboBox.TabIndex = 18;
-            this.gameModeComboBox.SelectedIndexChanged += new System.EventHandler(this.gameModeComboBox_SelectedIndexChanged);
-            // 
             // playButton
             // 
-            this.playButton.Location = new System.Drawing.Point(1000, 40);
+            this.playButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.playButton.Location = new System.Drawing.Point(33, 62);
             this.playButton.Margin = new System.Windows.Forms.Padding(2);
             this.playButton.Name = "playButton";
-            this.playButton.Size = new System.Drawing.Size(58, 39);
+            this.playButton.Size = new System.Drawing.Size(109, 84);
             this.playButton.TabIndex = 19;
             this.playButton.Text = "Play";
             this.playButton.UseVisualStyleBackColor = true;
@@ -308,6 +249,7 @@ namespace Project2
             this.dealerPictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.dealerPictureBox1.Name = "dealerPictureBox1";
             this.dealerPictureBox1.Size = new System.Drawing.Size(57, 84);
+            this.dealerPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dealerPictureBox1.TabIndex = 20;
             this.dealerPictureBox1.TabStop = false;
             this.dealerPictureBox1.Click += new System.EventHandler(this.dealerPicturebox1_Click);
@@ -318,28 +260,10 @@ namespace Project2
             this.playerPicturebox1.Margin = new System.Windows.Forms.Padding(2);
             this.playerPicturebox1.Name = "playerPicturebox1";
             this.playerPicturebox1.Size = new System.Drawing.Size(57, 84);
+            this.playerPicturebox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.playerPicturebox1.TabIndex = 21;
             this.playerPicturebox1.TabStop = false;
             this.playerPicturebox1.Click += new System.EventHandler(this.playerPicturebox1_Click);
-            // 
-            // numberOfDeckComboBox
-            // 
-            this.numberOfDeckComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.numberOfDeckComboBox.FormattingEnabled = true;
-            this.numberOfDeckComboBox.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8"});
-            this.numberOfDeckComboBox.Location = new System.Drawing.Point(26, 107);
-            this.numberOfDeckComboBox.Margin = new System.Windows.Forms.Padding(2);
-            this.numberOfDeckComboBox.Name = "numberOfDeckComboBox";
-            this.numberOfDeckComboBox.Size = new System.Drawing.Size(62, 21);
-            this.numberOfDeckComboBox.TabIndex = 22;
             // 
             // dealerValueRichTextBox
             // 
@@ -374,6 +298,7 @@ namespace Project2
             this.dealerPictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.dealerPictureBox2.Name = "dealerPictureBox2";
             this.dealerPictureBox2.Size = new System.Drawing.Size(57, 84);
+            this.dealerPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dealerPictureBox2.TabIndex = 27;
             this.dealerPictureBox2.TabStop = false;
             // 
@@ -383,6 +308,7 @@ namespace Project2
             this.dealerPictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.dealerPictureBox3.Name = "dealerPictureBox3";
             this.dealerPictureBox3.Size = new System.Drawing.Size(57, 84);
+            this.dealerPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dealerPictureBox3.TabIndex = 28;
             this.dealerPictureBox3.TabStop = false;
             // 
@@ -392,6 +318,7 @@ namespace Project2
             this.dealerPictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.dealerPictureBox4.Name = "dealerPictureBox4";
             this.dealerPictureBox4.Size = new System.Drawing.Size(57, 84);
+            this.dealerPictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dealerPictureBox4.TabIndex = 29;
             this.dealerPictureBox4.TabStop = false;
             // 
@@ -401,6 +328,7 @@ namespace Project2
             this.dealerPictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.dealerPictureBox5.Name = "dealerPictureBox5";
             this.dealerPictureBox5.Size = new System.Drawing.Size(57, 84);
+            this.dealerPictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dealerPictureBox5.TabIndex = 30;
             this.dealerPictureBox5.TabStop = false;
             // 
@@ -410,6 +338,7 @@ namespace Project2
             this.dealerPictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.dealerPictureBox6.Name = "dealerPictureBox6";
             this.dealerPictureBox6.Size = new System.Drawing.Size(57, 84);
+            this.dealerPictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dealerPictureBox6.TabIndex = 31;
             this.dealerPictureBox6.TabStop = false;
             // 
@@ -473,6 +402,7 @@ namespace Project2
             this.playerPicturebox2.Margin = new System.Windows.Forms.Padding(2);
             this.playerPicturebox2.Name = "playerPicturebox2";
             this.playerPicturebox2.Size = new System.Drawing.Size(57, 84);
+            this.playerPicturebox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.playerPicturebox2.TabIndex = 38;
             this.playerPicturebox2.TabStop = false;
             // 
@@ -482,6 +412,7 @@ namespace Project2
             this.playerPicturebox3.Margin = new System.Windows.Forms.Padding(2);
             this.playerPicturebox3.Name = "playerPicturebox3";
             this.playerPicturebox3.Size = new System.Drawing.Size(57, 84);
+            this.playerPicturebox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.playerPicturebox3.TabIndex = 39;
             this.playerPicturebox3.TabStop = false;
             // 
@@ -491,6 +422,7 @@ namespace Project2
             this.playerPicturebox4.Margin = new System.Windows.Forms.Padding(2);
             this.playerPicturebox4.Name = "playerPicturebox4";
             this.playerPicturebox4.Size = new System.Drawing.Size(57, 84);
+            this.playerPicturebox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.playerPicturebox4.TabIndex = 40;
             this.playerPicturebox4.TabStop = false;
             // 
@@ -500,6 +432,7 @@ namespace Project2
             this.playerPicturebox5.Margin = new System.Windows.Forms.Padding(2);
             this.playerPicturebox5.Name = "playerPicturebox5";
             this.playerPicturebox5.Size = new System.Drawing.Size(57, 84);
+            this.playerPicturebox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.playerPicturebox5.TabIndex = 41;
             this.playerPicturebox5.TabStop = false;
             // 
@@ -509,6 +442,7 @@ namespace Project2
             this.playerPicturebox6.Margin = new System.Windows.Forms.Padding(2);
             this.playerPicturebox6.Name = "playerPicturebox6";
             this.playerPicturebox6.Size = new System.Drawing.Size(57, 84);
+            this.playerPicturebox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.playerPicturebox6.TabIndex = 42;
             this.playerPicturebox6.TabStop = false;
             // 
@@ -584,7 +518,7 @@ namespace Project2
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1074, 673);
+            this.ClientSize = new System.Drawing.Size(882, 571);
             this.Controls.Add(this.moneyGroupBox);
             this.Controls.Add(this.playerPicturebox12);
             this.Controls.Add(this.playerPicturebox10);
@@ -611,18 +545,12 @@ namespace Project2
             this.Controls.Add(this.winOrLoseRichTextBox);
             this.Controls.Add(this.playerValueRichTextBox);
             this.Controls.Add(this.dealerValueRichTextBox);
-            this.Controls.Add(this.numberOfDeckComboBox);
             this.Controls.Add(this.playerPicturebox1);
             this.Controls.Add(this.dealerPictureBox1);
             this.Controls.Add(this.playButton);
-            this.Controls.Add(this.gameModeComboBox);
-            this.Controls.Add(this.gameModeLabel);
-            this.Controls.Add(this.deckLabel);
             this.Controls.Add(this.winOrLoseLabel);
             this.Controls.Add(this.playerValueLabel);
             this.Controls.Add(this.dealerValueLabel);
-            this.Controls.Add(this.seedTextbox);
-            this.Controls.Add(this.seedLabel);
             this.Controls.Add(this.hitButton);
             this.Controls.Add(this.standButton);
             this.Controls.Add(this.resetButton);
@@ -674,18 +602,12 @@ namespace Project2
         private System.Windows.Forms.Button hitButton;
         private System.Windows.Forms.TextBox totalTextBox;
         private System.Windows.Forms.TextBox betTextBox;
-        private System.Windows.Forms.Label seedLabel;
-        private System.Windows.Forms.TextBox seedTextbox;
         private System.Windows.Forms.Label dealerValueLabel;
         private System.Windows.Forms.Label playerValueLabel;
         private System.Windows.Forms.Label winOrLoseLabel;
-        private System.Windows.Forms.Label deckLabel;
-        private System.Windows.Forms.Label gameModeLabel;
-        private System.Windows.Forms.ComboBox gameModeComboBox;
         private System.Windows.Forms.Button playButton;
         private System.Windows.Forms.PictureBox dealerPictureBox1;
         private System.Windows.Forms.PictureBox playerPicturebox1;
-        private System.Windows.Forms.ComboBox numberOfDeckComboBox;
         private System.Windows.Forms.RichTextBox dealerValueRichTextBox;
         private System.Windows.Forms.RichTextBox playerValueRichTextBox;
         private System.Windows.Forms.RichTextBox winOrLoseRichTextBox;

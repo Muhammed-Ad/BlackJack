@@ -16,8 +16,8 @@ namespace Project2
     /// </summary>
     public partial class GameForm : Form
     {
-        
-
+        List<aCard> dealer = new List<aCard>();
+        List<aCard> player = new List<aCard>();
 
         //imageList 
         List<Image> playerPictureboxList;
@@ -33,11 +33,18 @@ namespace Project2
 
         //number of decks
         int nDecks;
-        bool s17Mode = true;  //playing mode
+        string s17Mode = "";  //playing mode
+        string h17Mode = "";
         //also got a deck of card one though lol.
         aDeckOfCards deck;
+        aShoe shoe;
+
+        //sum and ace
         int dealerSum = 0;
         int playerSum = 0;
+        int dealerAce = 0;
+        int playerAce = 0;
+
         int playerImageNum = 0, dealerImageNum = 0;
         aShoe dealingShoe;
         string win = "You Won";
@@ -62,21 +69,27 @@ namespace Project2
 
         }
 
-        public GameForm(int seed, int NumDecks, bool mode)
+        public GameForm(int seed, int NumDecks, string mode)
         {
             InitializeComponent();
 
-            seedTextbox.Text = seed.ToString();
+            //seedTextbox.Text = seed.ToString();
             rand = new Random(seed);
-            s17Mode = mode;
+            if (mode == "S17")
+            {
+                s17Mode = mode;
+            }
+            else
+                h17Mode = mode;
+            
             dealingShoe = new aShoe(NumDecks);
             playerPictureboxList = new List<Image>();
             dealerPictureboxList = new List<Image>();
             initList();
-            drawCard(false, 2); //draw two cards for player
-            drawCard(true, 1);  //draw 1 card for dealer
-            updateDealer();
-            updatePlayer();
+            //drawCard(false, 2); //draw two cards for player
+            //drawCard(true, 1);  //draw 1 card for dealer
+            //updateDealer();
+            //updatePlayer();
             
             
         }
@@ -228,7 +241,127 @@ namespace Project2
 
         private void playButton_Click(object sender, EventArgs e)
         {
+            //check the user bet
+            if (String.IsNullOrEmpty(betTextBox.Text))
+            {
+                MessageBox.Show("You have to bet before playing!", "Error");
+                return;
+            }
 
+            //if the user money less than total money, print error message
+            if(int.Parse(betTextBox.Text) > int.Parse(totalTextBox.Text))
+            {
+                MessageBox.Show("Out of money! Please contact customer service to make a loan :3", "Warning");
+                return;
+            }
+
+            //we have to reset the game
+            resetCards();
+
+            shoe = new aShoe();
+
+            //draw and display a card for the dealer
+            //bool isDealer = true;
+            //drawCards(ref dealer, isDealer);
+
+            //draw a card for dealer
+            aCard dealerCard = shoe.Draw();
+            dealerPictureBox1.Image = dealerCard.getImage();
+            //calculate and display dealer's value
+            dealerSum = dealerCard.getValue();
+            dealerValueRichTextBox.Text = dealerSum.ToString();
+
+            //draw 2 cards for player
+            aCard playerCard1 = shoe.Draw();
+            aCard playerCard2 = shoe.Draw();
+            playerPicturebox1.Image = playerCard1.getImage();
+            playerPicturebox2.Image = playerCard2.getImage();
+
+            //calculate and display player's value
+            playerSum = playerCard1.getValue() + playerCard2.getValue();
+            playerValueRichTextBox.Text = playerSum.ToString();
+
+        }
+
+        private void drawCards(ref List<aCard> info, bool isDealer)
+        {
+            aCard card = shoe.Draw();
+
+            //for dealer
+            if (isDealer)
+            {
+                //if a card is Ace
+                if(card.getValue() == 11)
+                {
+                    ++dealerAce;
+                }
+                dealerSum += card.getValue();
+
+                //if a card is Ace but the total > 21, Ace should be 1
+                if(dealerAce > 0 && dealerSum > 21)
+                {
+                    --dealerAce;
+                    //11 - 10 = 1
+                    dealerSum -= 10;
+                }
+            }
+            //for player
+            else
+            {
+                //if a card is Ace
+                if (card.getValue() == 11)
+                {
+                    ++playerAce;
+                }
+                playerSum += card.getValue();
+
+                //if a card is Ace but the total > 21, Ace should be 1
+                if (playerAce > 0 && playerSum > 21)
+                {
+                    --playerAce;
+                    //11 - 10 = 1
+                    playerSum -= 10;
+                }
+            }
+            
+
+        }
+
+        /// <summary>
+        /// function the reset the cards of dealder and player
+        /// </summary>
+        private void resetCards()
+        {
+            //For dealer
+            foreach(aCard cardDealer in dealer)
+            {
+                Controls.Remove(cardDealer.cardDisplay);
+                //dispose card Display
+                cardDealer.cardDisplay.Dispose();
+            }
+            //clear cards of player and set sum = 0 again
+            dealer.Clear();
+            dealerSum = 0;
+            dealerAce = 0;
+            //clear the rich text box
+            dealerValueRichTextBox.Text = string.Empty;
+            
+
+            //For player
+            foreach (aCard cardPlayer in player)
+            {
+                Controls.Remove(cardPlayer.cardDisplay);
+                //dispose card Display
+                cardPlayer.cardDisplay.Dispose();
+            }
+
+            //clear cards of player and set sum = 0 again
+            player.Clear();
+            playerSum = 0;
+            playerAce = 0;
+            //clear the rich text box
+            playerValueRichTextBox.Text = string.Empty;
+            
         }
 
         private void resetButton_Click(object sender, EventArgs e)
@@ -254,9 +387,10 @@ namespace Project2
             updatePlayer();
         }
 
+
         private void standButton_Click(object sender, EventArgs e)
         {
-           while()
+           //while()
         }
 
         private void dealerCards_Click(object sender, EventArgs e)

@@ -30,12 +30,13 @@ namespace Project2
         /// </summary>
         public aDeckOfCards()
         {
-            for (int i = 1; i < 53; ++i)
+            for (int i = 0; i < 52; ++i)
             {
-                CardValue value = aCard.calculateValue(i % 13);
-                CardSuit suit = aCard.calculateSuit(i % 4);
+                CardValue value = aCard.calculateValue((i % 13) + 1);
+                CardSuit suit = aCard.calculateSuit((i % 4) + 1);
 
-                deck.Add(new aCard(value, suit, cardImage(value + " " + suit)));
+                deck.Add(new aCard(value, suit, cardImage(value + " of " + suit)));
+                System.Console.WriteLine(value);
             }
         }
 
@@ -62,109 +63,109 @@ namespace Project2
         {
             switch (type)
             {
-                case "Ace Spades":
+                case "Ace of Spades":
                     return Properties.Resources.AS;
-                case "Ace Clubs":
+                case "Ace of Clubs":
                     return Properties.Resources.AC;
-                case "Ace Diamonds":
+                case "Ace of Diamonds":
                     return Properties.Resources.AD;
-                case "Ace Hearts":
+                case "Ace of Hearts":
                     return Properties.Resources.AH;
-                case "Two Spades":
+                case "Two of Spades":
                     return Properties.Resources._2S;
-                case "Two Clubs":
+                case "Two of Clubs":
                     return Properties.Resources._2C;
-                case "Two Diamonds":
+                case "Two of Diamonds":
                     return Properties.Resources._2D;
-                case "Two Hearts":
+                case "Two of Hearts":
                     return Properties.Resources._2H;
-                case "Three Spades":
+                case "Three of Spades":
                     return Properties.Resources._3S;
-                case "Three Clubs":
+                case "Three of Clubs":
                     return Properties.Resources._3C;
-                case "Three Diamonds":
+                case "Three of Diamonds":
                     return Properties.Resources._3D;
-                case "Three Hearts":
+                case "Three of Hearts":
                     return Properties.Resources._3H;
-                case "Four Spades":
+                case "Four of Spades":
                     return Properties.Resources._4S;
-                case "Four Clubs":
+                case "Four of Clubs":
                     return Properties.Resources._4C;
-                case "Four Diamonds":
+                case "Four of Diamonds":
                     return Properties.Resources._4D;
-                case "Four Hearts":
+                case "Four of Hearts":
                     return Properties.Resources._4H;
-                case "Five Spades":
+                case "Five of Spades":
                     return Properties.Resources._5S;
-                case "Five Clubs":
+                case "Five of Clubs":
                     return Properties.Resources._5C;
-                case "Five Diamonds":
+                case "Five of Diamonds":
                     return Properties.Resources._5D;
-                case "Five Hearts":
+                case "Five of Hearts":
                     return Properties.Resources._5H;
-                case "Six Spades":
+                case "Six of Spades":
                     return Properties.Resources._6S;
-                case "Six Clubs":
+                case "Six of Clubs":
                     return Properties.Resources._6C;
-                case "Six Diamonds":
+                case "Six of Diamonds":
                     return Properties.Resources._6D;
-                case "Six Hearts":
+                case "Six of Hearts":
                     return Properties.Resources._6H;
-                case "Seven Spades":
+                case "Seven of Spades":
                     return Properties.Resources._7S;
-                case "Seven Clubs":
+                case "Seven of Clubs":
                     return Properties.Resources._7C;
-                case "Seven Diamonds":
+                case "Seven of Diamonds":
                     return Properties.Resources._7D;
-                case "Seven Hearts":
+                case "Seven of Hearts":
                     return Properties.Resources._7H;
-                case "Eight Spades":
+                case "Eight of Spades":
                     return Properties.Resources._8S;
-                case "Eight Clubs":
+                case "Eight of Clubs":
                     return Properties.Resources._8C;
-                case "Eight Diamonds":
+                case "Eight of Diamonds":
                     return Properties.Resources._8D;
-                case "Eight Hearts":
+                case "Eight of Hearts":
                     return Properties.Resources._8H;
-                case "Nine Spades":
+                case "Nine of Spades":
                     return Properties.Resources._9S;
-                case "Nine Clubs":
+                case "Nine of Clubs":
                     return Properties.Resources._9C;
-                case "Nine Diamonds":
+                case "Nine of Diamonds":
                     return Properties.Resources._9D;
-                case "Nine Hearts":
+                case "Nine of Hearts":
                     return Properties.Resources._9H;
-                case "Ten Spades":
+                case "Ten of Spades":
                     return Properties.Resources._10S;
-                case "Ten Clubs":
+                case "Ten of Clubs":
                     return Properties.Resources._10C;
-                case "Ten Diamonds":
+                case "Ten of Diamonds":
                     return Properties.Resources._10D;
-                case "Ten Hearts":
+                case "Ten of Hearts":
                     return Properties.Resources._10H;
-                case "Jack Spades":
+                case "Jack of Spades":
                     return Properties.Resources.JS;
-                case "Jack Clubs":
+                case "Jack of Clubs":
                     return Properties.Resources.JC;
-                case "Jack Diamonds":
+                case "Jack of Diamonds":
                     return Properties.Resources.JD;
-                case "Jack Hearts":
+                case "Jack of Hearts":
                     return Properties.Resources.JH;
-                case "Queen Spades":
+                case "Queen of Spades":
                     return Properties.Resources.QS;
-                case "Queen Clubs":
+                case "Queen of Clubs":
                     return Properties.Resources.QC;
-                case "Queen Diamonds":
+                case "Queen of Diamonds":
                     return Properties.Resources.QD;
-                case "Queen Hearts":
+                case "Queen of Hearts":
                     return Properties.Resources.QH;
-                case "King Spades":
+                case "King of Spades":
                     return Properties.Resources.KS;
-                case "King Clubs":
+                case "King of Clubs":
                     return Properties.Resources.KC;
-                case "King Diamonds":
+                case "King of Diamonds":
                     return Properties.Resources.KD;
-                case "King Hearts":
+                case "King of Hearts":
                     return Properties.Resources.KH;
                 default:
                     return Properties.Resources.back_cards_07;

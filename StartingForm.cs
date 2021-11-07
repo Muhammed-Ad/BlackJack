@@ -21,7 +21,17 @@ namespace Project2
         {
             int seed; int NumDecks;
             bool s17 = S17CheckBox.Checked;
-            if(!int.TryParse(SeedTextBox.Text, out seed))
+            //check value of game mode comboBox
+            var index = gameModecomboBox.FindStringExact(gameModecomboBox.Text);
+
+            if(index == -1)
+            {
+                MessageBox.Show("Choose Game Mode!", "Warning!"); //build the constructor to put args
+                return;
+            }
+            
+
+            if (!int.TryParse(SeedTextBox.Text, out seed))
             {
                 MessageBox.Show("Seed must be an integer"); //build the constructor to put args
                 return;
@@ -33,7 +43,7 @@ namespace Project2
 
             }
                 
-            GameForm GameForm = new GameForm(seed, NumDecks, s17);
+            GameForm GameForm = new GameForm(seed, NumDecks, gameModecomboBox.Text);
             GameForm.Show();
         }
     }
