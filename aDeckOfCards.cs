@@ -30,6 +30,10 @@ namespace Project2
         /// </summary>
         public aDeckOfCards()
         {
+            createDeck();
+        }
+        private void createDeck()
+        {
             for (int i = 0; i < 52; ++i)
             {
                 CardValue value = aCard.calculateValue((i % 13) + 1);
@@ -38,8 +42,8 @@ namespace Project2
                 deck.Add(new aCard(value, suit, cardImage(value + " of " + suit)));
                 System.Console.WriteLine(value);
             }
+            cardCount = 52;
         }
-
         public aCard drawCard(int index)
         {
             if (index > deck.Count())
@@ -62,6 +66,11 @@ namespace Project2
         public bool isEmpty()
         {
             return this.cardCount == 0;
+        }
+        public void reset()
+        {
+            deck.Clear();
+            createDeck();
         }
         /// <summary>
         /// 

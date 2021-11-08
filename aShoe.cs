@@ -60,6 +60,14 @@ namespace Project2
             return drawCard;
 
         }
+
+        public void reset()
+        {
+            for(int i = 0; i < shoe.Count(); i++)
+            {
+                shoe[i].reset();
+            }
+        }
     }
  
 

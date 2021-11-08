@@ -104,7 +104,7 @@ namespace Project2
             this.dealerCardsLabel.Location = new System.Drawing.Point(334, 10);
             this.dealerCardsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.dealerCardsLabel.Name = "dealerCardsLabel";
-            this.dealerCardsLabel.Size = new System.Drawing.Size(186, 31);
+            this.dealerCardsLabel.Size = new System.Drawing.Size(230, 39);
             this.dealerCardsLabel.TabIndex = 0;
             this.dealerCardsLabel.Text = "Dealer Cards";
             this.dealerCardsLabel.Click += new System.EventHandler(this.dealerCards_Click);
@@ -116,7 +116,7 @@ namespace Project2
             this.playerCardsLabel.Location = new System.Drawing.Point(334, 271);
             this.playerCardsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.playerCardsLabel.Name = "playerCardsLabel";
-            this.playerCardsLabel.Size = new System.Drawing.Size(183, 31);
+            this.playerCardsLabel.Size = new System.Drawing.Size(226, 39);
             this.playerCardsLabel.TabIndex = 1;
             this.playerCardsLabel.Text = "Player Cards";
             // 
@@ -127,7 +127,7 @@ namespace Project2
             this.totalLabel.Location = new System.Drawing.Point(8, 16);
             this.totalLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.totalLabel.Name = "totalLabel";
-            this.totalLabel.Size = new System.Drawing.Size(71, 20);
+            this.totalLabel.Size = new System.Drawing.Size(92, 25);
             this.totalLabel.TabIndex = 2;
             this.totalLabel.Text = "Total ($):";
             this.totalLabel.UseWaitCursor = true;
@@ -139,7 +139,7 @@ namespace Project2
             this.betLabel.Location = new System.Drawing.Point(10, 64);
             this.betLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.betLabel.Name = "betLabel";
-            this.betLabel.Size = new System.Drawing.Size(61, 20);
+            this.betLabel.Size = new System.Drawing.Size(77, 25);
             this.betLabel.TabIndex = 3;
             this.betLabel.Text = "Bet ($):";
             this.betLabel.UseWaitCursor = true;
@@ -205,7 +205,7 @@ namespace Project2
             this.dealerValueLabel.Location = new System.Drawing.Point(747, 17);
             this.dealerValueLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.dealerValueLabel.Name = "dealerValueLabel";
-            this.dealerValueLabel.Size = new System.Drawing.Size(59, 24);
+            this.dealerValueLabel.Size = new System.Drawing.Size(74, 29);
             this.dealerValueLabel.TabIndex = 12;
             this.dealerValueLabel.Text = "Value";
             // 
@@ -216,7 +216,7 @@ namespace Project2
             this.playerValueLabel.Location = new System.Drawing.Point(747, 271);
             this.playerValueLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.playerValueLabel.Name = "playerValueLabel";
-            this.playerValueLabel.Size = new System.Drawing.Size(59, 24);
+            this.playerValueLabel.Size = new System.Drawing.Size(74, 29);
             this.playerValueLabel.TabIndex = 13;
             this.playerValueLabel.Text = "Value";
             // 
@@ -227,7 +227,7 @@ namespace Project2
             this.winOrLoseLabel.Location = new System.Drawing.Point(728, 432);
             this.winOrLoseLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.winOrLoseLabel.Name = "winOrLoseLabel";
-            this.winOrLoseLabel.Size = new System.Drawing.Size(131, 24);
+            this.winOrLoseLabel.Size = new System.Drawing.Size(171, 29);
             this.winOrLoseLabel.TabIndex = 14;
             this.winOrLoseLabel.Text = "win/lose status";
             // 
@@ -270,6 +270,7 @@ namespace Project2
             this.dealerValueRichTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dealerValueRichTextBox.Location = new System.Drawing.Point(714, 62);
             this.dealerValueRichTextBox.Name = "dealerValueRichTextBox";
+            this.dealerValueRichTextBox.ReadOnly = true;
             this.dealerValueRichTextBox.Size = new System.Drawing.Size(145, 96);
             this.dealerValueRichTextBox.TabIndex = 24;
             this.dealerValueRichTextBox.Text = "Some Value or Bust";
@@ -279,6 +280,7 @@ namespace Project2
             this.playerValueRichTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.playerValueRichTextBox.Location = new System.Drawing.Point(714, 305);
             this.playerValueRichTextBox.Name = "playerValueRichTextBox";
+            this.playerValueRichTextBox.ReadOnly = true;
             this.playerValueRichTextBox.Size = new System.Drawing.Size(145, 91);
             this.playerValueRichTextBox.TabIndex = 25;
             this.playerValueRichTextBox.Text = "Some Value or Bust";
@@ -288,6 +290,7 @@ namespace Project2
             this.winOrLoseRichTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.winOrLoseRichTextBox.Location = new System.Drawing.Point(714, 459);
             this.winOrLoseRichTextBox.Name = "winOrLoseRichTextBox";
+            this.winOrLoseRichTextBox.ReadOnly = true;
             this.winOrLoseRichTextBox.Size = new System.Drawing.Size(145, 73);
             this.winOrLoseRichTextBox.TabIndex = 26;
             this.winOrLoseRichTextBox.Text = "Win or Lose or Tie status";

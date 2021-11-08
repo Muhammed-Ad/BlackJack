@@ -19,7 +19,7 @@ namespace Project2
 
         private void StartButton_Click(object sender, EventArgs e)
         {
-            int seed; int NumDecks;
+            int seed; int NumDecks = 1;
             bool s17 = S17CheckBox.Checked;
             //check value of game mode comboBox
             //var index = gameModecomboBox.FindStringExact(gameModecomboBox.Text);
@@ -48,6 +48,11 @@ namespace Project2
                 MessageBox.Show("Number of decks must be an integer");
                 return;
 
+            }
+            else if(NumDecks < 1)
+            {
+                MessageBox.Show("Number of decks must be an integer greater than 0");
+                return;
             }
                 
             GameForm GameForm = new GameForm( NumDecks, s17, seed);

@@ -35,7 +35,7 @@ namespace Project2
             this.SeedTextBox = new System.Windows.Forms.TextBox();
             this.SeedLabel = new System.Windows.Forms.Label();
             this.NumDecksLabel = new System.Windows.Forms.Label();
-            this.NumDecksTextBox = new System.Windows.Forms.TextBox();
+            this.NumDecksTextBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // S17CheckBox
@@ -95,10 +95,20 @@ namespace Project2
             // 
             // NumDecksTextBox
             // 
+            this.NumDecksTextBox.FormattingEnabled = true;
+            this.NumDecksTextBox.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"});
             this.NumDecksTextBox.Location = new System.Drawing.Point(168, 62);
             this.NumDecksTextBox.Name = "NumDecksTextBox";
-            this.NumDecksTextBox.Size = new System.Drawing.Size(100, 20);
-            this.NumDecksTextBox.TabIndex = 15;
+            this.NumDecksTextBox.Size = new System.Drawing.Size(121, 21);
+            this.NumDecksTextBox.TabIndex = 16;
             this.NumDecksTextBox.Text = "1";
             // 
             // StartingForm
@@ -128,6 +138,6 @@ namespace Project2
         private System.Windows.Forms.TextBox SeedTextBox;
         private System.Windows.Forms.Label SeedLabel;
         private System.Windows.Forms.Label NumDecksLabel;
-        private System.Windows.Forms.TextBox NumDecksTextBox;
+        private System.Windows.Forms.ComboBox NumDecksTextBox;
     }
 }
