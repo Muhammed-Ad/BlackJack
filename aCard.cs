@@ -11,9 +11,9 @@ using System.Windows.Forms;
 namespace Project2
 {
    
-    
-    public enum CardValue
+    public enum CardValue: int
     {
+        
         Ace = 1,
         Two = 2,
         Three = 3,
@@ -24,18 +24,21 @@ namespace Project2
         Eight = 8,
         Nine = 9,
         Ten = 10,
-        Jack = 11,
-        Queen = 12,
-        King = 13,
-        //None = -1,
+        Jack = 10,
+        Queen = 10,
+        King = 10,
+        None = -1,
     }
+
     public enum CardSuit
     {
+        
         Spades = 1,
         Clubs = 2,
         Diamonds = 3,
         Hearts = 4,
-        //None = -1,
+        None = -1,
+
     }
 
 
@@ -60,6 +63,11 @@ namespace Project2
         /// the image
         /// </summary>
         private Image image;
+
+        /// <summary>
+        /// display card
+        /// </summary>
+        public PictureBox cardDisplay;
 
         public aCard(CardValue value, CardSuit suit, System.Drawing.Image image)
         {
@@ -100,7 +108,7 @@ namespace Project2
                 return 0;
         }
 
-        /*public static CardValue calculateValue(int value)
+        public static CardValue calculateValue(int value)
         {
             switch (value)
             {
@@ -151,7 +159,7 @@ namespace Project2
                 default:
                     return CardSuit.None;
             }
-        }*/
+        }
 
     }
     
