@@ -448,6 +448,7 @@ namespace Project2
             }
 
             drawCard(false, 1);///player draw card
+            drawCard(true, 1); ///dealer draw card
         }
 
 
