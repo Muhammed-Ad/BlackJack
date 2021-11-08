@@ -34,13 +34,24 @@ namespace Project2
         }
         private void createDeck()
         {
-            for (int i = 0; i < 52; ++i)
+            /*for (int i = 0; i < 52; ++i)
             {
                 CardValue value = aCard.calculateValue((i % 13) + 1);
                 CardSuit suit = aCard.calculateSuit((i % 4) + 1);
 
                 deck.Add(new aCard(value, suit, cardImage(value + " of " + suit)));
                 System.Console.WriteLine(value);
+            }*/
+            foreach (CardSuit suit in Enum.GetValues(typeof(CardSuit)))
+            {
+                foreach (CardValue value in Enum.GetValues(typeof(CardValue)))
+                {
+                    deck.Add(new aCard(value, suit, cardImage(value + " of " + suit)));
+                    System.Console.Write(value);
+                    System.Console.Write(" of ");
+                    System.Console.WriteLine(suit);
+
+                }
             }
             cardCount = 52;
         }

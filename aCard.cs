@@ -24,10 +24,9 @@ namespace Project2
         Eight = 8,
         Nine = 9,
         Ten = 10,
-        Jack = 10,
-        Queen = 10,
-        King = 10,
-        None = -1,
+        Jack = 11,
+        Queen = 12,
+        King = 13,
     }
 
     public enum CardSuit
@@ -37,7 +36,6 @@ namespace Project2
         Clubs = 2,
         Diamonds = 3,
         Hearts = 4,
-        None = -1,
 
     }
 
@@ -108,7 +106,7 @@ namespace Project2
                 return 0;
         }
 
-        public static CardValue calculateValue(int value)
+       /* public static CardValue calculateValue(int value)
         {
             switch (value)
             {
@@ -159,7 +157,7 @@ namespace Project2
                 default:
                     return CardSuit.None;
             }
-        }
+        }*/
 
     }
     
