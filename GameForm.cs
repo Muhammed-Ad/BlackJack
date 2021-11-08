@@ -297,7 +297,7 @@ namespace Project2
 
         private void playButton_Click(object sender, EventArgs e)
         {
-            numTimesPlayed++;
+            
             //check the user bet
             if (String.IsNullOrEmpty(betTextBox.Text))
             {
@@ -311,7 +311,7 @@ namespace Project2
                 MessageBox.Show("Out of money! Please contact customer service to make a loan :3", "Warning");
                 return;
             }
-
+            numTimesPlayed++;
             //we have to reset the game
             if(numTimesPlayed > 1)
                 resetCards();
@@ -339,7 +339,7 @@ namespace Project2
             playerSum = playerCard1.getValue() + playerCard2.getValue();
             playerValueRichTextBox.Text = playerSum.ToString();*/
 
-            hitButton_Click(null, EventArgs.Empty); hitButton_Click(null, EventArgs.Empty);//draw two cards for player
+            drawCard(false, 2); //draw two cards for player
             drawCard(true, 1);  //draw 1 card for dealer
             
 
@@ -448,13 +448,15 @@ namespace Project2
             }
 
             drawCard(false, 1);///player draw card
-            drawCard(true, 1); ///dealer draw card
         }
 
 
         private void standButton_Click(object sender, EventArgs e)
         {
-           //while()
+           while(dealerSum < 17 && s17Mode)
+            {
+                drawCard(true, 1);
+            }
         }
 
         private void dealerCards_Click(object sender, EventArgs e)
