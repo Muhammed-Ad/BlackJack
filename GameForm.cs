@@ -49,7 +49,7 @@ namespace Project2
         aShoe dealingShoe;
         string win = "You Won";
         string lose = "You Lost";
-
+        int numTimesPlayed = 0;
         
 
         /// <summary>
@@ -118,52 +118,112 @@ namespace Project2
                     {
                         dealerSum += temp.getValue();
                     }
-                    dealer[dealerImageNum++] = temp;
+                    dealer[dealerImageNum] = temp;
+                    updateDealer(dealerImageNum);
+                    dealerImageNum++;
                 }
                 else
                 {
                     playerSum += temp.getValue();
-                    player[dealerImageNum++] = temp;
+                    player[playerImageNum] = temp;
+                    updatePlayer(playerImageNum);
+                    playerImageNum++;
                 }
             }
             dealerValueRichTextBox.Text = dealerSum.ToString();
             playerValueRichTextBox.Text = playerSum.ToString();
         }
 
-        private void updateDealer()
+        private void updateDealer(int numUpdated)
         {
-            dealerPictureBox1.Image = dealer[0].getImage();
-            dealerPictureBox2.Image = dealer[1].getImage();
-            dealerPictureBox3.Image = dealer[2].getImage();
-            dealerPictureBox4.Image = dealer[3].getImage();
-            dealerPictureBox5.Image = dealer[4].getImage();
-            dealerPictureBox6.Image = dealer[5].getImage();
+            if (numUpdated > 12 || numUpdated < 1)
+                return;
 
-            dealerPictureBox7.Image = dealer[6].getImage();
-            dealerPictureBox8.Image = dealer[7].getImage();
-            dealerPictureBox9.Image = dealer[8].getImage();
-            dealerPictureBox10.Image = dealer[9].getImage();
-            dealerPictureBox11.Image = dealer[10].getImage();
-            dealerPictureBox12.Image = dealer[11].getImage();
-
-            //dealerPictureBox7.Visible = true;
+            switch (numUpdated)
+            {
+                case 12:
+                    dealerPictureBox12.Image = dealer[11].getImage();
+                    break;
+                case 11:
+                    dealerPictureBox11.Image = dealer[10].getImage();
+                    break;
+                case 10:
+                    dealerPictureBox10.Image = dealer[9].getImage();
+                    break;
+                case 9:
+                    dealerPictureBox9.Image = dealer[8].getImage();
+                    break;
+                case 8:
+                    dealerPictureBox8.Image = dealer[7].getImage();
+                    break;
+                case 7:
+                    dealerPictureBox7.Image = dealer[6].getImage();
+                    break;
+                case 6:
+                    dealerPictureBox6.Image = dealer[5].getImage();
+                    break;
+                case 5:
+                    dealerPictureBox5.Image = dealer[4].getImage();
+                    break;
+                case 4:
+                    dealerPictureBox4.Image = dealer[3].getImage();
+                    break;
+                case 3:
+                    dealerPictureBox3.Image = dealer[2].getImage();
+                    break;
+                case 2:
+                    dealerPictureBox2.Image = dealer[1].getImage();
+                    break;
+                case 1:
+                    dealerPictureBox1.Image = dealer[0].getImage();
+                    break;
+            }
         }
 
-        private void updatePlayer()
+        private void updatePlayer(int numUpdated)
         {
-            playerPicturebox1.Image = player[0].getImage();
-            playerPicturebox2.Image = player[0].getImage();
-            playerPicturebox3.Image = player[0].getImage();
-            playerPicturebox4.Image = player[0].getImage();
-            playerPicturebox5.Image = player[0].getImage();
-            playerPicturebox6.Image = player[0].getImage();
+            if (numUpdated > 12 || numUpdated < 1)
+                return;
 
-            playerPicturebox7.Image = player[0].getImage();
-            playerPicturebox8.Image = player[0].getImage();
-            playerPicturebox9.Image = player[0].getImage();
-            playerPicturebox10.Image = player[0].getImage();
-            playerPicturebox11.Image = player[0].getImage();
-            playerPicturebox12.Image = player[0].getImage();
+            switch (numUpdated)
+            {
+                case 12:
+                    playerPicturebox12.Image = player[11].getImage();
+                    break;
+                case 11:
+                    playerPicturebox11.Image = player[10].getImage();
+                    break;
+                case 10:
+                    playerPicturebox10.Image = player[9].getImage();
+                    break;
+                case 9:
+                    playerPicturebox9.Image = player[8].getImage();
+                    break;
+                case 8:
+                    playerPicturebox8.Image = player[7].getImage();
+                    break;
+                case 7:
+                    playerPicturebox7.Image = player[6].getImage();
+                    break;
+                case 6:
+                    playerPicturebox6.Image = player[5].getImage();
+                    break;
+                case 5:
+                    playerPicturebox5.Image = player[4].getImage();
+                    break;
+                case 4:
+                    playerPicturebox4.Image = player[3].getImage();
+                    break;
+                case 3:
+                    playerPicturebox3.Image = player[2].getImage();
+                    break;
+                case 2:
+                    playerPicturebox2.Image = player[1].getImage();
+                    break;
+                case 1:
+                    playerPicturebox1.Image = player[0].getImage();
+                    break;
+            }
         }
    
         
@@ -237,6 +297,7 @@ namespace Project2
 
         private void playButton_Click(object sender, EventArgs e)
         {
+            numTimesPlayed++;
             //check the user bet
             if (String.IsNullOrEmpty(betTextBox.Text))
             {
@@ -252,7 +313,8 @@ namespace Project2
             }
 
             //we have to reset the game
-            //resetCards();
+            if(numTimesPlayed > 1)
+                resetCards();
 
             /*shoe = new aShoe();
 
@@ -277,10 +339,9 @@ namespace Project2
             playerSum = playerCard1.getValue() + playerCard2.getValue();
             playerValueRichTextBox.Text = playerSum.ToString();*/
 
-            drawCard(false, 2); //draw two cards for player
+            hitButton_Click(null, EventArgs.Empty); hitButton_Click(null, EventArgs.Empty);//draw two cards for player
             drawCard(true, 1);  //draw 1 card for dealer
-            updateDealer();
-            updatePlayer();
+            
 
         }
 
@@ -333,6 +394,7 @@ namespace Project2
         /// </summary>
         private void resetCards()
         {
+            
             //For dealer
             foreach(aCard cardDealer in dealer)
             {
@@ -367,7 +429,7 @@ namespace Project2
 
         private void resetButton_Click(object sender, EventArgs e)
         {
-            
+            //resetCards();
         }
 
         /// <summary>
@@ -382,10 +444,10 @@ namespace Project2
             {
                 MessageBox.Show("Cannot hit, must stand");
                 standButton_Click(null, EventArgs.Empty);
+                return;
             }
 
             drawCard(false, 1);///player draw card
-            updatePlayer();
         }
 
 
