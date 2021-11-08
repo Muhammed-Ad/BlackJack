@@ -23,7 +23,7 @@ namespace Project2
         /// Contructor with the default number of decks is 1 if no argument passed
         /// </summary>
         /// <param name="numberOfDecks"></param>
-        public aShoe(int numberOfDecks = 1)
+        public aShoe(Random rand, int numberOfDecks = 1)
         {
             this.numberOfDecks = numberOfDecks;
             for (int i = 0; i < numberOfDecks; ++i)
@@ -32,7 +32,7 @@ namespace Project2
                 // shoe.AddRange(deck.)
                 shoe.Add(new aDeckOfCards());
             }
-            rand = new Random();
+            this.rand = rand;
         }
 
         

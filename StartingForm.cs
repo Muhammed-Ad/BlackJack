@@ -29,12 +29,20 @@ namespace Project2
                 MessageBox.Show("Game Mode: H17", "Notice"); //build the constructor to put args
             }
             
-
-            if (!int.TryParse(SeedTextBox.Text, out seed))
+            if(string.IsNullOrEmpty(SeedTextBox.Text) || string.IsNullOrWhiteSpace(SeedTextBox.Text))
             {
-                MessageBox.Show("Seed must be an integer"); //build the constructor to put args
-                return;
+                seed = -1;
+                MessageBox.Show("Seed empty, using default seed", "Notice");
             }
+            else
+            {
+                if (!int.TryParse(SeedTextBox.Text, out seed))
+                {
+                    MessageBox.Show("Seed must be an integer"); //build the constructor to put args
+                    return;
+                }
+            }
+            
             if (!int.TryParse(NumDecksTextBox.Text, out NumDecks))
             {
                 MessageBox.Show("Number of decks must be an integer");
@@ -42,7 +50,7 @@ namespace Project2
 
             }
                 
-            GameForm GameForm = new GameForm(seed, NumDecks, s17);
+            GameForm GameForm = new GameForm( NumDecks, s17, seed);
             GameForm.Show();
         }
     }
