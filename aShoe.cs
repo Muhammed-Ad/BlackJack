@@ -13,7 +13,7 @@ namespace Project2
         /// object shoe as read only at the runtime
         /// </summary>
         private readonly List<aDeckOfCards> shoe = new List<aDeckOfCards>();
-
+        Random rand;
         /// <summary>
         /// number of deck
         /// </summary>
@@ -32,13 +32,13 @@ namespace Project2
                 // shoe.AddRange(deck.)
                 shoe.Add(new aDeckOfCards());
             }
-
+            rand = new Random();
         }
 
         
         public aCard Draw()
         {
-            Random rand = new Random();
+            
             int DeckIndex = rand.Next(0, numberOfDecks);
             if (shoe[DeckIndex].isEmpty())
             {

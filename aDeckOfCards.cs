@@ -42,12 +42,21 @@ namespace Project2
 
         public aCard drawCard(int index)
         {
+            if (index > deck.Count())
+            {
+                System.Windows.Forms.MessageBox.Show("Card index out of bounds, please exit.");
+                return null;
+            }
+                
+           
             return deck[index];
+            
         }
 
         public void removeCard(int index)
         {
             deck.RemoveAt(index);
+            cardCount--;
         }
 
         public bool isEmpty()

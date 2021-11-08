@@ -83,8 +83,8 @@ namespace Project2
                 h17Mode = mode;
             
             dealingShoe = new aShoe(NumDecks);
-            playerPictureboxList = new List<Image>();
-            dealerPictureboxList = new List<Image>();
+            /*playerPictureboxList = new List<Image>();
+            dealerPictureboxList = new List<Image>();*/
             initList();
             //drawCard(false, 2); //draw two cards for player
             //drawCard(true, 1);  //draw 1 card for dealer
@@ -97,18 +97,19 @@ namespace Project2
         {
             for(int i = 0; i < 12; i++)
             {
-                playerPictureboxList.Add(default);
-                dealerPictureboxList.Add(default);
+                player.Add(new aCard(0, 0, defaultImage));
+                dealer.Add(new aCard(0, 0, defaultImage));
             }
         }
-        private void drawCard(bool dealer, int numCardsDrawn)
+        private void drawCard(bool isDealer, int numCardsDrawn)
         {
             aCard temp;
             for (int i = 0; i < numCardsDrawn; i++)
             {
-                if (dealer)
+                temp = dealingShoe.Draw();
+                if (isDealer)
                 {
-                    temp = dealingShoe.Draw();
+                    
                     if(dealerSum > 10 && temp.getValue() == 1)
                     {
                         dealerSum += 10;
@@ -117,59 +118,54 @@ namespace Project2
                     {
                         dealerSum += temp.getValue();
                     }
-                    dealerPictureboxList[dealerImageNum++] = dealingShoe.Draw().getImage();
+                    dealer[dealerImageNum++] = temp;
                 }
                 else
                 {
-            
-                    temp = dealingShoe.Draw();
                     playerSum += temp.getValue();
-                    playerPictureboxList[dealerImageNum++] = dealingShoe.Draw().getImage();
+                    player[dealerImageNum++] = temp;
                 }
             }
-            
+            dealerValueRichTextBox.Text = dealerSum.ToString();
+            playerValueRichTextBox.Text = playerSum.ToString();
         }
 
         private void updateDealer()
         {
-            dealerPictureBox1.Image = dealerPictureboxList[0];
-            dealerPictureBox2.Image = dealerPictureboxList[1];
-            dealerPictureBox3.Image = dealerPictureboxList[2];
-            dealerPictureBox4.Image = dealerPictureboxList[3];
-            dealerPictureBox5.Image = dealerPictureboxList[4];
-            dealerPictureBox6.Image = dealerPictureboxList[5];
+            dealerPictureBox1.Image = dealer[0].getImage();
+            dealerPictureBox2.Image = dealer[1].getImage();
+            dealerPictureBox3.Image = dealer[2].getImage();
+            dealerPictureBox4.Image = dealer[3].getImage();
+            dealerPictureBox5.Image = dealer[4].getImage();
+            dealerPictureBox6.Image = dealer[5].getImage();
 
-            dealerPictureBox7.Image = dealerPictureboxList[6];
-            dealerPictureBox8.Image = dealerPictureboxList[7];
-            dealerPictureBox9.Image = dealerPictureboxList[8];
-            dealerPictureBox10.Image = dealerPictureboxList[9];
-            dealerPictureBox11.Image = dealerPictureboxList[10];
-            dealerPictureBox12.Image = dealerPictureboxList[11];
+            dealerPictureBox7.Image = dealer[6].getImage();
+            dealerPictureBox8.Image = dealer[7].getImage();
+            dealerPictureBox9.Image = dealer[8].getImage();
+            dealerPictureBox10.Image = dealer[9].getImage();
+            dealerPictureBox11.Image = dealer[10].getImage();
+            dealerPictureBox12.Image = dealer[11].getImage();
 
             //dealerPictureBox7.Visible = true;
         }
 
         private void updatePlayer()
         {
-            playerPicturebox1.Image = dealerPictureboxList[0];
-            playerPicturebox2.Image = dealerPictureboxList[1];
-            playerPicturebox3.Image = dealerPictureboxList[2];
-            playerPicturebox4.Image = dealerPictureboxList[3];
-            playerPicturebox5.Image = dealerPictureboxList[4];
-            playerPicturebox6.Image = dealerPictureboxList[5];
+            playerPicturebox1.Image = player[0].getImage();
+            playerPicturebox2.Image = player[0].getImage();
+            playerPicturebox3.Image = player[0].getImage();
+            playerPicturebox4.Image = player[0].getImage();
+            playerPicturebox5.Image = player[0].getImage();
+            playerPicturebox6.Image = player[0].getImage();
 
-            playerPicturebox7.Image = dealerPictureboxList[6];
-            playerPicturebox8.Image = dealerPictureboxList[7];
-            playerPicturebox9.Image = dealerPictureboxList[8];
-            playerPicturebox10.Image = dealerPictureboxList[9];
-            playerPicturebox11.Image = dealerPictureboxList[10];
-            playerPicturebox12.Image = dealerPictureboxList[11];
+            playerPicturebox7.Image = player[0].getImage();
+            playerPicturebox8.Image = player[0].getImage();
+            playerPicturebox9.Image = player[0].getImage();
+            playerPicturebox10.Image = player[0].getImage();
+            playerPicturebox11.Image = player[0].getImage();
+            playerPicturebox12.Image = player[0].getImage();
         }
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+   
         
         
 
@@ -256,9 +252,9 @@ namespace Project2
             }
 
             //we have to reset the game
-            resetCards();
+            //resetCards();
 
-            shoe = new aShoe();
+            /*shoe = new aShoe();
 
             //draw and display a card for the dealer
             //bool isDealer = true;
@@ -279,7 +275,12 @@ namespace Project2
 
             //calculate and display player's value
             playerSum = playerCard1.getValue() + playerCard2.getValue();
-            playerValueRichTextBox.Text = playerSum.ToString();
+            playerValueRichTextBox.Text = playerSum.ToString();*/
+
+            drawCard(false, 2); //draw two cards for player
+            drawCard(true, 1);  //draw 1 card for dealer
+            updateDealer();
+            updatePlayer();
 
         }
 
@@ -383,7 +384,7 @@ namespace Project2
                 standButton_Click(null, EventArgs.Empty);
             }
 
-            drawCard(false, 1);
+            drawCard(false, 1);///player draw card
             updatePlayer();
         }
 
