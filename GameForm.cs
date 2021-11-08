@@ -33,8 +33,8 @@ namespace Project2
 
         //number of decks
         int nDecks;
-        string s17Mode = "";  //playing mode
-        string h17Mode = "";
+        bool s17Mode;  //playing mode
+        bool h17Mode;
         //also got a deck of card one though lol.
         aDeckOfCards deck;
         aShoe shoe;
@@ -69,17 +69,17 @@ namespace Project2
 
         }
 
-        public GameForm(int seed, int NumDecks, string mode)
+        public GameForm(int seed, int NumDecks, bool mode)
         {
             InitializeComponent();
 
             //seedTextbox.Text = seed.ToString();
             rand = new Random(seed);
-            if (mode == "S17")
+            if (mode == true)
             {
                 s17Mode = mode;
             }
-            else
+            else             
                 h17Mode = mode;
             
             dealingShoe = new aShoe(NumDecks);

@@ -22,12 +22,11 @@ namespace Project2
             int seed; int NumDecks;
             bool s17 = S17CheckBox.Checked;
             //check value of game mode comboBox
-            var index = gameModecomboBox.FindStringExact(gameModecomboBox.Text);
+            //var index = gameModecomboBox.FindStringExact(gameModecomboBox.Text);
 
-            if(index == -1)
+            if(!s17)
             {
-                MessageBox.Show("Choose Game Mode!", "Warning!"); //build the constructor to put args
-                return;
+                MessageBox.Show("Game Mode: H17", "Notice"); //build the constructor to put args
             }
             
 
@@ -43,7 +42,7 @@ namespace Project2
 
             }
                 
-            GameForm GameForm = new GameForm(seed, NumDecks, gameModecomboBox.Text);
+            GameForm GameForm = new GameForm(seed, NumDecks, s17);
             GameForm.Show();
         }
     }

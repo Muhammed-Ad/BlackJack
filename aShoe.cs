@@ -28,6 +28,8 @@ namespace Project2
             this.numberOfDecks = numberOfDecks;
             for (int i = 0; i < numberOfDecks; ++i)
             {
+                aDeckOfCards deck = new aDeckOfCards();
+                // shoe.AddRange(deck.)
                 shoe.Add(new aDeckOfCards());
             }
 
@@ -41,11 +43,13 @@ namespace Project2
             if (shoe[DeckIndex].isEmpty())
             {
                 shoe.RemoveAt(DeckIndex);
+                
                 if (shoe.Count() == 0)
                 {
                     System.Windows.Forms.MessageBox.Show("Empty Deck of cards. Please exit.");
                     return null;
                 }
+                
             }
 
             int value = rand.Next(0, shoe[DeckIndex].Count);

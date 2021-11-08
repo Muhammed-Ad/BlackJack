@@ -36,13 +36,12 @@ namespace Project2
             this.SeedLabel = new System.Windows.Forms.Label();
             this.NumDecksLabel = new System.Windows.Forms.Label();
             this.NumDecksTextBox = new System.Windows.Forms.TextBox();
-            this.gameModecomboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // S17CheckBox
             // 
             this.S17CheckBox.AutoSize = true;
-            this.S17CheckBox.Location = new System.Drawing.Point(82, 243);
+            this.S17CheckBox.Location = new System.Drawing.Point(168, 184);
             this.S17CheckBox.Name = "S17CheckBox";
             this.S17CheckBox.Size = new System.Drawing.Size(45, 17);
             this.S17CheckBox.TabIndex = 14;
@@ -51,11 +50,12 @@ namespace Project2
             // 
             // StartButton
             // 
+            this.StartButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StartButton.Location = new System.Drawing.Point(159, 281);
             this.StartButton.Name = "StartButton";
             this.StartButton.Size = new System.Drawing.Size(118, 71);
             this.StartButton.TabIndex = 13;
-            this.StartButton.Text = "Start";
+            this.StartButton.Text = "New Player";
             this.StartButton.UseVisualStyleBackColor = true;
             this.StartButton.Click += new System.EventHandler(this.StartButton_Click);
             // 
@@ -102,23 +102,11 @@ namespace Project2
             this.NumDecksTextBox.TabIndex = 15;
             this.NumDecksTextBox.Text = "1";
             // 
-            // gameModecomboBox
-            // 
-            this.gameModecomboBox.FormattingEnabled = true;
-            this.gameModecomboBox.Items.AddRange(new object[] {
-            "S17",
-            "H17"});
-            this.gameModecomboBox.Location = new System.Drawing.Point(168, 184);
-            this.gameModecomboBox.Name = "gameModecomboBox";
-            this.gameModecomboBox.Size = new System.Drawing.Size(100, 21);
-            this.gameModecomboBox.TabIndex = 16;
-            // 
             // StartingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(399, 421);
-            this.Controls.Add(this.gameModecomboBox);
             this.Controls.Add(this.NumDecksTextBox);
             this.Controls.Add(this.S17CheckBox);
             this.Controls.Add(this.StartButton);
@@ -142,6 +130,5 @@ namespace Project2
         private System.Windows.Forms.Label SeedLabel;
         private System.Windows.Forms.Label NumDecksLabel;
         private System.Windows.Forms.TextBox NumDecksTextBox;
-        private System.Windows.Forms.ComboBox gameModecomboBox;
     }
 }
