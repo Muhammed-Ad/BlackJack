@@ -42,10 +42,9 @@ namespace Project2
                     /*System.Console.Write(value);
                     System.Console.Write(" of ");
                     System.Console.WriteLine(suit);*/
-                    cardCount++;
                 }
             }
-            
+            cardCount = 52;
         }
         public aCard drawCard(int index)
         {

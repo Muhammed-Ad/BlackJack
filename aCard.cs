@@ -13,7 +13,6 @@ namespace Project2
    
     public enum CardValue: int
     {
-        
         Ace = 1,
         Two = 2,
         Three = 3,
@@ -31,12 +30,10 @@ namespace Project2
 
     public enum CardSuit
     {
-        
         Spades = 1,
         Clubs = 2,
         Diamonds = 3,
         Hearts = 4,
-
     }
 
 

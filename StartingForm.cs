@@ -23,6 +23,17 @@ namespace Project2
             bool s17 = S17CheckBox.Checked;
             //check value of game mode comboBox
             //var index = gameModecomboBox.FindStringExact(gameModecomboBox.Text);
+            if (!int.TryParse(NumDecksTextBox.Text, out NumDecks))
+            {
+                MessageBox.Show("You choose the Number of Decks!", "Error");
+                return;
+
+            }
+            else if(NumDecks < 1)
+            {
+                MessageBox.Show("Number of decks must be an integer greater than 0");
+                return;
+            }
 
             if(!s17)
             {
@@ -41,18 +52,6 @@ namespace Project2
                     MessageBox.Show("Seed must be an integer"); //build the constructor to put args
                     return;
                 }
-            }
-            
-            if (!int.TryParse(NumDecksTextBox.Text, out NumDecks))
-            {
-                MessageBox.Show("You choose the Number of Decks!", "Error");
-                return;
-
-            }
-            else if(NumDecks < 1)
-            {
-                MessageBox.Show("Number of decks must be an integer greater than 0");
-                return;
             }
             
             GameForm GameForm = new GameForm( NumDecks, s17, seed);
