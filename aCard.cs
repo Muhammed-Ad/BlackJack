@@ -106,59 +106,6 @@ namespace Project2
                 return 0;
         }
 
-       /* public static CardValue calculateValue(int value)
-        {
-            switch (value)
-            {
-                case 1:
-                    return CardValue.Ace;
-                case 2:
-                    return CardValue.Two;
-                case 3:
-                    return CardValue.Three;
-                case 4:
-                    return CardValue.Four;
-                case 5:
-                    return CardValue.Five;
-                case 6:
-                    return CardValue.Six;
-                case 7:
-                    return CardValue.Seven;
-                case 8:
-                    return CardValue.Eight;
-                case 9:
-                    return CardValue.Nine;
-                case 10:
-                    return CardValue.Ten;
-                case 11:
-                    return CardValue.Jack;
-                case 12:
-                    return CardValue.Queen;
-                case 13:
-                    return CardValue.King;
-                default:
-                    return CardValue.None;
-               
-            }
-        }
-
-        public static CardSuit calculateSuit(int value)
-        {
-            switch (value)
-            {
-                case 1:
-                    return CardSuit.Spades;
-                case 2:
-                    return CardSuit.Clubs;
-                case 3:
-                    return CardSuit.Diamonds;
-                case 4:
-                    return CardSuit.Hearts;
-                default:
-                    return CardSuit.None;
-            }
-        }*/
-
     }
     
 }

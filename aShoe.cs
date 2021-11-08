@@ -28,7 +28,6 @@ namespace Project2
             this.numberOfDecks = numberOfDecks;
             for (int i = 0; i < numberOfDecks; ++i)
             {
-                aDeckOfCards deck = new aDeckOfCards();
                 // shoe.AddRange(deck.)
                 shoe.Add(new aDeckOfCards());
             }

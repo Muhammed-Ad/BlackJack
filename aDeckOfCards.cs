@@ -20,7 +20,7 @@ namespace Project2
         /// </summary>
         private readonly List<aCard> deck = new List<aCard>();
 
-        int cardCount = 52;
+        int cardCount = 0;
         public int Count
         {
             get { return this.cardCount; }
@@ -50,10 +50,10 @@ namespace Project2
                     System.Console.Write(value);
                     System.Console.Write(" of ");
                     System.Console.WriteLine(suit);
-
+                    cardCount++;
                 }
             }
-            cardCount = 52;
+            
         }
         public aCard drawCard(int index)
         {
