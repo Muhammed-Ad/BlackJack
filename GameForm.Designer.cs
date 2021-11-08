@@ -104,7 +104,7 @@ namespace Project2
             this.dealerCardsLabel.Location = new System.Drawing.Point(334, 10);
             this.dealerCardsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.dealerCardsLabel.Name = "dealerCardsLabel";
-            this.dealerCardsLabel.Size = new System.Drawing.Size(230, 39);
+            this.dealerCardsLabel.Size = new System.Drawing.Size(186, 31);
             this.dealerCardsLabel.TabIndex = 0;
             this.dealerCardsLabel.Text = "Dealer Cards";
             this.dealerCardsLabel.Click += new System.EventHandler(this.dealerCards_Click);
@@ -116,7 +116,7 @@ namespace Project2
             this.playerCardsLabel.Location = new System.Drawing.Point(334, 271);
             this.playerCardsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.playerCardsLabel.Name = "playerCardsLabel";
-            this.playerCardsLabel.Size = new System.Drawing.Size(226, 39);
+            this.playerCardsLabel.Size = new System.Drawing.Size(183, 31);
             this.playerCardsLabel.TabIndex = 1;
             this.playerCardsLabel.Text = "Player Cards";
             // 
@@ -127,7 +127,7 @@ namespace Project2
             this.totalLabel.Location = new System.Drawing.Point(8, 16);
             this.totalLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.totalLabel.Name = "totalLabel";
-            this.totalLabel.Size = new System.Drawing.Size(92, 25);
+            this.totalLabel.Size = new System.Drawing.Size(71, 20);
             this.totalLabel.TabIndex = 2;
             this.totalLabel.Text = "Total ($):";
             this.totalLabel.UseWaitCursor = true;
@@ -139,7 +139,7 @@ namespace Project2
             this.betLabel.Location = new System.Drawing.Point(10, 64);
             this.betLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.betLabel.Name = "betLabel";
-            this.betLabel.Size = new System.Drawing.Size(77, 25);
+            this.betLabel.Size = new System.Drawing.Size(61, 20);
             this.betLabel.TabIndex = 3;
             this.betLabel.Text = "Bet ($):";
             this.betLabel.UseWaitCursor = true;
@@ -182,15 +182,17 @@ namespace Project2
             // 
             // totalTextBox
             // 
+            this.totalTextBox.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.totalTextBox.Location = new System.Drawing.Point(14, 38);
             this.totalTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.totalTextBox.Name = "totalTextBox";
+            this.totalTextBox.ReadOnly = true;
             this.totalTextBox.Size = new System.Drawing.Size(113, 20);
             this.totalTextBox.TabIndex = 7;
-            this.totalTextBox.UseWaitCursor = true;
             // 
             // betTextBox
             // 
+            this.betTextBox.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.betTextBox.Location = new System.Drawing.Point(12, 86);
             this.betTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.betTextBox.Name = "betTextBox";
@@ -205,7 +207,7 @@ namespace Project2
             this.dealerValueLabel.Location = new System.Drawing.Point(747, 17);
             this.dealerValueLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.dealerValueLabel.Name = "dealerValueLabel";
-            this.dealerValueLabel.Size = new System.Drawing.Size(74, 29);
+            this.dealerValueLabel.Size = new System.Drawing.Size(59, 24);
             this.dealerValueLabel.TabIndex = 12;
             this.dealerValueLabel.Text = "Value";
             // 
@@ -213,10 +215,10 @@ namespace Project2
             // 
             this.playerValueLabel.AutoSize = true;
             this.playerValueLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.playerValueLabel.Location = new System.Drawing.Point(747, 271);
+            this.playerValueLabel.Location = new System.Drawing.Point(747, 394);
             this.playerValueLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.playerValueLabel.Name = "playerValueLabel";
-            this.playerValueLabel.Size = new System.Drawing.Size(74, 29);
+            this.playerValueLabel.Size = new System.Drawing.Size(59, 24);
             this.playerValueLabel.TabIndex = 13;
             this.playerValueLabel.Text = "Value";
             // 
@@ -224,12 +226,12 @@ namespace Project2
             // 
             this.winOrLoseLabel.AutoSize = true;
             this.winOrLoseLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.winOrLoseLabel.Location = new System.Drawing.Point(728, 432);
+            this.winOrLoseLabel.Location = new System.Drawing.Point(747, 197);
             this.winOrLoseLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.winOrLoseLabel.Name = "winOrLoseLabel";
-            this.winOrLoseLabel.Size = new System.Drawing.Size(171, 29);
+            this.winOrLoseLabel.Size = new System.Drawing.Size(60, 24);
             this.winOrLoseLabel.TabIndex = 14;
-            this.winOrLoseLabel.Text = "win/lose status";
+            this.winOrLoseLabel.Text = "Status";
             // 
             // playButton
             // 
@@ -271,27 +273,28 @@ namespace Project2
             this.dealerValueRichTextBox.Location = new System.Drawing.Point(714, 62);
             this.dealerValueRichTextBox.Name = "dealerValueRichTextBox";
             this.dealerValueRichTextBox.ReadOnly = true;
-            this.dealerValueRichTextBox.Size = new System.Drawing.Size(145, 96);
+            this.dealerValueRichTextBox.Size = new System.Drawing.Size(145, 62);
             this.dealerValueRichTextBox.TabIndex = 24;
             this.dealerValueRichTextBox.Text = "Some Value or Bust";
             // 
             // playerValueRichTextBox
             // 
             this.playerValueRichTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.playerValueRichTextBox.Location = new System.Drawing.Point(714, 305);
+            this.playerValueRichTextBox.Location = new System.Drawing.Point(714, 424);
             this.playerValueRichTextBox.Name = "playerValueRichTextBox";
             this.playerValueRichTextBox.ReadOnly = true;
-            this.playerValueRichTextBox.Size = new System.Drawing.Size(145, 91);
+            this.playerValueRichTextBox.Size = new System.Drawing.Size(145, 67);
             this.playerValueRichTextBox.TabIndex = 25;
             this.playerValueRichTextBox.Text = "Some Value or Bust";
             // 
             // winOrLoseRichTextBox
             // 
-            this.winOrLoseRichTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.winOrLoseRichTextBox.Location = new System.Drawing.Point(714, 459);
+            this.winOrLoseRichTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.winOrLoseRichTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.winOrLoseRichTextBox.Location = new System.Drawing.Point(714, 224);
             this.winOrLoseRichTextBox.Name = "winOrLoseRichTextBox";
             this.winOrLoseRichTextBox.ReadOnly = true;
-            this.winOrLoseRichTextBox.Size = new System.Drawing.Size(145, 73);
+            this.winOrLoseRichTextBox.Size = new System.Drawing.Size(145, 120);
             this.winOrLoseRichTextBox.TabIndex = 26;
             this.winOrLoseRichTextBox.Text = "Win or Lose or Tie status";
             // 
@@ -351,6 +354,7 @@ namespace Project2
             this.dealerPictureBox8.Margin = new System.Windows.Forms.Padding(2);
             this.dealerPictureBox8.Name = "dealerPictureBox8";
             this.dealerPictureBox8.Size = new System.Drawing.Size(57, 84);
+            this.dealerPictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dealerPictureBox8.TabIndex = 32;
             this.dealerPictureBox8.TabStop = false;
             // 
@@ -360,6 +364,7 @@ namespace Project2
             this.dealerPictureBox9.Margin = new System.Windows.Forms.Padding(2);
             this.dealerPictureBox9.Name = "dealerPictureBox9";
             this.dealerPictureBox9.Size = new System.Drawing.Size(57, 84);
+            this.dealerPictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dealerPictureBox9.TabIndex = 33;
             this.dealerPictureBox9.TabStop = false;
             // 
@@ -369,6 +374,7 @@ namespace Project2
             this.dealerPictureBox10.Margin = new System.Windows.Forms.Padding(2);
             this.dealerPictureBox10.Name = "dealerPictureBox10";
             this.dealerPictureBox10.Size = new System.Drawing.Size(57, 84);
+            this.dealerPictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dealerPictureBox10.TabIndex = 34;
             this.dealerPictureBox10.TabStop = false;
             // 
@@ -378,6 +384,7 @@ namespace Project2
             this.dealerPictureBox11.Margin = new System.Windows.Forms.Padding(2);
             this.dealerPictureBox11.Name = "dealerPictureBox11";
             this.dealerPictureBox11.Size = new System.Drawing.Size(57, 84);
+            this.dealerPictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dealerPictureBox11.TabIndex = 35;
             this.dealerPictureBox11.TabStop = false;
             // 
@@ -387,6 +394,7 @@ namespace Project2
             this.dealerPictureBox12.Margin = new System.Windows.Forms.Padding(2);
             this.dealerPictureBox12.Name = "dealerPictureBox12";
             this.dealerPictureBox12.Size = new System.Drawing.Size(57, 84);
+            this.dealerPictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dealerPictureBox12.TabIndex = 36;
             this.dealerPictureBox12.TabStop = false;
             // 
@@ -396,6 +404,7 @@ namespace Project2
             this.dealerPictureBox7.Margin = new System.Windows.Forms.Padding(2);
             this.dealerPictureBox7.Name = "dealerPictureBox7";
             this.dealerPictureBox7.Size = new System.Drawing.Size(57, 84);
+            this.dealerPictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dealerPictureBox7.TabIndex = 37;
             this.dealerPictureBox7.TabStop = false;
             // 
@@ -455,6 +464,7 @@ namespace Project2
             this.playerPicturebox7.Margin = new System.Windows.Forms.Padding(2);
             this.playerPicturebox7.Name = "playerPicturebox7";
             this.playerPicturebox7.Size = new System.Drawing.Size(57, 84);
+            this.playerPicturebox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.playerPicturebox7.TabIndex = 43;
             this.playerPicturebox7.TabStop = false;
             // 
@@ -464,6 +474,7 @@ namespace Project2
             this.playerPicturebox11.Margin = new System.Windows.Forms.Padding(2);
             this.playerPicturebox11.Name = "playerPicturebox11";
             this.playerPicturebox11.Size = new System.Drawing.Size(57, 84);
+            this.playerPicturebox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.playerPicturebox11.TabIndex = 44;
             this.playerPicturebox11.TabStop = false;
             // 
@@ -473,6 +484,7 @@ namespace Project2
             this.playerPicturebox8.Margin = new System.Windows.Forms.Padding(2);
             this.playerPicturebox8.Name = "playerPicturebox8";
             this.playerPicturebox8.Size = new System.Drawing.Size(57, 84);
+            this.playerPicturebox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.playerPicturebox8.TabIndex = 45;
             this.playerPicturebox8.TabStop = false;
             // 
@@ -482,6 +494,7 @@ namespace Project2
             this.playerPicturebox9.Margin = new System.Windows.Forms.Padding(2);
             this.playerPicturebox9.Name = "playerPicturebox9";
             this.playerPicturebox9.Size = new System.Drawing.Size(57, 84);
+            this.playerPicturebox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.playerPicturebox9.TabIndex = 46;
             this.playerPicturebox9.TabStop = false;
             // 
@@ -491,6 +504,7 @@ namespace Project2
             this.playerPicturebox10.Margin = new System.Windows.Forms.Padding(2);
             this.playerPicturebox10.Name = "playerPicturebox10";
             this.playerPicturebox10.Size = new System.Drawing.Size(57, 84);
+            this.playerPicturebox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.playerPicturebox10.TabIndex = 47;
             this.playerPicturebox10.TabStop = false;
             // 
@@ -500,6 +514,7 @@ namespace Project2
             this.playerPicturebox12.Margin = new System.Windows.Forms.Padding(2);
             this.playerPicturebox12.Name = "playerPicturebox12";
             this.playerPicturebox12.Size = new System.Drawing.Size(57, 84);
+            this.playerPicturebox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.playerPicturebox12.TabIndex = 48;
             this.playerPicturebox12.TabStop = false;
             // 
@@ -509,12 +524,12 @@ namespace Project2
             this.moneyGroupBox.Controls.Add(this.betTextBox);
             this.moneyGroupBox.Controls.Add(this.totalLabel);
             this.moneyGroupBox.Controls.Add(this.totalTextBox);
-            this.moneyGroupBox.Location = new System.Drawing.Point(12, 312);
+            this.moneyGroupBox.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.moneyGroupBox.Location = new System.Drawing.Point(33, 361);
             this.moneyGroupBox.Name = "moneyGroupBox";
             this.moneyGroupBox.Size = new System.Drawing.Size(150, 130);
             this.moneyGroupBox.TabIndex = 49;
             this.moneyGroupBox.TabStop = false;
-            this.moneyGroupBox.UseWaitCursor = true;
             // 
             // GameForm
             // 

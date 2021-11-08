@@ -45,7 +45,7 @@ namespace Project2
             
             if (!int.TryParse(NumDecksTextBox.Text, out NumDecks))
             {
-                MessageBox.Show("Number of decks must be an integer");
+                MessageBox.Show("You choose the Number of Decks!", "Error");
                 return;
 
             }
@@ -54,7 +54,7 @@ namespace Project2
                 MessageBox.Show("Number of decks must be an integer greater than 0");
                 return;
             }
-                
+            
             GameForm GameForm = new GameForm( NumDecks, s17, seed);
             GameForm.Show();
         }

@@ -249,6 +249,7 @@ namespace Project2
             //check the cards
             if (isBlackJack(player))
             {
+                MessageBox.Show("Congratulations! BLACK JACK!", "YOU WIN!");
                 winOrLoseRichTextBox.Text = win;
                 calcBet();
             }
@@ -273,51 +274,6 @@ namespace Project2
                 totalTextBox.Text = (int.Parse(totalTextBox.Text) + (int.Parse(betTextBox.Text) * ratio)).ToString();
             }
         }
-
-        
-        /*private void drawCards(ref List<aCard> info, bool isDealer)
-        {
-            aCard card = shoe.Draw();
-
-            //for dealer
-            if (isDealer)
-            {
-                //if a card is Ace
-                if(card.getValue() == 11)
-                {
-                    ++dealerAce;
-                }
-                dealerSum += card.getValue();
-
-                //if a card is Ace but the total > 21, Ace should be 1
-                if(dealerAce > 0 && dealerSum > 21)
-                {
-                    --dealerAce;
-                    //11 - 10 = 1
-                    dealerSum -= 10;
-                }
-            }
-            //for player
-            else
-            {
-                //if a card is Ace
-                if (card.getValue() == 11)
-                {
-                    ++playerAce;
-                }
-                playerSum += card.getValue();
-
-                //if a card is Ace but the total > 21, Ace should be 1
-                if (playerAce > 0 && playerSum > 21)
-                {
-                    --playerAce;
-                    //11 - 10 = 1
-                    playerSum -= 10;
-                }
-            }
-            
-
-        }*/
 
         /// <summary>
         /// function the reset the cards of dealder and player

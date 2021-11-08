@@ -43,7 +43,7 @@ namespace Project2
             this.S17CheckBox.AutoSize = true;
             this.S17CheckBox.Location = new System.Drawing.Point(168, 184);
             this.S17CheckBox.Name = "S17CheckBox";
-            this.S17CheckBox.Size = new System.Drawing.Size(51, 19);
+            this.S17CheckBox.Size = new System.Drawing.Size(45, 17);
             this.S17CheckBox.TabIndex = 14;
             this.S17CheckBox.Text = "S17";
             this.S17CheckBox.UseVisualStyleBackColor = true;
@@ -64,7 +64,7 @@ namespace Project2
             this.ModeLabel.AutoSize = true;
             this.ModeLabel.Location = new System.Drawing.Point(123, 184);
             this.ModeLabel.Name = "ModeLabel";
-            this.ModeLabel.Size = new System.Drawing.Size(42, 15);
+            this.ModeLabel.Size = new System.Drawing.Size(37, 13);
             this.ModeLabel.TabIndex = 12;
             this.ModeLabel.Text = "Mode:";
             // 
@@ -80,7 +80,7 @@ namespace Project2
             this.SeedLabel.AutoSize = true;
             this.SeedLabel.Location = new System.Drawing.Point(123, 121);
             this.SeedLabel.Name = "SeedLabel";
-            this.SeedLabel.Size = new System.Drawing.Size(39, 15);
+            this.SeedLabel.Size = new System.Drawing.Size(35, 13);
             this.SeedLabel.TabIndex = 10;
             this.SeedLabel.Text = "Seed:";
             // 
@@ -89,12 +89,13 @@ namespace Project2
             this.NumDecksLabel.AutoSize = true;
             this.NumDecksLabel.Location = new System.Drawing.Point(57, 65);
             this.NumDecksLabel.Name = "NumDecksLabel";
-            this.NumDecksLabel.Size = new System.Drawing.Size(105, 15);
+            this.NumDecksLabel.Size = new System.Drawing.Size(93, 13);
             this.NumDecksLabel.TabIndex = 8;
             this.NumDecksLabel.Text = "Number of Decks:";
             // 
             // NumDecksTextBox
             // 
+            this.NumDecksTextBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.NumDecksTextBox.FormattingEnabled = true;
             this.NumDecksTextBox.Items.AddRange(new object[] {
             "1",
@@ -107,9 +108,8 @@ namespace Project2
             "8"});
             this.NumDecksTextBox.Location = new System.Drawing.Point(168, 62);
             this.NumDecksTextBox.Name = "NumDecksTextBox";
-            this.NumDecksTextBox.Size = new System.Drawing.Size(121, 21);
+            this.NumDecksTextBox.Size = new System.Drawing.Size(100, 21);
             this.NumDecksTextBox.TabIndex = 16;
-            this.NumDecksTextBox.Text = "1";
             // 
             // StartingForm
             // 
