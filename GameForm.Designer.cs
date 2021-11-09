@@ -130,7 +130,6 @@ namespace Project2
             this.totalLabel.Size = new System.Drawing.Size(71, 20);
             this.totalLabel.TabIndex = 2;
             this.totalLabel.Text = "Total ($):";
-            this.totalLabel.UseWaitCursor = true;
             // 
             // betLabel
             // 
@@ -142,7 +141,6 @@ namespace Project2
             this.betLabel.Size = new System.Drawing.Size(61, 20);
             this.betLabel.TabIndex = 3;
             this.betLabel.Text = "Bet ($):";
-            this.betLabel.UseWaitCursor = true;
             // 
             // resetButton
             // 
@@ -192,13 +190,12 @@ namespace Project2
             // 
             // betTextBox
             // 
-            this.betTextBox.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.betTextBox.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.betTextBox.Location = new System.Drawing.Point(12, 86);
             this.betTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.betTextBox.Name = "betTextBox";
             this.betTextBox.Size = new System.Drawing.Size(118, 20);
             this.betTextBox.TabIndex = 8;
-            this.betTextBox.UseWaitCursor = true;
             // 
             // dealerValueLabel
             // 

@@ -210,10 +210,19 @@ namespace Project2
 
         private void playButton_Click(object sender, EventArgs e)
         {
+
             if (playButtonHit)
             {
-                MessageBox.Show("Cannot hit play button if game not Reset!!", "Error");
+                MessageBox.Show("Cannot hit play button if game not Reset!!\nReset will reset the cards", "Error");
                 return;
+            }
+
+            double parsedValue = 0.0;
+            if (!double.TryParse(betTextBox.Text, out parsedValue))
+            {
+                MessageBox.Show("This is a number only field", "Error");
+                return;
+
             }
             
             //check the user bet
@@ -224,18 +233,20 @@ namespace Project2
             }
 
             //if the user money less than total money, print error message
-            if(int.Parse(betTextBox.Text) > int.Parse(totalTextBox.Text))
+            if(double.Parse(betTextBox.Text) > double.Parse(totalTextBox.Text))
             {
                 MessageBox.Show("Out of money! Please contact customer service to make a loan :3", "Warning");
                 return;
             }
-
             //if the user type invalid value
-            if(int.Parse(betTextBox.Text) <= 0)
+            if (double.Parse(betTextBox.Text) <= 0)
             {
                 MessageBox.Show("Invalid Money", "Warning");
                 return;
             }
+
+
+
 
             playButtonHit = true;
             numTimesPlayed++;
@@ -252,10 +263,12 @@ namespace Project2
                 MessageBox.Show("Congratulations! BLACK JACK!", "YOU WIN!");
                 winOrLoseRichTextBox.Text = win;
                 calcBet();
+                return;
             }
 
             //enable Hit and Stand button
             buttonStatus(true);
+            betTextBox.ReadOnly = true;
 
         }
 
@@ -266,12 +279,12 @@ namespace Project2
             if (winOrLoseRichTextBox.Text == lose)
             {
                 //player bust
-                totalTextBox.Text = (int.Parse(totalTextBox.Text) - int.Parse(betTextBox.Text)).ToString();
+                totalTextBox.Text = (double.Parse(totalTextBox.Text) - double.Parse(betTextBox.Text)).ToString();
             }
             else if(winOrLoseRichTextBox.Text == win)
             {
                 //player win
-                totalTextBox.Text = (int.Parse(totalTextBox.Text) + (int.Parse(betTextBox.Text) * ratio)).ToString();
+                totalTextBox.Text = (double.Parse(totalTextBox.Text) + (double.Parse(betTextBox.Text) * ratio)).ToString();
             }
         }
 
@@ -309,6 +322,7 @@ namespace Project2
 
             dealingShoe.reset();
             buttonStatus(false);
+            betTextBox.ReadOnly = false;
             
         }
 
@@ -391,7 +405,7 @@ namespace Project2
 
                     if (dealerSum == 21 && playerSum == 21)
                     {
-                        winOrLoseRichTextBox.Text = lose; //if player and dealer bust, dealer wins
+                        winOrLoseRichTextBox.Text = "It's tie"; //if player and dealer bust, dealer wins
                     }
                     else if (dealerSum == playerSum)
                     {//if neither bust and are equal, then it's a tie
@@ -433,7 +447,7 @@ namespace Project2
 
         private bool isBlackJack(List<aCard> cards)
         {
-            return (cards[1].getValue() + cards[1].getValue()) == 21;
+            return (cards[0].getValue() + cards[1].getValue()) == 21;
                   
         }
 
