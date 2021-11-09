@@ -53,8 +53,8 @@ namespace Project2
                 System.Windows.Forms.MessageBox.Show("Card index out of bounds, please exit.");
                 return null;
             }
-                
-           
+
+            Console.WriteLine(deck.Count);
             return deck[index];
             
         }

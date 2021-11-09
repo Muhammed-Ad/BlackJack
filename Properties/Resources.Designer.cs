@@ -493,39 +493,29 @@ namespace Project2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap background {
+            get {
+                object obj = ResourceManager.GetObject("background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap background3 {
+            get {
+                object obj = ResourceManager.GetObject("background3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BI_winner__01413_1440111674_1280_1280 {
             get {
                 object obj = ResourceManager.GetObject("BI_winner__01413_1440111674_1280_1280", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap blue_back {
-            get {
-                object obj = ResourceManager.GetObject("blue_back", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap gray_back {
-            get {
-                object obj = ResourceManager.GetObject("gray_back", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap green_back {
-            get {
-                object obj = ResourceManager.GetObject("green_back", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -663,9 +653,19 @@ namespace Project2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap purple_back {
+        internal static System.Drawing.Bitmap online_casino2_generated {
             get {
-                object obj = ResourceManager.GetObject("purple_back", resourceCulture);
+                object obj = ResourceManager.GetObject("online_casino2_generated", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap playbutton {
+            get {
+                object obj = ResourceManager.GetObject("playbutton", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -713,9 +713,9 @@ namespace Project2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap red_back {
+        internal static System.Drawing.Bitmap restart_icon {
             get {
-                object obj = ResourceManager.GetObject("red_back", resourceCulture);
+                object obj = ResourceManager.GetObject("restart_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -726,16 +726,6 @@ namespace Project2.Properties {
         internal static System.Drawing.Bitmap table_play {
             get {
                 object obj = ResourceManager.GetObject("table_play", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap yellow_back {
-            get {
-                object obj = ResourceManager.GetObject("yellow_back", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

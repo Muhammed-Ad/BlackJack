@@ -29,6 +29,7 @@ namespace Project2
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartingForm));
             this.S17CheckBox = new System.Windows.Forms.CheckBox();
             this.StartButton = new System.Windows.Forms.Button();
             this.ModeLabel = new System.Windows.Forms.Label();
@@ -41,19 +42,24 @@ namespace Project2
             // S17CheckBox
             // 
             this.S17CheckBox.AutoSize = true;
-            this.S17CheckBox.Location = new System.Drawing.Point(168, 184);
+            this.S17CheckBox.BackColor = System.Drawing.Color.Transparent;
+            this.S17CheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S17CheckBox.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.S17CheckBox.Location = new System.Drawing.Point(168, 180);
             this.S17CheckBox.Name = "S17CheckBox";
-            this.S17CheckBox.Size = new System.Drawing.Size(45, 17);
+            this.S17CheckBox.Size = new System.Drawing.Size(60, 24);
             this.S17CheckBox.TabIndex = 14;
             this.S17CheckBox.Text = "S17";
-            this.S17CheckBox.UseVisualStyleBackColor = true;
+            this.S17CheckBox.UseVisualStyleBackColor = false;
             // 
             // StartButton
             // 
-            this.StartButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StartButton.Location = new System.Drawing.Point(159, 281);
+            this.StartButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StartButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.StartButton.Image = global::Project2.Properties.Resources.online_casino2_generated;
+            this.StartButton.Location = new System.Drawing.Point(99, 286);
             this.StartButton.Name = "StartButton";
-            this.StartButton.Size = new System.Drawing.Size(118, 71);
+            this.StartButton.Size = new System.Drawing.Size(167, 76);
             this.StartButton.TabIndex = 13;
             this.StartButton.Text = "New Player";
             this.StartButton.UseVisualStyleBackColor = true;
@@ -62,9 +68,12 @@ namespace Project2
             // ModeLabel
             // 
             this.ModeLabel.AutoSize = true;
-            this.ModeLabel.Location = new System.Drawing.Point(123, 184);
+            this.ModeLabel.BackColor = System.Drawing.Color.Transparent;
+            this.ModeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ModeLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.ModeLabel.Location = new System.Drawing.Point(95, 180);
             this.ModeLabel.Name = "ModeLabel";
-            this.ModeLabel.Size = new System.Drawing.Size(37, 13);
+            this.ModeLabel.Size = new System.Drawing.Size(53, 20);
             this.ModeLabel.TabIndex = 12;
             this.ModeLabel.Text = "Mode:";
             // 
@@ -78,18 +87,24 @@ namespace Project2
             // SeedLabel
             // 
             this.SeedLabel.AutoSize = true;
-            this.SeedLabel.Location = new System.Drawing.Point(123, 121);
+            this.SeedLabel.BackColor = System.Drawing.Color.Transparent;
+            this.SeedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SeedLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.SeedLabel.Location = new System.Drawing.Point(97, 114);
             this.SeedLabel.Name = "SeedLabel";
-            this.SeedLabel.Size = new System.Drawing.Size(35, 13);
+            this.SeedLabel.Size = new System.Drawing.Size(51, 20);
             this.SeedLabel.TabIndex = 10;
             this.SeedLabel.Text = "Seed:";
             // 
             // NumDecksLabel
             // 
             this.NumDecksLabel.AutoSize = true;
-            this.NumDecksLabel.Location = new System.Drawing.Point(57, 65);
+            this.NumDecksLabel.BackColor = System.Drawing.Color.Transparent;
+            this.NumDecksLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NumDecksLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.NumDecksLabel.Location = new System.Drawing.Point(12, 63);
             this.NumDecksLabel.Name = "NumDecksLabel";
-            this.NumDecksLabel.Size = new System.Drawing.Size(93, 13);
+            this.NumDecksLabel.Size = new System.Drawing.Size(136, 20);
             this.NumDecksLabel.TabIndex = 8;
             this.NumDecksLabel.Text = "Number of Decks:";
             // 
@@ -115,7 +130,10 @@ namespace Project2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(399, 421);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BackgroundImage = global::Project2.Properties.Resources.online_casino2_generated;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ClientSize = new System.Drawing.Size(374, 444);
             this.Controls.Add(this.NumDecksTextBox);
             this.Controls.Add(this.S17CheckBox);
             this.Controls.Add(this.StartButton);
@@ -123,8 +141,13 @@ namespace Project2
             this.Controls.Add(this.SeedTextBox);
             this.Controls.Add(this.SeedLabel);
             this.Controls.Add(this.NumDecksLabel);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "StartingForm";
             this.Text = "StartingForm";
+            this.Load += new System.EventHandler(this.StartingForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

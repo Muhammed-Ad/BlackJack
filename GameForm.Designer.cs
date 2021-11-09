@@ -29,6 +29,7 @@ namespace Project2
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameForm));
             this.dealerCardsLabel = new System.Windows.Forms.Label();
             this.playerCardsLabel = new System.Windows.Forms.Label();
             this.totalLabel = new System.Windows.Forms.Label();
@@ -100,11 +101,14 @@ namespace Project2
             // dealerCardsLabel
             // 
             this.dealerCardsLabel.AutoSize = true;
+            this.dealerCardsLabel.BackColor = System.Drawing.Color.Transparent;
+            this.dealerCardsLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dealerCardsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dealerCardsLabel.ForeColor = System.Drawing.Color.MediumVioletRed;
             this.dealerCardsLabel.Location = new System.Drawing.Point(334, 10);
             this.dealerCardsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.dealerCardsLabel.Name = "dealerCardsLabel";
-            this.dealerCardsLabel.Size = new System.Drawing.Size(186, 31);
+            this.dealerCardsLabel.Size = new System.Drawing.Size(188, 33);
             this.dealerCardsLabel.TabIndex = 0;
             this.dealerCardsLabel.Text = "Dealer Cards";
             this.dealerCardsLabel.Click += new System.EventHandler(this.dealerCards_Click);
@@ -112,11 +116,14 @@ namespace Project2
             // playerCardsLabel
             // 
             this.playerCardsLabel.AutoSize = true;
+            this.playerCardsLabel.BackColor = System.Drawing.Color.Transparent;
+            this.playerCardsLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.playerCardsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.playerCardsLabel.ForeColor = System.Drawing.Color.MediumVioletRed;
             this.playerCardsLabel.Location = new System.Drawing.Point(334, 271);
             this.playerCardsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.playerCardsLabel.Name = "playerCardsLabel";
-            this.playerCardsLabel.Size = new System.Drawing.Size(183, 31);
+            this.playerCardsLabel.Size = new System.Drawing.Size(185, 33);
             this.playerCardsLabel.TabIndex = 1;
             this.playerCardsLabel.Text = "Player Cards";
             // 
@@ -144,18 +151,23 @@ namespace Project2
             // 
             // resetButton
             // 
+            this.resetButton.BackColor = System.Drawing.Color.Transparent;
+            this.resetButton.BackgroundImage = global::Project2.Properties.Resources.restart_icon;
+            this.resetButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.resetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resetButton.ForeColor = System.Drawing.Color.MediumVioletRed;
             this.resetButton.Location = new System.Drawing.Point(33, 173);
             this.resetButton.Margin = new System.Windows.Forms.Padding(2);
             this.resetButton.Name = "resetButton";
             this.resetButton.Size = new System.Drawing.Size(109, 73);
             this.resetButton.TabIndex = 4;
             this.resetButton.Text = "Reset";
-            this.resetButton.UseVisualStyleBackColor = true;
+            this.resetButton.UseVisualStyleBackColor = false;
             this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
             // 
             // standButton
             // 
+            this.standButton.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.standButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.standButton.Location = new System.Drawing.Point(457, 512);
             this.standButton.Margin = new System.Windows.Forms.Padding(2);
@@ -163,11 +175,12 @@ namespace Project2
             this.standButton.Size = new System.Drawing.Size(90, 44);
             this.standButton.TabIndex = 5;
             this.standButton.Text = "Stand";
-            this.standButton.UseVisualStyleBackColor = true;
+            this.standButton.UseVisualStyleBackColor = false;
             this.standButton.Click += new System.EventHandler(this.standButton_Click);
             // 
             // hitButton
             // 
+            this.hitButton.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.hitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hitButton.Location = new System.Drawing.Point(327, 513);
             this.hitButton.Margin = new System.Windows.Forms.Padding(2);
@@ -175,75 +188,93 @@ namespace Project2
             this.hitButton.Size = new System.Drawing.Size(86, 43);
             this.hitButton.TabIndex = 6;
             this.hitButton.Text = "Hit";
-            this.hitButton.UseVisualStyleBackColor = true;
+            this.hitButton.UseVisualStyleBackColor = false;
             this.hitButton.Click += new System.EventHandler(this.hitButton_Click);
             // 
             // totalTextBox
             // 
+            this.totalTextBox.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.totalTextBox.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.totalTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalTextBox.Location = new System.Drawing.Point(14, 38);
             this.totalTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.totalTextBox.Name = "totalTextBox";
             this.totalTextBox.ReadOnly = true;
-            this.totalTextBox.Size = new System.Drawing.Size(113, 20);
+            this.totalTextBox.Size = new System.Drawing.Size(113, 26);
             this.totalTextBox.TabIndex = 7;
             // 
             // betTextBox
             // 
+            this.betTextBox.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.betTextBox.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.betTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.betTextBox.Location = new System.Drawing.Point(12, 86);
             this.betTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.betTextBox.Name = "betTextBox";
-            this.betTextBox.Size = new System.Drawing.Size(118, 20);
+            this.betTextBox.Size = new System.Drawing.Size(118, 26);
             this.betTextBox.TabIndex = 8;
             // 
             // dealerValueLabel
             // 
             this.dealerValueLabel.AutoSize = true;
-            this.dealerValueLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dealerValueLabel.Location = new System.Drawing.Point(747, 17);
+            this.dealerValueLabel.BackColor = System.Drawing.Color.Transparent;
+            this.dealerValueLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dealerValueLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dealerValueLabel.ForeColor = System.Drawing.Color.Peru;
+            this.dealerValueLabel.Location = new System.Drawing.Point(751, 33);
             this.dealerValueLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.dealerValueLabel.Name = "dealerValueLabel";
-            this.dealerValueLabel.Size = new System.Drawing.Size(59, 24);
+            this.dealerValueLabel.Size = new System.Drawing.Size(66, 26);
             this.dealerValueLabel.TabIndex = 12;
             this.dealerValueLabel.Text = "Value";
             // 
             // playerValueLabel
             // 
             this.playerValueLabel.AutoSize = true;
-            this.playerValueLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.playerValueLabel.BackColor = System.Drawing.Color.Transparent;
+            this.playerValueLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.playerValueLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.playerValueLabel.ForeColor = System.Drawing.Color.Peru;
             this.playerValueLabel.Location = new System.Drawing.Point(747, 394);
             this.playerValueLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.playerValueLabel.Name = "playerValueLabel";
-            this.playerValueLabel.Size = new System.Drawing.Size(59, 24);
+            this.playerValueLabel.Size = new System.Drawing.Size(66, 26);
             this.playerValueLabel.TabIndex = 13;
             this.playerValueLabel.Text = "Value";
             // 
             // winOrLoseLabel
             // 
             this.winOrLoseLabel.AutoSize = true;
-            this.winOrLoseLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.winOrLoseLabel.BackColor = System.Drawing.Color.Transparent;
+            this.winOrLoseLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.winOrLoseLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.winOrLoseLabel.ForeColor = System.Drawing.Color.Peru;
             this.winOrLoseLabel.Location = new System.Drawing.Point(747, 197);
             this.winOrLoseLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.winOrLoseLabel.Name = "winOrLoseLabel";
-            this.winOrLoseLabel.Size = new System.Drawing.Size(60, 24);
+            this.winOrLoseLabel.Size = new System.Drawing.Size(68, 26);
             this.winOrLoseLabel.TabIndex = 14;
             this.winOrLoseLabel.Text = "Status";
             // 
             // playButton
             // 
-            this.playButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.playButton.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.playButton.BackgroundImage = global::Project2.Properties.Resources.playbutton;
+            this.playButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.playButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.playButton.ForeColor = System.Drawing.Color.MediumVioletRed;
             this.playButton.Location = new System.Drawing.Point(33, 62);
             this.playButton.Margin = new System.Windows.Forms.Padding(2);
             this.playButton.Name = "playButton";
             this.playButton.Size = new System.Drawing.Size(109, 84);
             this.playButton.TabIndex = 19;
             this.playButton.Text = "Play";
-            this.playButton.UseVisualStyleBackColor = true;
+            this.playButton.UseVisualStyleBackColor = false;
             this.playButton.Click += new System.EventHandler(this.playButton_Click);
             // 
             // dealerPictureBox1
             // 
+            this.dealerPictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.dealerPictureBox1.Location = new System.Drawing.Point(223, 62);
             this.dealerPictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.dealerPictureBox1.Name = "dealerPictureBox1";
@@ -255,6 +286,7 @@ namespace Project2
             // 
             // playerPicturebox1
             // 
+            this.playerPicturebox1.BackColor = System.Drawing.Color.Transparent;
             this.playerPicturebox1.Location = new System.Drawing.Point(223, 312);
             this.playerPicturebox1.Margin = new System.Windows.Forms.Padding(2);
             this.playerPicturebox1.Name = "playerPicturebox1";
@@ -266,6 +298,7 @@ namespace Project2
             // 
             // dealerValueRichTextBox
             // 
+            this.dealerValueRichTextBox.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.dealerValueRichTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dealerValueRichTextBox.Location = new System.Drawing.Point(714, 62);
             this.dealerValueRichTextBox.Name = "dealerValueRichTextBox";
@@ -276,6 +309,7 @@ namespace Project2
             // 
             // playerValueRichTextBox
             // 
+            this.playerValueRichTextBox.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.playerValueRichTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.playerValueRichTextBox.Location = new System.Drawing.Point(714, 424);
             this.playerValueRichTextBox.Name = "playerValueRichTextBox";
@@ -287,6 +321,7 @@ namespace Project2
             // winOrLoseRichTextBox
             // 
             this.winOrLoseRichTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.winOrLoseRichTextBox.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.winOrLoseRichTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.winOrLoseRichTextBox.Location = new System.Drawing.Point(714, 224);
             this.winOrLoseRichTextBox.Name = "winOrLoseRichTextBox";
@@ -297,6 +332,7 @@ namespace Project2
             // 
             // dealerPictureBox2
             // 
+            this.dealerPictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.dealerPictureBox2.Location = new System.Drawing.Point(296, 62);
             this.dealerPictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.dealerPictureBox2.Name = "dealerPictureBox2";
@@ -307,6 +343,7 @@ namespace Project2
             // 
             // dealerPictureBox3
             // 
+            this.dealerPictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.dealerPictureBox3.Location = new System.Drawing.Point(370, 62);
             this.dealerPictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.dealerPictureBox3.Name = "dealerPictureBox3";
@@ -317,6 +354,7 @@ namespace Project2
             // 
             // dealerPictureBox4
             // 
+            this.dealerPictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.dealerPictureBox4.Location = new System.Drawing.Point(440, 62);
             this.dealerPictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.dealerPictureBox4.Name = "dealerPictureBox4";
@@ -327,6 +365,7 @@ namespace Project2
             // 
             // dealerPictureBox5
             // 
+            this.dealerPictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.dealerPictureBox5.Location = new System.Drawing.Point(516, 62);
             this.dealerPictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.dealerPictureBox5.Name = "dealerPictureBox5";
@@ -337,6 +376,7 @@ namespace Project2
             // 
             // dealerPictureBox6
             // 
+            this.dealerPictureBox6.BackColor = System.Drawing.Color.Transparent;
             this.dealerPictureBox6.Location = new System.Drawing.Point(595, 62);
             this.dealerPictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.dealerPictureBox6.Name = "dealerPictureBox6";
@@ -347,6 +387,7 @@ namespace Project2
             // 
             // dealerPictureBox8
             // 
+            this.dealerPictureBox8.BackColor = System.Drawing.Color.Transparent;
             this.dealerPictureBox8.Location = new System.Drawing.Point(296, 162);
             this.dealerPictureBox8.Margin = new System.Windows.Forms.Padding(2);
             this.dealerPictureBox8.Name = "dealerPictureBox8";
@@ -357,6 +398,7 @@ namespace Project2
             // 
             // dealerPictureBox9
             // 
+            this.dealerPictureBox9.BackColor = System.Drawing.Color.Transparent;
             this.dealerPictureBox9.Location = new System.Drawing.Point(370, 162);
             this.dealerPictureBox9.Margin = new System.Windows.Forms.Padding(2);
             this.dealerPictureBox9.Name = "dealerPictureBox9";
@@ -367,6 +409,7 @@ namespace Project2
             // 
             // dealerPictureBox10
             // 
+            this.dealerPictureBox10.BackColor = System.Drawing.Color.Transparent;
             this.dealerPictureBox10.Location = new System.Drawing.Point(440, 162);
             this.dealerPictureBox10.Margin = new System.Windows.Forms.Padding(2);
             this.dealerPictureBox10.Name = "dealerPictureBox10";
@@ -377,6 +420,7 @@ namespace Project2
             // 
             // dealerPictureBox11
             // 
+            this.dealerPictureBox11.BackColor = System.Drawing.Color.Transparent;
             this.dealerPictureBox11.Location = new System.Drawing.Point(516, 162);
             this.dealerPictureBox11.Margin = new System.Windows.Forms.Padding(2);
             this.dealerPictureBox11.Name = "dealerPictureBox11";
@@ -387,6 +431,7 @@ namespace Project2
             // 
             // dealerPictureBox12
             // 
+            this.dealerPictureBox12.BackColor = System.Drawing.Color.Transparent;
             this.dealerPictureBox12.Location = new System.Drawing.Point(595, 162);
             this.dealerPictureBox12.Margin = new System.Windows.Forms.Padding(2);
             this.dealerPictureBox12.Name = "dealerPictureBox12";
@@ -397,6 +442,7 @@ namespace Project2
             // 
             // dealerPictureBox7
             // 
+            this.dealerPictureBox7.BackColor = System.Drawing.Color.Transparent;
             this.dealerPictureBox7.Location = new System.Drawing.Point(223, 162);
             this.dealerPictureBox7.Margin = new System.Windows.Forms.Padding(2);
             this.dealerPictureBox7.Name = "dealerPictureBox7";
@@ -407,6 +453,7 @@ namespace Project2
             // 
             // playerPicturebox2
             // 
+            this.playerPicturebox2.BackColor = System.Drawing.Color.Transparent;
             this.playerPicturebox2.Location = new System.Drawing.Point(296, 312);
             this.playerPicturebox2.Margin = new System.Windows.Forms.Padding(2);
             this.playerPicturebox2.Name = "playerPicturebox2";
@@ -417,6 +464,7 @@ namespace Project2
             // 
             // playerPicturebox3
             // 
+            this.playerPicturebox3.BackColor = System.Drawing.Color.Transparent;
             this.playerPicturebox3.Location = new System.Drawing.Point(370, 312);
             this.playerPicturebox3.Margin = new System.Windows.Forms.Padding(2);
             this.playerPicturebox3.Name = "playerPicturebox3";
@@ -427,6 +475,7 @@ namespace Project2
             // 
             // playerPicturebox4
             // 
+            this.playerPicturebox4.BackColor = System.Drawing.Color.Transparent;
             this.playerPicturebox4.Location = new System.Drawing.Point(440, 312);
             this.playerPicturebox4.Margin = new System.Windows.Forms.Padding(2);
             this.playerPicturebox4.Name = "playerPicturebox4";
@@ -437,6 +486,7 @@ namespace Project2
             // 
             // playerPicturebox5
             // 
+            this.playerPicturebox5.BackColor = System.Drawing.Color.Transparent;
             this.playerPicturebox5.Location = new System.Drawing.Point(516, 312);
             this.playerPicturebox5.Margin = new System.Windows.Forms.Padding(2);
             this.playerPicturebox5.Name = "playerPicturebox5";
@@ -447,6 +497,7 @@ namespace Project2
             // 
             // playerPicturebox6
             // 
+            this.playerPicturebox6.BackColor = System.Drawing.Color.Transparent;
             this.playerPicturebox6.Location = new System.Drawing.Point(595, 312);
             this.playerPicturebox6.Margin = new System.Windows.Forms.Padding(2);
             this.playerPicturebox6.Name = "playerPicturebox6";
@@ -457,6 +508,7 @@ namespace Project2
             // 
             // playerPicturebox7
             // 
+            this.playerPicturebox7.BackColor = System.Drawing.Color.Transparent;
             this.playerPicturebox7.Location = new System.Drawing.Point(223, 407);
             this.playerPicturebox7.Margin = new System.Windows.Forms.Padding(2);
             this.playerPicturebox7.Name = "playerPicturebox7";
@@ -467,6 +519,7 @@ namespace Project2
             // 
             // playerPicturebox11
             // 
+            this.playerPicturebox11.BackColor = System.Drawing.Color.Transparent;
             this.playerPicturebox11.Location = new System.Drawing.Point(516, 407);
             this.playerPicturebox11.Margin = new System.Windows.Forms.Padding(2);
             this.playerPicturebox11.Name = "playerPicturebox11";
@@ -477,6 +530,7 @@ namespace Project2
             // 
             // playerPicturebox8
             // 
+            this.playerPicturebox8.BackColor = System.Drawing.Color.Transparent;
             this.playerPicturebox8.Location = new System.Drawing.Point(296, 407);
             this.playerPicturebox8.Margin = new System.Windows.Forms.Padding(2);
             this.playerPicturebox8.Name = "playerPicturebox8";
@@ -487,6 +541,7 @@ namespace Project2
             // 
             // playerPicturebox9
             // 
+            this.playerPicturebox9.BackColor = System.Drawing.Color.Transparent;
             this.playerPicturebox9.Location = new System.Drawing.Point(370, 407);
             this.playerPicturebox9.Margin = new System.Windows.Forms.Padding(2);
             this.playerPicturebox9.Name = "playerPicturebox9";
@@ -497,6 +552,7 @@ namespace Project2
             // 
             // playerPicturebox10
             // 
+            this.playerPicturebox10.BackColor = System.Drawing.Color.Transparent;
             this.playerPicturebox10.Location = new System.Drawing.Point(440, 407);
             this.playerPicturebox10.Margin = new System.Windows.Forms.Padding(2);
             this.playerPicturebox10.Name = "playerPicturebox10";
@@ -507,6 +563,7 @@ namespace Project2
             // 
             // playerPicturebox12
             // 
+            this.playerPicturebox12.BackColor = System.Drawing.Color.Transparent;
             this.playerPicturebox12.Location = new System.Drawing.Point(595, 407);
             this.playerPicturebox12.Margin = new System.Windows.Forms.Padding(2);
             this.playerPicturebox12.Name = "playerPicturebox12";
@@ -517,14 +574,15 @@ namespace Project2
             // 
             // moneyGroupBox
             // 
+            this.moneyGroupBox.BackColor = System.Drawing.Color.Transparent;
             this.moneyGroupBox.Controls.Add(this.betLabel);
             this.moneyGroupBox.Controls.Add(this.betTextBox);
             this.moneyGroupBox.Controls.Add(this.totalLabel);
             this.moneyGroupBox.Controls.Add(this.totalTextBox);
             this.moneyGroupBox.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.moneyGroupBox.Location = new System.Drawing.Point(33, 361);
+            this.moneyGroupBox.Location = new System.Drawing.Point(33, 352);
             this.moneyGroupBox.Name = "moneyGroupBox";
-            this.moneyGroupBox.Size = new System.Drawing.Size(150, 130);
+            this.moneyGroupBox.Size = new System.Drawing.Size(142, 139);
             this.moneyGroupBox.TabIndex = 49;
             this.moneyGroupBox.TabStop = false;
             // 
@@ -532,7 +590,11 @@ namespace Project2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Gray;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.BackColor = System.Drawing.Color.DimGray;
+            this.BackgroundImage = global::Project2.Properties.Resources.background;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(882, 571);
             this.Controls.Add(this.moneyGroupBox);
             this.Controls.Add(this.playerPicturebox12);
@@ -571,8 +633,14 @@ namespace Project2
             this.Controls.Add(this.resetButton);
             this.Controls.Add(this.playerCardsLabel);
             this.Controls.Add(this.dealerCardsLabel);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.Name = "GameForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "JasonTruong_and_MuhammedAdemola";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dealerPictureBox1)).EndInit();

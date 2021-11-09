@@ -133,20 +133,17 @@
   <data name="AS" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\cards\AS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\cards\background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="background3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\cards\background3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="back_cards_07" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\cards\back_cards-07.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BI_winner__01413_1440111674_1280_1280" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\cards\BI_winner__01413.1440111674.1280.1280.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="blue_back" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\cards\blue_back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="gray_back" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\cards\gray_back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="green_back" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\cards\green_back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="honors_spade_14" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\cards\honors_spade-14.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,8 +184,11 @@
   <data name="KS" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\cards\K_Sp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="purple_back" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\cards\purple_back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="online_casino2_generated" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\cards\online-casino2_generated.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="playbutton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\cards\playbutton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="QC" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\cards\Q_Club.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,14 +202,11 @@
   <data name="QS" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\cards\Q_Sp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="red_back" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\cards\red_back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="restart_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\cards\restart-icon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="table_play" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\cards\table_play.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="yellow_back" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\cards\yellow_back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_10C" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\cards\10C.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

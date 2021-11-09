@@ -136,11 +136,11 @@
     <Content Include="cards\AD.png" />
     <Content Include="cards\AH.png" />
     <Content Include="cards\AS.png" />
+    <None Include="cards\background2.jpg" />
+    <None Include="cards\background3.jpg" />
+    <None Include="cards\background.jpg" />
     <Content Include="cards\back_cards-07.png" />
     <Content Include="cards\BI_winner__01413.1440111674.1280.1280.png" />
-    <Content Include="cards\blue_back.png" />
-    <Content Include="cards\gray_back.png" />
-    <Content Include="cards\green_back.png" />
     <Content Include="cards\honors_spade-14.png" />
     <Content Include="cards\honor_clubs.png" />
     <Content Include="cards\honor_diamond.png" />
@@ -162,7 +162,8 @@
     <Content Include="cards\K_Dia.png" />
     <Content Include="cards\K_Hrt.png" />
     <Content Include="cards\K_Sp.png" />
-    <Content Include="cards\purple_back.png" />
+    <None Include="cards\online-casino2_generated.jpg" />
+    <None Include="cards\playbutton.png" />
     <Content Include="cards\QC.png" />
     <Content Include="cards\QD.png" />
     <Content Include="cards\QH.png" />
@@ -171,9 +172,8 @@
     <Content Include="cards\Q_Dia.png" />
     <Content Include="cards\Q_Hrt.png" />
     <Content Include="cards\Q_Sp.png" />
-    <Content Include="cards\red_back.png" />
+    <None Include="cards\restart-icon.jpg" />
     <Content Include="cards\table_play.png" />
-    <Content Include="cards\yellow_back.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

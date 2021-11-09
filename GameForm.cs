@@ -23,7 +23,7 @@ namespace Project2
         PictureBox[] dealerImages;
         PictureBox[] playerImages;
 
-        Image defaultImage = Properties.Resources.gray_back;
+        
         //PictureBox computerPicturebox;
         //PictureBox playerPicturebox;
         int startingHand = 2;
@@ -92,8 +92,8 @@ namespace Project2
             }
             //disable Hit and Stand button
             buttonStatus(false);
-            
-            
+
+            visibleButton(false);
             dealingShoe = seed == -1 ? new aShoe(new Random(), NumDecks) : new aShoe(new Random(seed), NumDecks);
             /*playerPictureboxList = new List<Image>();
             dealerPictureboxList = new List<Image>();*/
@@ -113,7 +113,7 @@ namespace Project2
                 temp = dealingShoe.Draw();
                 if (isDealer)
                 {
-                    if(dealerSum < 22 && temp.getValue() == 1) //if card is ace, increment by ten if sum is greater than 10 already
+                    if(dealerSum < 11 && temp.getValue() == 1) //if card is ace, increment by ten if sum is greater than 10 already
                     {
                         dealerSum += 11;
                     }
@@ -129,7 +129,7 @@ namespace Project2
                 }
                 else
                 {
-                    if(playerSum < 22 && temp.getValue() == 1)
+                    if(playerSum < 11 && temp.getValue() == 1)
                     {
                         playerSum += 11;
                     }
@@ -245,9 +245,6 @@ namespace Project2
                 return;
             }
 
-
-
-
             playButtonHit = true;
             numTimesPlayed++;
             //we have to reset the game
@@ -257,7 +254,7 @@ namespace Project2
             drawCard(false, 2); //draw two cards for player
             drawCard(true, 1);  //draw 1 card for dealer
 
-            //check the cards
+            //check the cards if blackjack
             if (isBlackJack(player))
             {
                 MessageBox.Show("Congratulations! BLACK JACK!", "YOU WIN!");
@@ -269,7 +266,7 @@ namespace Project2
             //enable Hit and Stand button
             buttonStatus(true);
             betTextBox.ReadOnly = true;
-
+            visibleButton(true);
         }
 
         /// <summary>
@@ -323,7 +320,8 @@ namespace Project2
             dealingShoe.reset();
             buttonStatus(false);
             betTextBox.ReadOnly = false;
-            
+
+            visibleButton(false);
         }
 
         /// <summary>
@@ -431,6 +429,17 @@ namespace Project2
 
         }
 
+        private void visibleButton(bool status)
+        {
+            //set whether visibility
+            dealerValueLabel.Visible = status;
+            playerValueLabel.Visible = status;
+            dealerValueRichTextBox.Visible = status;
+            playerValueRichTextBox.Visible = status;
+            winOrLoseLabel.Visible = status;
+            winOrLoseRichTextBox.Visible = status;
+        }
+
         private void buttonStatus(bool status)
         {
             if (status)
@@ -447,7 +456,7 @@ namespace Project2
 
         private bool isBlackJack(List<aCard> cards)
         {
-            return (cards[0].getValue() + cards[1].getValue()) == 21;
+            return ((cards[0].getValue() + cards[1].getValue()) == 21);
                   
         }
 

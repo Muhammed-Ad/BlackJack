@@ -55,7 +55,7 @@ namespace Project2
             aCard drawCard = shoe[DeckIndex].drawCard(value);
 
             shoe[DeckIndex].removeCard(value);
-
+            Console.WriteLine(shoe[DeckIndex].Count);
             return drawCard;
 
         }
