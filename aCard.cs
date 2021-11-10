@@ -10,7 +10,9 @@ using System.Windows.Forms;
 
 namespace Project2
 {
-   
+   /// <summary>
+   /// enumerator card Value Type
+   /// </summary>
     public enum CardValue: int
     {
         Ace = 1,
@@ -28,6 +30,9 @@ namespace Project2
         King = 13,
     }
 
+    /// <summary>
+    /// enumerator of card suits
+    /// </summary>
     public enum CardSuit
     {
         Spades = 1,
@@ -38,7 +43,7 @@ namespace Project2
 
 
     /// <summary>
-    /// a card contains value, face and picture? 
+    /// Class aCard contains value, face and picture? 
     /// </summary>
     public class aCard
     {
@@ -60,10 +65,11 @@ namespace Project2
         private Image image;
 
         /// <summary>
-        /// display card
+        /// constructor with 3 parameter
         /// </summary>
-        public PictureBox cardDisplay;
-
+        /// <param name="value">card value</param>
+        /// <param name="suit">card suit</param>
+        /// <param name="image">the images</param>
         public aCard(CardValue value, CardSuit suit, System.Drawing.Image image)
         {
             this.cardValue = value;
@@ -71,15 +77,23 @@ namespace Project2
             this.image = image;
         }
 
+        /// <summary>
+        /// method to get the image
+        /// </summary>
+        /// <returns></returns>
         public Image getImage()
         {
             return this.image;
         }
 
+        /// <summary>
+        /// method to get value of the card
+        /// </summary>
+        /// <returns>return integer number of card corresponding</returns>
         public int getValue()
         {
             if (this.cardValue == CardValue.Ace)
-                return 1;
+                return 11;
             else if (this.cardValue == CardValue.Two)
                 return 2;
             else if (this.cardValue == CardValue.Three)

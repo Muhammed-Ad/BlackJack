@@ -111,7 +111,7 @@ namespace Project2
             this.dealerCardsLabel.Size = new System.Drawing.Size(188, 33);
             this.dealerCardsLabel.TabIndex = 0;
             this.dealerCardsLabel.Text = "Dealer Cards";
-            this.dealerCardsLabel.Click += new System.EventHandler(this.dealerCards_Click);
+            
             // 
             // playerCardsLabel
             // 
@@ -131,6 +131,7 @@ namespace Project2
             // 
             this.totalLabel.AutoSize = true;
             this.totalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalLabel.ForeColor = System.Drawing.Color.Peru;
             this.totalLabel.Location = new System.Drawing.Point(8, 16);
             this.totalLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.totalLabel.Name = "totalLabel";
@@ -142,6 +143,7 @@ namespace Project2
             // 
             this.betLabel.AutoSize = true;
             this.betLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.betLabel.ForeColor = System.Drawing.Color.Peru;
             this.betLabel.Location = new System.Drawing.Point(10, 64);
             this.betLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.betLabel.Name = "betLabel";
@@ -169,6 +171,7 @@ namespace Project2
             // 
             this.standButton.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.standButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.standButton.ForeColor = System.Drawing.Color.MediumVioletRed;
             this.standButton.Location = new System.Drawing.Point(457, 512);
             this.standButton.Margin = new System.Windows.Forms.Padding(2);
             this.standButton.Name = "standButton";
@@ -182,6 +185,7 @@ namespace Project2
             // 
             this.hitButton.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.hitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hitButton.ForeColor = System.Drawing.Color.MediumVioletRed;
             this.hitButton.Location = new System.Drawing.Point(327, 513);
             this.hitButton.Margin = new System.Windows.Forms.Padding(2);
             this.hitButton.Name = "hitButton";
@@ -282,7 +286,7 @@ namespace Project2
             this.dealerPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dealerPictureBox1.TabIndex = 20;
             this.dealerPictureBox1.TabStop = false;
-            this.dealerPictureBox1.Click += new System.EventHandler(this.dealerPicturebox1_Click);
+            
             // 
             // playerPicturebox1
             // 
@@ -294,7 +298,7 @@ namespace Project2
             this.playerPicturebox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.playerPicturebox1.TabIndex = 21;
             this.playerPicturebox1.TabStop = false;
-            this.playerPicturebox1.Click += new System.EventHandler(this.playerPicturebox1_Click);
+            
             // 
             // dealerValueRichTextBox
             // 

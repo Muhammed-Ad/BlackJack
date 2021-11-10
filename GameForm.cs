@@ -16,42 +16,57 @@ namespace Project2
     /// </summary>
     public partial class GameForm : Form
     {
+        /// <summary>
+        /// dealer and player object of aCard List
+        /// </summary>
         List<aCard> dealer = new List<aCard>();
         List<aCard> player = new List<aCard>();
-        private enum OUTCOME {Tie = 0, Win = 1, Lose = 2}
-        //imageList 
+        
+        /// <summary>
+        /// images List
+        /// </summary>
         PictureBox[] dealerImages;
         PictureBox[] playerImages;
 
-        
-        //PictureBox computerPicturebox;
-        //PictureBox playerPicturebox;
-        int startingHand = 2;
         Random rand; //random number gen. to start from once given seed
         //did not specify though
-        int max_cards_on_table = 11;
 
-        //number of decks
-        int nDecks;
-        bool s17Mode;  //playing mode
-        bool h17Mode;
-        bool playButtonHit = false, gameOver = false; 
-        //also got a deck of card one though lol.
-        aDeckOfCards deck;
-        aShoe shoe;
+        /// <summary>
+        /// aShoe object
+        /// </summary>
+        aShoe dealingShoe;
+
+        /// <summary>
+        /// boolean varibles for mode and button
+        /// </summary>
+        bool s17Mode = false;  //playing mode
+        bool h17Mode = false;
+        bool playButtonHit = false;
         int mode = 17;
-        //sum and ace
+
+        /// <summary>
+        /// variables for sumValue and number of Aces
+        /// </summary>
         int dealerSum = 0;
         int playerSum = 0;
         int dealerAce = 0;
         int playerAce = 0;
 
+        /// <summary>
+        /// index of the images Lists
+        /// </summary>
         int playerImageNum = 0, dealerImageNum = 0;
-        aShoe dealingShoe;
-        string win = "You Won";
-        string lose = "You Lost";
+
+        /// <summary>
+        /// status variable
+        /// </summary>
+        const string win = "You Win";
+        const string lose = "You Lost";
         int numTimesPlayed = 0;
 
+        /// <summary>
+        /// ratio of player win 3:2
+        /// </summary>
         double ratio = 1.5;
 
         /// <summary>
@@ -70,6 +85,12 @@ namespace Project2
             totalTextBox.Text = "100";
         }
 
+        /// <summary>
+        /// GameForm constructor with 3 parameters
+        /// </summary>
+        /// <param name="NumDecks">the number of decks that user chose</param>
+        /// <param name="mode">mode S17 or H17</param>
+        /// <param name="seed">the seed number that user chose</param>
         public GameForm( int NumDecks, bool mode, int seed)
         {
             InitializeComponent();
@@ -95,58 +116,10 @@ namespace Project2
 
             visibleButton(false);
             dealingShoe = seed == -1 ? new aShoe(new Random(), NumDecks) : new aShoe(new Random(seed), NumDecks);
-            /*playerPictureboxList = new List<Image>();
-            dealerPictureboxList = new List<Image>();*/
-            //initList();
-            //drawCard(false, 2); //draw two cards for player
-            //drawCard(true, 1);  //draw 1 card for dealer
-            //updateDealer();
-            //updatePlayer();
+                       
             
-            
-        }
-        private void drawCard(bool isDealer, int numCardsDrawn)
-        {
-            aCard temp;
-            for (int i = 0; i < numCardsDrawn; i++)
-            {
-                temp = dealingShoe.Draw();
-                if (isDealer)
-                {
-                    if(dealerSum < 11 && temp.getValue() == 1) //if card is ace, increment by ten if sum is greater than 10 already
-                    {
-                        dealerSum += 11;
-                    }
-                    else
-                    {
-                        dealerSum += temp.getValue();
-                    }
-                    //dealer[dealerImageNum] = temp;
-                    dealer.Add(temp);
-                    dealerImages[dealerImageNum].Image = dealer[dealerImageNum].getImage();
-                    //updateDealer(dealerImageNum + 1);
-                    dealerImageNum++;
-                }
-                else
-                {
-                    if(playerSum < 11 && temp.getValue() == 1)
-                    {
-                        playerSum += 11;
-                    }
-                    else
-                    {
-                        playerSum += temp.getValue();
-                    }
-                    //player[playerImageNum] = temp;
-                    player.Add(temp);
-                    playerImages[playerImageNum].Image = player[playerImageNum].getImage();
-                    //updatePlayer(playerImageNum + 1);
-                    playerImageNum++;
-                }
-            }
-            dealerValueRichTextBox.Text = dealerSum.ToString();
-            playerValueRichTextBox.Text = playerSum.ToString();
-        }
+        }        
+
         /// <summary>
         /// function calls when form1 loads
         /// </summary>
@@ -154,8 +127,7 @@ namespace Project2
         /// <param name="e"></param>
         public void Form1_Load(object sender, EventArgs e)
         {
-            //set starting credit to 100:
-            
+            //set starting credit to 100:            
          
         }
 
@@ -169,45 +141,12 @@ namespace Project2
             this.Close();
         }
 
-        /*
-        //need picture box though
-        private void updatePicturebox(ref PictureBox pBox, ref Hand hand)
-        {
-            //PUT PLAYER CARD INTO THE PICTUREBOX
-            //prepare and add playerHand cards to picture box
-            List<Bitmap> images = new List<Bitmap>();
-
-            //but still missing though kinda weird.
-            int totalWidth = 73 * (int)hand.Cards.Count();
-            int height = 97;
-
-            //put in the images list.
-            for (int j = 0; j < hand.Cards.Count(); j++)
-            {
-                images.Add(hand.Cards[j].GetBitmapImage());
-            }
-
-            //create an image(bitmap)
-            Bitmap combinedBitmap = new Bitmap(totalWidth, height);
-
-            //combine the images from the bit map list - with the graphic 
-            Graphics combinedGraphics = Graphics.FromImage(combinedBitmap);
-
-            int drawingPosition = 0;
-
-            //put into combinedGraphic (or a picture)
-            foreach (Bitmap bitmap in images)
-            {
-
-                //draw image into the graphic, cool. 
-                combinedGraphics.DrawImage(bitmap, new Point(drawingPosition, 0));
-                drawingPosition += bitmap.Width;
-            }
-
-            //done putting in
-            pBox.Image = combinedBitmap;
-        }*/
-
+        
+        /// <summary>
+        /// method taking the event when user click Hit Button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void playButton_Click(object sender, EventArgs e)
         {
 
@@ -260,6 +199,7 @@ namespace Project2
                 MessageBox.Show("Congratulations! BLACK JACK!", "YOU WIN!");
                 winOrLoseRichTextBox.Text = win;
                 calcBet();
+                visibleButton(true);
                 return;
             }
 
@@ -268,62 +208,7 @@ namespace Project2
             betTextBox.ReadOnly = true;
             visibleButton(true);
         }
-
-        /// <summary>
-        /// function to calculate the player's money
-        /// </summary>
-        private void calcBet(){ 
-            if (winOrLoseRichTextBox.Text == lose)
-            {
-                //player bust
-                totalTextBox.Text = (double.Parse(totalTextBox.Text) - double.Parse(betTextBox.Text)).ToString();
-            }
-            else if(winOrLoseRichTextBox.Text == win)
-            {
-                //player win
-                totalTextBox.Text = (double.Parse(totalTextBox.Text) + (double.Parse(betTextBox.Text) * ratio)).ToString();
-            }
-        }
-
-        /// <summary>
-        /// function the reset the cards of dealder and player
-        /// </summary>
-        private void resetCards()
-        {
-            //reset the picture boxes
-            foreach (PictureBox picture in dealerImages)
-            {
-                picture.Image = null;
-            }
-            foreach (PictureBox picture in playerImages)
-            {
-                picture.Image = null;
-            }
-
-            //clear cards of player and set sum = 0 again
-            dealer.Clear();
-            dealerSum = 0;
-            dealerAce = 0;
-            //clear the rich text box
-            dealerValueRichTextBox.Text = string.Empty;                                    
-
-            //clear cards of player and set sum = 0 again
-            player.Clear();
-            playerSum = 0;
-            playerAce = 0;
-            //clear the rich text box
-            playerValueRichTextBox.Text = string.Empty;
-            
-            playerImageNum = 0;
-            dealerImageNum = 0;
-
-            dealingShoe.reset();
-            buttonStatus(false);
-            betTextBox.ReadOnly = false;
-
-            visibleButton(false);
-        }
-
+        
         /// <summary>
         /// when user click the reset button
         /// </summary>
@@ -333,10 +218,11 @@ namespace Project2
         {
 
             //clear bet money box
-            betTextBox.Text = string.Empty;
+            //betTextBox.Text = string.Empty;
+            //reset buttons and cards
             resetCards();
             playButtonHit = false;
-            
+            winOrLoseRichTextBox.Text = "Win or Lose or Tie status";
 
 
         }
@@ -345,7 +231,6 @@ namespace Project2
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-
         private void hitButton_Click(object sender, EventArgs e)
         {
             if (!playButtonHit)
@@ -372,7 +257,11 @@ namespace Project2
             }
         }
 
-
+        /// <summary>
+        /// method taking the event whenever user click Stand button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void standButton_Click(object sender, EventArgs e)
         {
             if (!playButtonHit)
@@ -380,33 +269,35 @@ namespace Project2
                 MessageBox.Show("Cannot stand, must click play first", "Error!");
                 return;
             }
+            //if player value greater than 21 => bust
             if (playerSum > 21)
             {
                 winOrLoseRichTextBox.Text = lose;
             }
+
+            //draw card for dealer until reach the mode(S17 or H17)
             while(dealerSum < mode)
             {
                 drawCard(true, 1);
             }
+            //if player value is not bust
             if(playerSum <= 21)
             {
-                if(dealerSum > 21)
+                ///if dealer greater than 21 (bust), player wins
+                if (dealerSum > 21)
                 {
-                    winOrLoseRichTextBox.Text = win; ///if dealer greater than 21, player wins
+                    winOrLoseRichTextBox.Text = win; 
                 }
                 else
                 {
+                    //if dealer is black jack, player not black jack => lose
                     if (isBlackJack(dealer))
                     {
                         winOrLoseRichTextBox.Text = lose;
                     }
-
-                    if (dealerSum == 21 && playerSum == 21)
+                    //if neither bust and are equal, then it's a tie
+                    if (dealerSum == playerSum)
                     {
-                        winOrLoseRichTextBox.Text = "It's tie"; //if player and dealer bust, dealer wins
-                    }
-                    else if (dealerSum == playerSum)
-                    {//if neither bust and are equal, then it's a tie
                         winOrLoseRichTextBox.Text = "It's tie";
                     }
                     //if neither bust and player less, dealer wins
@@ -429,6 +320,126 @@ namespace Project2
 
         }
 
+        /// <summary>
+        /// function to draw cards
+        /// </summary>
+        /// <param name="isDealer">boolean value to know if dealer or not</param>
+        /// <param name="numCardsDrawn">number of cards want to draw</param>
+        private void drawCard(bool isDealer, int numCardsDrawn)
+        {
+            aCard temp;
+            for (int i = 0; i < numCardsDrawn; i++)
+            {
+                temp = dealingShoe.Draw();
+                if (isDealer)
+                {
+                    /*if(dealerSum > 21 && temp.getValue() == 11) //if card is ace, increment by ten if sum is greater than 10 already
+                    {
+                        //dealerSum += 11;
+                        
+                        dealerSum -= 10;
+                    }
+                    else
+                    {
+                        dealerSum += temp.getValue();
+                        
+                    }*/
+                    //work with Ace cards
+                    checkAceValue(temp, ref dealerSum, ref dealerAce);
+
+                    //dealer[dealerImageNum] = temp;
+                    dealer.Add(temp);
+                    dealerImages[dealerImageNum].Image = dealer[dealerImageNum].getImage();
+                    //updateDealer(dealerImageNum + 1);
+                    dealerImageNum++;
+                }
+                else
+                {
+                    /*if(playerSum > 21 && temp.getValue() == 11)
+                    {
+                        //playerSum += 11;
+                        
+                        playerSum -= 10;
+                    }
+                    else
+                    {
+                        playerSum += temp.getValue();
+                        
+                    }*/
+                    //work with Ace cards
+                    checkAceValue(temp, ref playerSum, ref playerAce);
+
+                    //player[playerImageNum] = temp;
+                    player.Add(temp);
+                    playerImages[playerImageNum].Image = player[playerImageNum].getImage();
+                    //updatePlayer(playerImageNum + 1);
+                    playerImageNum++;
+                }
+            }
+            dealerValueRichTextBox.Text = dealerSum.ToString();
+            playerValueRichTextBox.Text = playerSum.ToString();
+        }
+
+        /// <summary>
+        /// function to calculate the player's money
+        /// </summary>
+        private void calcBet()
+        {
+            if (winOrLoseRichTextBox.Text == lose)
+            {
+                //player bust
+                totalTextBox.Text = (double.Parse(totalTextBox.Text) - double.Parse(betTextBox.Text)).ToString();
+            }
+            else if (winOrLoseRichTextBox.Text == win)
+            {
+                //player win
+                totalTextBox.Text = (double.Parse(totalTextBox.Text) + (double.Parse(betTextBox.Text) * ratio)).ToString();
+            }
+        }
+
+        /// <summary>
+        /// function the reset the cards of dealder and player
+        /// </summary>
+        private void resetCards()
+        {
+            //reset the picture boxes
+            foreach (PictureBox picture in dealerImages)
+            {
+                picture.Image = null;
+            }
+            foreach (PictureBox picture in playerImages)
+            {
+                picture.Image = null;
+            }
+
+            //clear cards of player and set sum = 0 again
+            dealer.Clear();
+            dealerSum = 0;
+            dealerAce = 0;
+            //clear the rich text box
+            dealerValueRichTextBox.Text = string.Empty;
+
+            //clear cards of player and set sum = 0 again
+            player.Clear();
+            playerSum = 0;
+            playerAce = 0;
+            //clear the rich text box
+            playerValueRichTextBox.Text = string.Empty;
+
+            playerImageNum = 0;
+            dealerImageNum = 0;
+
+            dealingShoe.reset();
+            buttonStatus(false);
+            betTextBox.ReadOnly = false;
+
+            visibleButton(false);
+        }
+
+        /// <summary>
+        /// the function to visible or invisible the Labels and Buttons
+        /// </summary>
+        /// <param name="status">boolean status</param>
         private void visibleButton(bool status)
         {
             //set whether visibility
@@ -440,39 +451,61 @@ namespace Project2
             winOrLoseRichTextBox.Visible = status;
         }
 
+        /// <summary>
+        /// The function to enable or disable button
+        /// </summary>
+        /// <param name="status">boolean status</param>
         private void buttonStatus(bool status)
         {
             if (status)
             {
                 hitButton.Enabled= true;
                 standButton.Enabled = true;
+                resetButton.Enabled = false;
             }
             else
             {
                 hitButton.Enabled = false;
                 standButton.Enabled = false;
+                resetButton.Enabled = true;
             }
         }
 
+        /// <summary>
+        /// The function to check BlackJack case
+        /// </summary>
+        /// <param name="cards">object cards in aCard List</param>
+        /// <returns>true if blackjack and false if not</returns>
         private bool isBlackJack(List<aCard> cards)
         {
+            //cards[0] = "Ace";
+           
             return ((cards[0].getValue() + cards[1].getValue()) == 21);
                   
         }
 
-        private void dealerCards_Click(object sender, EventArgs e)
+        /// <summary>
+        /// The function to check whenever Ace card appears
+        /// </summary>
+        /// <param name="card">object of aCard class</param>
+        /// <param name="cardSum">the sum of cards</param>
+        /// <param name="aces">number of aces</param>
+        private void checkAceValue(aCard card, ref int cardSum, ref int aces)
         {
+            //If the card is Ace, increase number of aces
+            if(card.getValue() == 11)
+            {
+                ++aces;
+            }
+            cardSum += card.getValue(); 
 
-        }
-
-        private void playerPicturebox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dealerPicturebox1_Click(object sender, EventArgs e)
-        {
-
+            //if the card value is greater then 21
+            //Ace now become 1
+            if(cardSum >= 22 && aces >= 1)
+            {
+                --aces;
+                cardSum -= 10;
+            }
         }
     }
 }

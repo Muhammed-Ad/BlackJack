@@ -5,6 +5,7 @@ using System;
 namespace Project2
 {
     /// <summary>
+    /// Class aShoe inherrit IDrawCard
     /// creating a shuffling machine or a shoe containing potentially up to 8 decks of cards
     /// </summary>
     public class aShoe : IDrawCard
@@ -34,7 +35,10 @@ namespace Project2
             this.rand = rand;
         }
 
-        
+        /// <summary>
+        /// method Draw to draw card
+        /// </summary>
+        /// <returns></returns>
         public aCard Draw()
         {
             
@@ -60,6 +64,9 @@ namespace Project2
 
         }
 
+        /// <summary>
+        /// method to reset cards
+        /// </summary>
         public void reset()
         {
             for(int i = 0; i < shoe.Count(); i++)
