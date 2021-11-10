@@ -156,19 +156,19 @@ namespace Project2
                 return;
             }
 
+            //check the user bet
+            if (String.IsNullOrEmpty(betTextBox.Text))
+            {
+                MessageBox.Show("You have to bet before playing!", "Error");
+                return;
+            }
+
             double parsedValue = 0.0;
             if (!double.TryParse(betTextBox.Text, out parsedValue))
             {
                 MessageBox.Show("This is a number only field", "Error");
                 return;
 
-            }
-            
-            //check the user bet
-            if (String.IsNullOrEmpty(betTextBox.Text))
-            {
-                MessageBox.Show("You have to bet before playing!", "Error");
-                return;
             }
 
             //if the user money less than total money, print error message
