@@ -126,30 +126,8 @@ namespace Project2
             //dealingShoe = seed == -1 ? new aShoe(aRandomVariable.rand_number , NumDecks) : new aShoe(aRandomVariable.rand_number, NumDecks);
                        
             
-        }        
-
-        /// <summary>
-        /// function calls when form1 loads
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        public void Form1_Load(object sender, EventArgs e)
-        {
-            //set starting credit to 100:            
-         
-        }
-
-        /// <summary>
-        /// function call setting button clicks
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void settingBttn_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        
+        } 
+       
         /// <summary>
         /// method taking the event when user click Hit Button
         /// </summary>
