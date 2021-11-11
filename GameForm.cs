@@ -1,12 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Project1;
 
 namespace Project2
 {
@@ -28,8 +23,9 @@ namespace Project2
         PictureBox[] dealerImages;
         PictureBox[] playerImages;
 
-        Random rand; //random number gen. to start from once given seed
+        //aRandomVariable rand; //random number gen. to start from once given seed
         //did not specify though
+               
 
         /// <summary>
         /// aShoe object
@@ -75,7 +71,8 @@ namespace Project2
         public GameForm()
         {
             InitializeComponent();
-            rand = new Random(999);
+            aRandomVariable.rand_number = new Random(999);
+            
             dealingShoe = new aShoe(new Random());
             dealerImages = new PictureBox[] { dealerPictureBox1, dealerPictureBox2, dealerPictureBox3, dealerPictureBox4, dealerPictureBox5,
                 dealerPictureBox6, dealerPictureBox7, dealerPictureBox8, dealerPictureBox9, dealerPictureBox10, dealerPictureBox11, dealerPictureBox12};
@@ -94,6 +91,7 @@ namespace Project2
         public GameForm( int NumDecks, bool mode, int seed)
         {
             InitializeComponent();
+            
             totalTextBox.Text = "100";
             dealerImages = new PictureBox[] { dealerPictureBox1, dealerPictureBox2, dealerPictureBox3, dealerPictureBox4, dealerPictureBox5,
                 dealerPictureBox6, dealerPictureBox7, dealerPictureBox8, dealerPictureBox9, dealerPictureBox10, dealerPictureBox11, dealerPictureBox12};
@@ -115,7 +113,17 @@ namespace Project2
             buttonStatus(false);
 
             visibleButton(false);
-            dealingShoe = seed == -1 ? new aShoe(new Random(), NumDecks) : new aShoe(new Random(seed), NumDecks);
+
+            if (seed == -1)
+            {
+                dealingShoe = new aShoe(aRandomVariable.rand_number, NumDecks);
+            }
+            else
+            {
+                aRandomVariable.rand_number = new Random(seed);
+                dealingShoe = new aShoe(aRandomVariable.rand_number, NumDecks);
+            }
+            //dealingShoe = seed == -1 ? new aShoe(aRandomVariable.rand_number , NumDecks) : new aShoe(aRandomVariable.rand_number, NumDecks);
                        
             
         }        
