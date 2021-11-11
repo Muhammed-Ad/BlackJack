@@ -57,10 +57,5 @@ namespace Project2
             GameForm GameForm = new GameForm( NumDecks, s17, seed);
             GameForm.Show();
         }
-
-        private void StartingForm_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
