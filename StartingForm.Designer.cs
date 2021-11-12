@@ -47,7 +47,7 @@ namespace Project2
             this.S17CheckBox.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.S17CheckBox.Location = new System.Drawing.Point(168, 180);
             this.S17CheckBox.Name = "S17CheckBox";
-            this.S17CheckBox.Size = new System.Drawing.Size(73, 29);
+            this.S17CheckBox.Size = new System.Drawing.Size(60, 24);
             this.S17CheckBox.TabIndex = 14;
             this.S17CheckBox.Text = "S17";
             this.S17CheckBox.UseVisualStyleBackColor = false;
@@ -73,7 +73,7 @@ namespace Project2
             this.ModeLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.ModeLabel.Location = new System.Drawing.Point(95, 180);
             this.ModeLabel.Name = "ModeLabel";
-            this.ModeLabel.Size = new System.Drawing.Size(68, 25);
+            this.ModeLabel.Size = new System.Drawing.Size(53, 20);
             this.ModeLabel.TabIndex = 12;
             this.ModeLabel.Text = "Mode:";
             // 
@@ -92,7 +92,7 @@ namespace Project2
             this.SeedLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.SeedLabel.Location = new System.Drawing.Point(97, 114);
             this.SeedLabel.Name = "SeedLabel";
-            this.SeedLabel.Size = new System.Drawing.Size(65, 25);
+            this.SeedLabel.Size = new System.Drawing.Size(51, 20);
             this.SeedLabel.TabIndex = 10;
             this.SeedLabel.Text = "Seed:";
             // 
@@ -104,7 +104,7 @@ namespace Project2
             this.NumDecksLabel.ForeColor = System.Drawing.SystemColors.Control;
             this.NumDecksLabel.Location = new System.Drawing.Point(12, 63);
             this.NumDecksLabel.Name = "NumDecksLabel";
-            this.NumDecksLabel.Size = new System.Drawing.Size(168, 25);
+            this.NumDecksLabel.Size = new System.Drawing.Size(136, 20);
             this.NumDecksLabel.TabIndex = 8;
             this.NumDecksLabel.Text = "Number of Decks:";
             // 
@@ -146,7 +146,7 @@ namespace Project2
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "StartingForm";
-            this.Text = "StartingForm";
+            this.Text = "Rich Kids Casino";
             this.ResumeLayout(false);
             this.PerformLayout();
 

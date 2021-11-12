@@ -1,22 +1,31 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+
+/// <summary>
+/// Project: Black Jack
+/// Group 1: Jason Truong, Muhammed Ademola
+/// </summary>
 
 namespace Project2
 {
+    /// <summary>
+    /// Starting form class
+    /// </summary>
     public partial class StartingForm : Form
     {
+        /// <summary>
+        /// constructor StartingForm
+        /// </summary>
         public StartingForm()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// method in case Start button is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void StartButton_Click(object sender, EventArgs e)
         {
             int seed; int NumDecks = 1;
@@ -29,17 +38,20 @@ namespace Project2
                 return;
 
             }
+            //check invalid number of decks
             else if(NumDecks < 1)
             {
                 MessageBox.Show("Number of decks must be an integer greater than 0");
                 return;
             }
 
+            //check mode
             if(!s17)
             {
                 MessageBox.Show("Game Mode: H17", "Notice"); //build the constructor to put args
             }
             
+            //check seed
             if(string.IsNullOrEmpty(SeedTextBox.Text) || string.IsNullOrWhiteSpace(SeedTextBox.Text))
             {
                 seed = -1;
@@ -53,7 +65,7 @@ namespace Project2
                     return;
                 }
             }
-            
+            //call game form
             GameForm GameForm = new GameForm( NumDecks, s17, seed);
             GameForm.Show();
         }

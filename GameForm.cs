@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 using Project1;
+/// <summary>
+/// Project 2 using aRandomVariable.cs from Project 1
+/// </summary>
 
 namespace Project2
 {
@@ -18,14 +21,11 @@ namespace Project2
         List<aCard> player = new List<aCard>();
         
         /// <summary>
-        /// images List
+        /// images Lists
         /// </summary>
         PictureBox[] dealerImages;
         PictureBox[] playerImages;
-
-        //aRandomVariable rand; //random number gen. to start from once given seed
-        //did not specify though
-               
+                            
 
         /// <summary>
         /// aShoe object
@@ -93,12 +93,13 @@ namespace Project2
             InitializeComponent();
             
             totalTextBox.Text = "100";
+            //list of picture boxes
             dealerImages = new PictureBox[] { dealerPictureBox1, dealerPictureBox2, dealerPictureBox3, dealerPictureBox4, dealerPictureBox5,
                 dealerPictureBox6, dealerPictureBox7, dealerPictureBox8, dealerPictureBox9, dealerPictureBox10, dealerPictureBox11, dealerPictureBox12};
             playerImages = new PictureBox[] { playerPicturebox1, playerPicturebox2, playerPicturebox3, playerPicturebox4, playerPicturebox5,
                 playerPicturebox6, playerPicturebox7, playerPicturebox8, playerPicturebox9, playerPicturebox10, playerPicturebox11, playerPicturebox12};
 
-            //seedTextbox.Text = seed.ToString();
+            //check mode
             if (mode == true)
             {
                 s17Mode = mode;
@@ -114,16 +115,18 @@ namespace Project2
 
             visibleButton(false);
 
+            //if seed is empty, use no seed random
             if (seed == -1)
             {
                 dealingShoe = new aShoe(aRandomVariable.rand_number, NumDecks);
             }
+            //pass with seed
             else
             {
                 aRandomVariable.rand_number = new Random(seed);
                 dealingShoe = new aShoe(aRandomVariable.rand_number, NumDecks);
             }
-            //dealingShoe = seed == -1 ? new aShoe(aRandomVariable.rand_number , NumDecks) : new aShoe(aRandomVariable.rand_number, NumDecks);
+            
                        
             
         } 
@@ -135,7 +138,7 @@ namespace Project2
         /// <param name="e"></param>
         private void playButton_Click(object sender, EventArgs e)
         {
-
+            //if user hit PLay button before reset
             if (playButtonHit)
             {
                 MessageBox.Show("Cannot hit play button if game not Reset!!\nReset will reset the cards", "Error");
@@ -150,6 +153,7 @@ namespace Project2
             }
 
             double parsedValue = 0.0;
+            //if user type not a number
             if (!double.TryParse(betTextBox.Text, out parsedValue))
             {
                 MessageBox.Show("This is a number only field", "Error");
@@ -172,10 +176,7 @@ namespace Project2
 
             playButtonHit = true;
             numTimesPlayed++;
-            //we have to reset the game
-            //if(numTimesPlayed > 1)
-            //    resetCards();
-
+            
             drawCard(false, 2); //draw two cards for player
             drawCard(true, 1);  //draw 1 card for dealer
 
@@ -219,12 +220,14 @@ namespace Project2
         /// <param name="e"></param>
         private void hitButton_Click(object sender, EventArgs e)
         {
+            //if user press HIT before Play
             if (!playButtonHit)
             {
                 MessageBox.Show("Cannot hit, must click play first", "Error!");
                 return;
             }
-            if(playerSum >= 21)//check the s17 mode
+            //if bust or 21
+            if(playerSum >= 21)
             {
                 MessageBox.Show("Cannot hit, must stand");
                 standButton_Click(null, EventArgs.Empty);
@@ -319,17 +322,7 @@ namespace Project2
                 temp = dealingShoe.Draw();
                 if (isDealer)
                 {
-                    /*if(dealerSum > 21 && temp.getValue() == 11) //if card is ace, increment by ten if sum is greater than 10 already
-                    {
-                        //dealerSum += 11;
-                        
-                        dealerSum -= 10;
-                    }
-                    else
-                    {
-                        dealerSum += temp.getValue();
-                        
-                    }*/
+                    
                     //work with Ace cards
                     checkAceValue(temp, ref dealerSum, ref dealerAce);
 
@@ -341,17 +334,7 @@ namespace Project2
                 }
                 else
                 {
-                    /*if(playerSum > 21 && temp.getValue() == 11)
-                    {
-                        //playerSum += 11;
-                        
-                        playerSum -= 10;
-                    }
-                    else
-                    {
-                        playerSum += temp.getValue();
-                        
-                    }*/
+                    
                     //work with Ace cards
                     checkAceValue(temp, ref playerSum, ref playerAce);
 
@@ -485,7 +468,7 @@ namespace Project2
             }
             cardSum += card.getValue(); 
 
-            //if the card value is greater then 21
+            //if the card value is greater than 21
             //Ace now become 1
             if(cardSum >= 22 && aces >= 1)
             {
